@@ -68,15 +68,21 @@ a {
 }
 /* ------------------------------- RECURENTES -- */
 /* ------------------------------- END RECURENTES -- */
-div.content {
-  height: 85%;
+main {
+  height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main div.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-div.content div.card {
+main div.content div.card {
   background-color: hsl(216, 50%, 16%);
   font-size: 18px;
   width: 400px;
@@ -85,20 +91,20 @@ div.content div.card {
   display: flex;
   flex-direction: column;
 }
-div.content div.card div.nft_prev {
+main div.content div.card div.nft_prev {
   padding: 6%;
 }
-div.content div.card div.nft_prev a {
+main div.content div.card div.nft_prev a {
   display: block;
   position: relative;
 }
-div.content div.card div.nft_prev a img {
+main div.content div.card div.nft_prev a img {
   width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 20px;
 }
-div.content div.card div.nft_prev a div.overlay {
+main div.content div.card div.nft_prev a div.overlay {
   margin: 0 auto;
   border-radius: 20px;
   position: absolute;
@@ -112,93 +118,98 @@ div.content div.card div.nft_prev a div.overlay {
   background-color: rgba(0, 255, 247, 0.562);
   text-align: center;
 }
-div.content div.card div.nft_prev a div.overlay i {
+main div.content div.card div.nft_prev a div.overlay i {
   font-size: 40px;
   color: hsl(0, 0%, 100%);
 }
-div.content div.card div.nft_prev:hover div.overlay {
+main div.content div.card div.nft_prev:hover div.overlay {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.content div.card div.infos {
+main div.content div.card div.infos {
   padding: 0% 6% 6% 6%;
 }
-div.content div.card div.infos a h2 {
+main div.content div.card div.infos a h2 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
 }
-div.content div.card div.infos a:hover h2 {
+main div.content div.card div.infos a:hover h2 {
   color: hsl(178, 100%, 50%);
 }
-div.content div.card div.infos p {
+main div.content div.card div.infos p {
   padding: 4% 0%;
   color: hsl(214, 54%, 71%);
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
 }
-div.content div.card div.datas {
+main div.content div.card div.datas {
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
 }
-div.content div.card div.datas p:nth-of-type(1) {
+main div.content div.card div.datas p:nth-of-type(1) {
   color: hsl(178, 100%, 50%);
+  font-weight: 600;
   position: relative;
 }
-div.content div.card div.datas p:nth-of-type(1)::before {
+main div.content div.card div.datas p:nth-of-type(1)::before {
   content: url(../img/icon-ethereum.svg);
   display: block;
   position: absolute;
   left: -20%;
   top: 32%;
 }
-div.content div.card div.datas p:nth-of-type(2) {
+main div.content div.card div.datas p:nth-of-type(2) {
   position: relative;
 }
-div.content div.card div.datas p:nth-of-type(2)::before {
+main div.content div.card div.datas p:nth-of-type(2)::before {
   content: url(../img/icon-clock.svg);
   display: block;
   position: absolute;
   left: -23%;
   top: 32%;
 }
-div.content div.card span {
+main div.content div.card span {
   display: block;
   width: 100%;
   height: 1px;
   background-color: hsl(215, 32%, 27%);
 }
-div.content div.card div.author {
+main div.content div.card div.author {
   padding: 4% 0%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-div.content div.card div.author div.icon {
+main div.content div.card div.author div.icon {
   width: 20%;
 }
-div.content div.card div.author div.icon img {
+main div.content div.card div.author div.icon img {
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 50%;
   width: 65%;
   height: auto;
 }
-div.content div.card div.author p {
+main div.content div.card div.author p {
   width: 100%;
   letter-spacing: 0px;
 }
-div.content div.card div.author p a {
+main div.content div.card div.author p a {
   color: hsl(0, 0%, 100%);
 }
-div.content div.card div.author p a:hover {
+main div.content div.card div.author p a:hover {
   color: hsl(178, 100%, 50%);
 }
-div.attribution {
+main div.attribution {
+  padding-top: 5%;
   color: hsl(0, 0%, 100%);
   font-size: 16px;
+}
+main div.attribution a:hover {
+  color: hsl(178, 100%, 50%);
 }
 /* ------------------------------------------------------------------------- */
 /* ----------------------------------------------MEDIA QUERIES 960px ---- */
