@@ -130,11 +130,11 @@ main div.content div.card div.nft_prev:hover div.overlay {
 main div.content div.card div.infos {
   padding: 0% 6% 6% 6%;
 }
-main div.content div.card div.infos a h2 {
+main div.content div.card div.infos a h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
 }
-main div.content div.card div.infos a:hover h2 {
+main div.content div.card div.infos a:hover h1 {
   color: hsl(178, 100%, 50%);
 }
 main div.content div.card div.infos p {
