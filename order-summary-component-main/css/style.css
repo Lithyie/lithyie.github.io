@@ -88,6 +88,7 @@ main {
   width: 100%;
   height: 90%;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -193,14 +194,14 @@ main article div.content div.buttons a:nth-of-type(2):hover {
   color: hsl(223, 47%, 23%);
   font-weight: 900;
 }
-section.credits div.attribution {
+div.credits div.attribution {
   font-size: 16px;
   text-align: center;
 }
-section.credits div.attribution a {
+div.credits div.attribution a {
   color: hsl(245, 83%, 68%);
 }
-section.credits div.attribution a:hover {
+div.credits div.attribution a:hover {
   color: hsl(245, 75%, 52%);
 }
 /* ------------------------------------------------------------------------- */
@@ -211,8 +212,12 @@ section.credits div.attribution a:hover {
     padding: 0% 5%;
     margin: 0 auto;
     background-image: url('../images/pattern-background-mobile.svg');
+    flex-direction: row;
   }
   main article div.content div.price div.plan::before {
     left: -3%;
+  }
+  main div.credits {
+    display: none;
   }
 }
