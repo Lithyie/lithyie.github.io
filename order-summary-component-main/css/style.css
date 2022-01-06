@@ -1,0 +1,218 @@
+@charset "utf-8";
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+div,
+header,
+nav,
+article,
+section,
+aside,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+figure,
+figcaption,
+class,
+img {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: hsl(225, 100%, 94%);
+  border: 0 solid transparent;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  width: 100%;
+  display: block;
+  font-family: 'Red Hat Display', sans-serif;
+}
+img,
+object,
+embed,
+canvas,
+video,
+audio,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* ------------------------------- RECURENTES -- */
+.clear {
+  display: block;
+  zoom: 1;
+}
+.clear:after {
+  content: '';
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.center {
+  width: 960px;
+  margin: 0 auto;
+}
+/* ------------------------------- END RECURENTES -- */
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+main article {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 450px;
+  background-color: hsl(225, 100%, 98%);
+  -webkit-box-shadow: 0px 9px 23px 6px rgba(219, 216, 251, 0.8);
+  box-shadow: 0px 9px 23px 6px rgba(219, 216, 251, 0.8);
+}
+main article div.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article div.content h1 {
+  font-weight: 900;
+  font-size: 28px;
+  color: hsl(223, 47%, 23%);
+  padding: 12% 0% 5% 0%;
+}
+main article div.content p {
+  text-align: center;
+  font-size: 16px;
+  color: hsl(224, 23%, 55%);
+  padding: 0% 15%;
+  font-weight: 500;
+  line-height: 1.5;
+}
+main article div.content div.price {
+  padding: 10% 10% 15% 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main article div.content div.price div.plan {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main article div.content div.price div.plan p:nth-of-type(1) {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+main article div.content div.price div.plan::before {
+  content: url('../images/icon-music.svg');
+  position: absolute;
+  left: 10%;
+}
+main article div.content div.price a {
+  flex: 1;
+  text-decoration: underline;
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+  font-size: 15px;
+}
+main article div.content div.price a:hover {
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+main article div.content div.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article div.content div.buttons a:nth-of-type(1) {
+  border-radius: 10px;
+  text-align: center;
+  color: hsl(225, 100%, 98%);
+  font-weight: 700;
+  width: 80%;
+  line-height: 3;
+  background-color: hsl(245, 75%, 52%);
+  margin-bottom: 3%;
+  -webkit-box-shadow: 0px 9px 23px 6px #dbd8fb;
+  box-shadow: 0px 9px 23px 6px #dbd8fb;
+  transition: 0.2s ease-in-out;
+}
+main article div.content div.buttons a:nth-of-type(1):hover {
+  background-color: hsl(245, 83%, 68%);
+}
+main article div.content div.buttons a:nth-of-type(2) {
+  border-radius: 10px;
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+  width: 50%;
+  line-height: 3;
+  display: block;
+  padding-bottom: 8%;
+}
+main article div.content div.buttons a:nth-of-type(2):hover {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+section.credits div.attribution {
+  font-size: 16px;
+  text-align: center;
+}
+section.credits div.attribution a {
+  color: hsl(245, 83%, 68%);
+}
+section.credits div.attribution a:hover {
+  color: hsl(245, 75%, 52%);
+}
+/* ------------------------------------------------------------------------- */
+/* ----------------------------------------------MEDIA QUERIES 375px ---- */
+/* ------------------------------------------------------------------------- */
+@media screen and (max-width: 375px) {
+  main {
+    padding: 0% 5%;
+    margin: 0 auto;
+    background-image: url('../images/pattern-background-mobile.svg');
+  }
+  main article div.content div.price div.plan::before {
+    left: -3%;
+  }
+}
