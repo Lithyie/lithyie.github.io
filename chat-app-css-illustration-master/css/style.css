@@ -322,15 +322,15 @@ main div.content div.phone div.bg div.screenbg div.screen section.send div.sendr
   align-items: center;
   color: hsl(271, 36%, 24%);
 }
-main div.content footer.text {
+main div.content div.text {
   width: 50%;
 }
-main div.content footer.text span {
+main div.content div.text span {
   color: hsl(271, 36%, 24%);
   font-weight: 500;
   font-size: 48px;
 }
-main div.content footer.text p {
+main div.content div.text p {
   padding: 5% 35% 5% 0%;
   line-height: 1.8;
   font-size: 18px;
@@ -370,15 +370,15 @@ main div.content footer.text p {
     width: initial;
     height: unset;
   }
-  main div.content footer.text {
+  main div.content div.text {
     width: 100%;
     padding-top: 15%;
     text-align: center;
   }
-  main div.content footer.text span {
+  main div.content div.text span {
     font-size: 34px;
   }
-  main div.content footer.text p {
+  main div.content div.text p {
     padding: 3% 0%;
     line-height: 1.4;
   }
