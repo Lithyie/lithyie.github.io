@@ -341,260 +341,45 @@ main div.content div.text p {
 /* ----------------------------------------------MEDIA QUERIES 375px ---- */
 /* ------------------------------------------------------------------------- */
 @media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+    width: initial;
+    height: initial;
+  }
   main::before {
-    height: 42%;
-    width: 100%;
-    left: -50%;
+    height: 48%;
+    width: 115%;
+    left: -67%;
   }
   main::after {
-    height: 85%;
-    width: 30%;
-    right: -10%;
-    bottom: 0;
+    height: 48%;
+    width: 115%;
+    right: -70%;
   }
   main div.content {
-    margin: 0 auto;
+    margin: 20% auto;
     width: 100%;
-    z-index: 2;
-    display: flex;
+    padding: 0% 15%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   main div.content div.phone {
-    width: 50%;
-    padding-left: 12%;
+    width: 100%;
+    padding-left: 0%;
   }
   main div.content div.phone div.bg {
-    -webkit-box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    width: 300px;
-    height: 615px;
-    background-color: hsl(0, 0%, 100%);
-  }
-  main div.content div.phone div.bg div.screenbg {
-    height: 100%;
-    padding: 4% 5%;
-    border-radius: 10%;
-    width: 100%;
-    margin: 0 auto;
-    background-color: hsl(0, 0%, 100%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen {
-    height: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    background-color: hsl(270, 20%, 96%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header {
-    padding: 12% 6% 4% 6%;
-    border-radius: 0 0 5px 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    background: linear-gradient(-90deg, #e942ff 1%, #8838ff 76%);
-    position: relative;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.icon {
-    width: 20%;
-    position: relative;
-    align-self: center;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.icon img {
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 60%;
-    border: 1px hsl(0, 0%, 100%) solid;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.icon::before {
-    position: absolute;
-    content: "\f104";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: flex;
-    height: 100%;
-    left: -10%;
-    align-items: center;
-    color: hsl(0, 0%, 100%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.call {
-    width: 80%;
-    position: relative;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.call h1 {
-    color: hsl(0, 0%, 100%);
-    font-size: 14px;
-    font-weight: 500;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.call p {
-    font-size: 10px;
-    color: hsl(276, 100%, 81%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header div.call::after {
-    position: absolute;
-    content: "\f142";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    display: flex;
-    height: 100%;
-    font-size: 12px;
-    right: 0%;
-    top: 0;
-    color: hsl(0, 0%, 100%);
-    align-items: center;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen div.header::before {
-    position: absolute;
-    content: '';
-    background-color: #fff;
-    border-radius: 0 0 15px 15px;
-    height: 20px;
-    width: 60%;
-    top: 0;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.top div.sam {
-    line-height: 1;
-    width: 69%;
-    padding: 2% 3%;
-    border-radius: 10px 10px 10px 0px;
-    margin: 5% 4%;
-    background-color: hsl(272, 41%, 93%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.top div.sam span {
-    font-size: 12px;
-    text-align: left;
-    color: hsl(276, 55%, 52%);
-    font-weight: 400;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.top div.dogs {
-    width: 100%;
-    padding-top: 2%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.top div.dogs div.pic {
-    display: flex;
-    padding-right: 1%;
-    width: 69%;
-    justify-content: flex-end;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.top div.dogs div.pic img {
-    border-radius: 10px;
-    margin: 0 3%;
-    width: 25%;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.mid {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.mid div.reply {
-    line-height: 1;
-    width: 69%;
-    padding: 2% 3%;
-    border-radius: 10px 10px 0px 10px;
-    margin: 3% 4% 1% 4%;
-    background-color: hsl(0, 0%, 100%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.mid div.reply span {
-    font-size: 12px;
-    text-align: left;
-    color: hsl(271, 15%, 43%);
-    font-weight: 400;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.mid div.reply:nth-of-type(2) {
-    width: fit-content;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.sam {
-    line-height: 1;
-    width: 69%;
-    padding: 2% 4%;
-    border-radius: 10px 10px 10px 0px;
-    margin: 5% 4%;
-    background-color: hsl(272, 41%, 93%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.sam span {
-    font-size: 12px;
-    text-align: left;
-    color: hsl(276, 55%, 52%);
-    font-weight: 400;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.offer {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    width: 80%;
-    padding: 5% 4%;
-    border-radius: 10px 10px 10px 0px;
-    margin: 5% 4%;
-    background: linear-gradient(90deg, #e942ff 1%, #8838ff 76%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.offer i {
-    margin: 0% 3%;
-    color: hsl(274, 39%, 93%);
-    opacity: 0.4;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.offer span {
-    font-size: 10px;
-    color: hsl(0, 0%, 100%);
-    font-weight: 400;
-    letter-spacing: 1px;
-    opacity: 0.8;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.bottom div.offer span:nth-of-type(2) {
-    opacity: 1;
-    margin-left: auto;
-    font-size: 15px;
-    color: hsl(0, 0%, 100%);
-    font-weight: 700;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.send {
-    padding: 3% 5% 2% 5%;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.send div.sendrep {
-    border-radius: 15px;
-    padding: 5% 0% 2% 0%;
-    background-color: hsl(0, 0%, 100%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-indent: 6%;
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.send div.sendrep span {
-    position: relative;
-    width: 90%;
-    font-size: 13px;
-    color: hsl(268, 19%, 85%);
-  }
-  main div.content div.phone div.bg div.screenbg div.screen section.send div.sendrep span:after {
-    position: absolute;
-    content: "\f138";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: flex;
-    height: 100%;
-    right: 0%;
-    top: -15%;
-    font-size: 26px;
-    align-items: center;
-    color: hsl(271, 36%, 24%);
+    width: initial;
+    height: unset;
   }
   main div.content div.text {
-    width: 50%;
+    width: 100%;
+    padding-top: 15%;
+    text-align: center;
   }
   main div.content div.text span {
-    color: hsl(271, 36%, 24%);
-    font-weight: 500;
-    font-size: 48px;
+    font-size: 34px;
   }
   main div.content div.text p {
-    padding: 5% 35% 5% 0%;
-    line-height: 1.8;
-    font-size: 18px;
-    color: hsl(206, 7%, 79%);
-    font-weight: 400;
+    padding: 3% 0%;
+    line-height: 1.4;
   }
 }
