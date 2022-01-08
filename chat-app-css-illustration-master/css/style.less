@@ -13,7 +13,7 @@ div, header, nav, article, section, aside, footer, h1, h2, h3, h4, h5, h6, p, a,
 }
 html, body {
 	height: 100%;
-	background-color: #a0a0a0;
+	background-color: hsl(0, 0%, 100%);
 	border: 0 solid transparent;
 	font-size: 16px;
 	margin: 0;
@@ -21,7 +21,7 @@ html, body {
 	padding: 0;
 	width: 100%;
 	display: block;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
 img, object, embed, canvas, video, audio, picture {
@@ -31,33 +31,661 @@ img, object, embed, canvas, video, audio, picture {
 img {
     display: block;
 }
-a {
-    text-decoration: none;
-    color: black;
+
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    &::before {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        display: block;
+        background: linear-gradient(180deg, rgba(233, 66, 255, 1) 1%, rgba(136, 56, 255, 1) 76%);
+        height: 90%;
+        width: 35%;
+        left: -12%;
+        border-radius: 0 0 44% 66%;
+    }
+
+    &::after {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        display: block;
+        background: linear-gradient(180deg, #e942ff 1%, #8838ff 76%);
+        height: 85%;
+        width: 30%;
+        right: -10%;
+        bottom: 0;
+        opacity: 0.03;
+        border-radius: 44% 66% 0 0;
+    }
+
+    div.content {
+        margin: 0 auto;
+        width: 80%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div.phone {
+            width: 50%;
+            padding-left: 12%;
+
+            div.bg {
+                -webkit-box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
+                box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
+                border-radius: 30px;
+                width: 300px;
+                height: 615px;
+                background-color: hsl(0, 0%, 100%);
+
+                div.screenbg {
+                    height: 100%;
+                    padding: 4% 5%;
+                    border-radius: 10%;
+                    width: 100%;
+                    margin: 0 auto;
+                    background-color: hsl(0, 0%, 100%);
+
+                    div.screen {
+                        height: 100%;
+                        border-radius: 30px;
+                        overflow: hidden;
+                        width: 100%;
+                        margin: 0 auto;
+                        background-color: hsl(270, 20%, 96%);
+
+                        div.header {
+                            padding: 12% 6% 4% 6%;
+                            border-radius: 0 0 5px 5px;
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: flex-end;
+                            background: linear-gradient(-90deg, rgba(233, 66, 255, 1) 1%, rgba(136, 56, 255, 1) 76%);
+                            position: relative;
+
+                            div.icon {
+                                width: 20%;
+                                position: relative;
+                                align-self: center;
+
+                                img {
+                                    margin: 0 auto;
+                                    border-radius: 50%;
+                                    width: 60%;
+                                    border: 1px hsl(0, 0%, 100%) solid;
+
+                                }
+
+                                &::before {
+                                    position: absolute;
+                                    content: "\f104";
+                                    font-family: "Font Awesome 5 Free";
+                                    font-weight: 900;
+                                    display: flex;
+                                    height: 100%;
+                                    left: -10%;
+                                    align-items: center;
+                                    color: hsl(0, 0%, 100%);
+                                }
+
+                            }
+
+                            div.call {
+                                width: 80%;
+                                position: relative;
+
+                                h1 {
+                                    color: hsl(0, 0%, 100%);
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+
+                                p {
+                                    font-size: 10px;
+                                    color: hsl(276, 100%, 81%);
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "\f142";
+                                    font-family: "Font Awesome 5 Free";
+                                    font-weight: 600;
+                                    display: flex;
+                                    height: 100%;
+                                    font-size: 12px;
+                                    right: 0%;
+                                    top: 0;
+                                    color: hsl(0, 0%, 100%);
+                                    align-items: center;
+                                }
+                            }
+
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                background-color: #fff;
+                                border-radius: 0 0 15px 15px;
+                                height: 20px;
+                                width: 60%;
+                                top: 0;
+                            }
+                        }
+
+                        //  END HEADER
+
+                        section.top {
+
+                            div.sam {
+                                line-height: 1;
+                                width: 69%;
+                                padding: 2% 3%;
+                                border-radius: 10px 10px 10px 0px;
+                                margin: 5% 4%;
+                                background-color: hsl(272, 41%, 93%);
+
+                                span {
+                                    font-size: 12px;
+                                    text-align: left;
+                                    color: hsl(276, 55%, 52%);
+                                    font-weight: 400;
+                                }
+                            }
+
+                            div.dogs {
+                                width: 100%;
+                                padding-top: 2%;
+                                display: flex;
+                                justify-content: flex-end;
+
+                                div.pic {
+                                    display: flex;
+                                    padding-right: 1%;
+                                    width: 69%;
+                                    justify-content: flex-end;
+
+                                    img {
+                                        border-radius: 10px;
+                                        margin: 0 3%;
+                                        width: 25%;
+                                    }
+                                }
+                            }
+                        }
+
+                        // TOP
+
+                        section.mid {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-direction: column;
+
+                            div.reply {
+                                line-height: 1;
+                                width: 69%;
+                                padding: 2% 3%;
+                                border-radius: 10px 10px 0px 10px;
+                                margin: 3% 4% 1% 4%;
+                                background-color: hsl(0, 0%, 100%);
+
+                                span {
+                                    font-size: 12px;
+                                    text-align: left;
+                                    color: hsl(271, 15%, 43%);
+                                    font-weight: 400;
+                                }
+                            }
+
+                            div.reply:nth-of-type(2) {
+                                width: fit-content;
+                            }
+                        }
+
+                        //MID
+
+                        section.bottom {
+                            div.sam {
+                                line-height: 1;
+                                width: 69%;
+                                padding: 2% 4%;
+                                border-radius: 10px 10px 10px 0px;
+                                margin: 5% 4%;
+                                background-color: hsl(272, 41%, 93%);
+
+                                span {
+                                    font-size: 12px;
+                                    text-align: left;
+                                    color: hsl(276, 55%, 52%);
+                                    font-weight: 400;
+                                }
+                            }
+
+                            div.offer {
+                                display: flex;
+                                align-items: center;
+                                line-height: 1;
+                                width: 80%;
+                                padding: 5% 4%;
+                                border-radius: 10px 10px 10px 0px;
+                                margin: 5% 4%;
+                                background: linear-gradient(90deg, rgba(233, 66, 255, 1) 1%, rgba(136, 56, 255, 1) 76%);
+
+                                i {
+                                    margin: 0% 3%;
+                                    color: hsl(274, 39%, 93%);
+                                    opacity: 0.4;
+                                }
+
+                                span {
+                                    font-size: 10px;
+                                    color: hsl(0, 0%, 100%);
+                                    font-weight: 400;
+                                    letter-spacing: 1px;
+                                    opacity: 0.8;
+                                }
+
+                                span:nth-of-type(2) {
+                                    opacity: 1;
+                                    margin-left: auto;
+                                    font-size: 15px;
+                                    color: hsl(0, 0%, 100%);
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                        //BOT
+
+                        section.send {
+                            padding: 3% 5% 2% 5%;
+
+                            div.sendrep {
+                                border-radius: 15px;
+                                padding: 5% 0% 2% 0%;
+                                background-color: hsl(0, 0%, 100%);
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                text-indent: 6%;
+
+                                span {
+                                    position: relative;
+                                    width: 90%;
+                                    font-size: 13px;
+                                    color: hsl(268, 19%, 85%);
+
+                                    &:after {
+                                        position: absolute;
+                                        content: "\f138";
+                                        font-family: "Font Awesome 5 Free";
+                                        font-weight: 900;
+                                        display: flex;
+                                        height: 100%;
+                                        right: 0%;
+                                        top: -15%;
+                                        font-size: 26px;
+                                        align-items: center;
+                                        color: hsl(271, 36%, 24%);
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // END PHONE
+
+        div.text {
+            width: 50%;
+
+            span {
+                color: hsl(271, 36%, 24%);
+                font-weight: 500;
+                font-size: 48px;
+            }
+
+            p {
+                padding: 5% 35% 5% 0%;
+                line-height: 1.8;
+                font-size: 18px;
+                color: hsl(206, 7%, 79%);
+                font-weight: 400;
+            }
+        }
+    }
 }
 
-/* ------------------------------- RECURENTES -- */
-
-/* ------------------------------- END RECURENTES -- */
-
-
-
-
-
-
-
-
 
 
 
 
 /* ------------------------------------------------------------------------- */
-/* ----------------------------------------------MEDIA QUERIES 960px ---- */
+/* ----------------------------------------------MEDIA QUERIES 375px ---- */
 /* ------------------------------------------------------------------------- */
 
-@media screen and (max-width: 960px) {
-    .center {
-        width: 100%;
-        margin: 0 auto;
+@media screen and (max-width: 375px) {
+    main {
+    
+        &::before {
+            height: 42%;
+            width: 100%;
+            left: -50%;
+        }
+    
+        &::after {
+            height: 85%;
+            width: 30%;
+            right: -10%;
+            bottom: 0;
+        }
+    
+        div.content {
+            margin: 0 auto;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            div.phone {
+                width: 50%;
+                padding-left: 12%;
+    
+                div.bg {
+                    -webkit-box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
+                    box-shadow: 7px 14px 13px 4px rgba(0, 0, 0, 0.2);
+                    border-radius: 30px;
+                    width: 300px;
+                    height: 615px;
+                    background-color: hsl(0, 0%, 100%);
+    
+                    div.screenbg {
+                        height: 100%;
+                        padding: 4% 5%;
+                        border-radius: 10%;
+                        width: 100%;
+                        margin: 0 auto;
+                        background-color: hsl(0, 0%, 100%);
+    
+                        div.screen {
+                            height: 100%;
+                            border-radius: 30px;
+                            overflow: hidden;
+                            width: 100%;
+                            margin: 0 auto;
+                            background-color: hsl(270, 20%, 96%);
+    
+                            div.header {
+                                padding: 12% 6% 4% 6%;
+                                border-radius: 0 0 5px 5px;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: flex-end;
+                                background: linear-gradient(-90deg, rgba(233, 66, 255, 1) 1%, rgba(136, 56, 255, 1) 76%);
+                                position: relative;
+    
+                                div.icon {
+                                    width: 20%;
+                                    position: relative;
+                                    align-self: center;
+    
+                                    img {
+                                        margin: 0 auto;
+                                        border-radius: 50%;
+                                        width: 60%;
+                                        border: 1px hsl(0, 0%, 100%) solid;
+    
+                                    }
+    
+                                    &::before {
+                                        position: absolute;
+                                        content: "\f104";
+                                        font-family: "Font Awesome 5 Free";
+                                        font-weight: 900;
+                                        display: flex;
+                                        height: 100%;
+                                        left: -10%;
+                                        align-items: center;
+                                        color: hsl(0, 0%, 100%);
+                                    }
+    
+                                }
+    
+                                div.call {
+                                    width: 80%;
+                                    position: relative;
+    
+                                    h1 {
+                                        color: hsl(0, 0%, 100%);
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                    }
+    
+                                    p {
+                                        font-size: 10px;
+                                        color: hsl(276, 100%, 81%);
+                                    }
+    
+                                    &::after {
+                                        position: absolute;
+                                        content: "\f142";
+                                        font-family: "Font Awesome 5 Free";
+                                        font-weight: 600;
+                                        display: flex;
+                                        height: 100%;
+                                        font-size: 12px;
+                                        right: 0%;
+                                        top: 0;
+                                        color: hsl(0, 0%, 100%);
+                                        align-items: center;
+                                    }
+                                }
+    
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    background-color: #fff;
+                                    border-radius: 0 0 15px 15px;
+                                    height: 20px;
+                                    width: 60%;
+                                    top: 0;
+                                }
+                            }
+    
+                            //  END HEADER
+    
+                            section.top {
+    
+                                div.sam {
+                                    line-height: 1;
+                                    width: 69%;
+                                    padding: 2% 3%;
+                                    border-radius: 10px 10px 10px 0px;
+                                    margin: 5% 4%;
+                                    background-color: hsl(272, 41%, 93%);
+    
+                                    span {
+                                        font-size: 12px;
+                                        text-align: left;
+                                        color: hsl(276, 55%, 52%);
+                                        font-weight: 400;
+                                    }
+                                }
+    
+                                div.dogs {
+                                    width: 100%;
+                                    padding-top: 2%;
+                                    display: flex;
+                                    justify-content: flex-end;
+    
+                                    div.pic {
+                                        display: flex;
+                                        padding-right: 1%;
+                                        width: 69%;
+                                        justify-content: flex-end;
+    
+                                        img {
+                                            border-radius: 10px;
+                                            margin: 0 3%;
+                                            width: 25%;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            // TOP
+    
+                            section.mid {
+                                display: flex;
+                                align-items: flex-end;
+                                flex-direction: column;
+    
+                                div.reply {
+                                    line-height: 1;
+                                    width: 69%;
+                                    padding: 2% 3%;
+                                    border-radius: 10px 10px 0px 10px;
+                                    margin: 3% 4% 1% 4%;
+                                    background-color: hsl(0, 0%, 100%);
+    
+                                    span {
+                                        font-size: 12px;
+                                        text-align: left;
+                                        color: hsl(271, 15%, 43%);
+                                        font-weight: 400;
+                                    }
+                                }
+    
+                                div.reply:nth-of-type(2) {
+                                    width: fit-content;
+                                }
+                            }
+    
+                            //MID
+    
+                            section.bottom {
+                                div.sam {
+                                    line-height: 1;
+                                    width: 69%;
+                                    padding: 2% 4%;
+                                    border-radius: 10px 10px 10px 0px;
+                                    margin: 5% 4%;
+                                    background-color: hsl(272, 41%, 93%);
+    
+                                    span {
+                                        font-size: 12px;
+                                        text-align: left;
+                                        color: hsl(276, 55%, 52%);
+                                        font-weight: 400;
+                                    }
+                                }
+    
+                                div.offer {
+                                    display: flex;
+                                    align-items: center;
+                                    line-height: 1;
+                                    width: 80%;
+                                    padding: 5% 4%;
+                                    border-radius: 10px 10px 10px 0px;
+                                    margin: 5% 4%;
+                                    background: linear-gradient(90deg, rgba(233, 66, 255, 1) 1%, rgba(136, 56, 255, 1) 76%);
+    
+                                    i {
+                                        margin: 0% 3%;
+                                        color: hsl(274, 39%, 93%);
+                                        opacity: 0.4;
+                                    }
+    
+                                    span {
+                                        font-size: 10px;
+                                        color: hsl(0, 0%, 100%);
+                                        font-weight: 400;
+                                        letter-spacing: 1px;
+                                        opacity: 0.8;
+                                    }
+    
+                                    span:nth-of-type(2) {
+                                        opacity: 1;
+                                        margin-left: auto;
+                                        font-size: 15px;
+                                        color: hsl(0, 0%, 100%);
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+    
+                            //BOT
+    
+                            section.send {
+                                padding: 3% 5% 2% 5%;
+    
+                                div.sendrep {
+                                    border-radius: 15px;
+                                    padding: 5% 0% 2% 0%;
+                                    background-color: hsl(0, 0%, 100%);
+                                    display: flex;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                    text-indent: 6%;
+    
+                                    span {
+                                        position: relative;
+                                        width: 90%;
+                                        font-size: 13px;
+                                        color: hsl(268, 19%, 85%);
+    
+                                        &:after {
+                                            position: absolute;
+                                            content: "\f138";
+                                            font-family: "Font Awesome 5 Free";
+                                            font-weight: 900;
+                                            display: flex;
+                                            height: 100%;
+                                            right: 0%;
+                                            top: -15%;
+                                            font-size: 26px;
+                                            align-items: center;
+                                            color: hsl(271, 36%, 24%);
+                                        }
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            // END PHONE
+    
+            div.text {
+                width: 50%;
+    
+                span {
+                    color: hsl(271, 36%, 24%);
+                    font-weight: 500;
+                    font-size: 48px;
+                }
+    
+                p {
+                    padding: 5% 35% 5% 0%;
+                    line-height: 1.8;
+                    font-size: 18px;
+                    color: hsl(206, 7%, 79%);
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
