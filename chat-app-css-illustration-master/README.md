@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY/hub/htmllessflex-7JDto1Nka)
 - Live Site URL: [Live Site](https://lithyie.github.io/chat-app-css-illustration-master/)
 
 ## My process
