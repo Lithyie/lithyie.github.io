@@ -194,16 +194,6 @@ main article div.content div.buttons a:nth-of-type(2):hover {
   color: hsl(223, 47%, 23%);
   font-weight: 900;
 }
-div.credits div.attribution {
-  font-size: 16px;
-  text-align: center;
-}
-div.credits div.attribution a {
-  color: hsl(245, 83%, 68%);
-}
-div.credits div.attribution a:hover {
-  color: hsl(245, 75%, 52%);
-}
 /* ------------------------------------------------------------------------- */
 /* ----------------------------------------------MEDIA QUERIES 375px ---- */
 /* ------------------------------------------------------------------------- */
@@ -216,8 +206,5 @@ div.credits div.attribution a:hover {
   }
   main article div.content div.price div.plan::before {
     left: -3%;
-  }
-  main div.credits {
-    display: none;
   }
 }
