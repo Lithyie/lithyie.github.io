@@ -39,15 +39,16 @@ img {
 html,
 body {
   height: 100%;
-  background-color: #a0a0a0;
+  background-color: black;
   border: 0 solid transparent;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
   min-height: 100%;
   padding: 0;
   width: 100%;
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
 }
 img,
 object,
@@ -84,6 +85,67 @@ a {
   margin: 0 auto;
 }
 /* ------------------------------- END RECURENTES -- */
+main {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main section.cards {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 84.5%;
+  background-color: #fff;
+}
+main section.cards div.content {
+  display: flex;
+  align-items: center;
+  padding: 0% 18%;
+}
+main section.cards div.content article {
+  width: calc(100% / 3);
+  height: 57%;
+  padding: 0% 5%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+main section.cards div.content article div.icon {
+  padding: 5% 0%;
+}
+main section.cards div.content article h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  padding-top: 5%;
+}
+main section.cards div.content article p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 24px;
+  padding-bottom: 30%;
+}
+main section.cards div.content article a {
+  background-color: hsl(0, 0%, 95%);
+  width: fit-content;
+  padding: 2% 5%;
+  border-radius: 20px;
+}
+main section.cards div.content article:nth-of-type(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0px 0px 10px;
+}
+main section.cards div.content article:nth-of-type(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+main section.cards div.content article:nth-of-type(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0px 10px 10px 0px;
+}
 /* ------------------------------------------------------------------------- */
 /* ----------------------------------------------MEDIA QUERIES 960px ---- */
 /* ------------------------------------------------------------------------- */
