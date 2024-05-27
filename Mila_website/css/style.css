@@ -11,7 +11,7 @@ body {
   display: table;
   width: 100%;
   height: 100%;
-  background-color: #171717;
+  background-color: #ffffff;
   color: #000;
   line-height: 1.6;
   position: relative;
@@ -34,7 +34,7 @@ body {
   height: 100%;
   top: 0;
   left: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.073);
   overflow: hidden;
 }
 .line::after {
@@ -61,6 +61,44 @@ body {
 }
 .line:nth-child(3)::after {
   animation-delay: 2.5s;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+}
+.menu .logo {
+  flex: 0 0 auto;
+}
+.menu .logo img {
+  height: 50px;
+}
+.menu .spacer {
+  flex: 1;
+}
+.menu .menu-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex: 0 0 60%;
+}
+.menu .menu-buttons .menu-button {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+.menu .menu-buttons .menu-button:hover {
+  color: #d6bb73;
+}
+.menu .menu-buttons .menu-button.contact {
+  background-color: #d6bb73;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+}
+.menu .menu-buttons .menu-button.contact:hover {
+  color: white;
 }
 @keyframes drop {
   0% {
