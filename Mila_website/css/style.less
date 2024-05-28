@@ -1,7 +1,51 @@
-@hover-color: #d6bb73;
-@contact-bg-color: #d6bb73;
+// RESET 
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+
+  &::before, &::after {
+    content: '';
+    content: none;
+  }
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} 
+
+// RESET 
 
 * {
   margin: 0;
@@ -9,8 +53,7 @@
   box-sizing: border-box !important;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -24,9 +67,9 @@ body {
   position: relative;
   font-family: sans-serif;
   overflow: hidden;
-  cursor: none;
 }
 
+// Background effect
 .lines {
   position: absolute;
   top: 0;
@@ -43,91 +86,59 @@ body {
   height: 100%;
   top: 0;
   left: 50%;
-  background: rgba(255, 255, 255, 0.073);
+  background: rgba(0, 0, 0, 0.11);
   overflow: hidden;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     height: 15vh;
     width: 100%;
     top: -50%;
     left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #000000 75%, #000000 100%);
+    -webkit-animation: drop 7s 0s infinite;
     animation: drop 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   }
 
   &:nth-child(1) {
-    margin-left: -25%;
+    margin-left: -35%;
 
     &::after {
+      -webkit-animation-delay: 2s;
       animation-delay: 2s;
     }
   }
 
   &:nth-child(3) {
-    margin-left: 25%;
+    margin-left: 35%;
 
     &::after {
+      -webkit-animation-delay: 2.5s;
       animation-delay: 2.5s;
     }
   }
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-
-    .logo {
-        flex: 0 0 auto;
-
-        img {
-            height: 50px; // Ajustez la taille de l'image selon vos besoins
-        }
-    }
-
-    .spacer {
-        flex: 1;
-    }
-
-    .menu-buttons {
-        display: flex;
-        justify-content: space-around;
-        flex: 0 0 60%; // Ajustez la largeur selon vos besoins
-
-        .menu-button {
-            text-decoration: none;
-            color: black;
-            padding: 10px 15px;
-            transition: color 0.3s;
-
-            &:hover {
-                color: @hover-color;
-            }
-
-            &.contact {
-                background-color: @contact-bg-color;
-                padding: 10px 20px;
-                border-radius: 5px; // Ajoutez un bord arrondi si nécessaire
-                color: black;
-
-                &:hover {
-                    color: white; // Change le texte en blanc au survol si besoin
-                }
-            }
-        }
-    }
+// End Bg Effect
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
 }
+
 @keyframes drop {
   0% {
     top: -50%;
   }
-
   100% {
     top: 110%;
   }
