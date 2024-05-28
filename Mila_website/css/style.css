@@ -136,7 +136,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
   line-height: 1.6;
   position: relative;
   font-family: sans-serif;
@@ -189,6 +189,33 @@ body {
 .line:nth-child(3)::after {
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
+}
+body {
+  width: 100vw;
+}
+body nav {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+  width: 100%;
+}
+body nav div.logo a img {
+  width: 80%;
+}
+body nav div.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+body nav div.menu ul li {
+  padding: 2% 4%;
+}
+body nav div.menu ul li a {
+  color: white;
+}
+body nav div.menu ul li a:visited {
+  color: white;
 }
 @-webkit-keyframes drop {
   0% {

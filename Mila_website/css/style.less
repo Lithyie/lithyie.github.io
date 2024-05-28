@@ -62,7 +62,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
   line-height: 1.6;
   position: relative;
   font-family: sans-serif;
@@ -126,6 +126,58 @@ body {
 }
 
 // End Bg Effect
+
+body{
+  width: 100vw;
+  nav{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    width: 100%;
+    div.logo{
+      a{
+        img{
+          width: 80%;
+        }
+      }
+    }
+    div.menu{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          padding: 2% 4%;
+          a{
+            color: white;
+            &:visited{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes drop {
   0% {
     top: -50%;
