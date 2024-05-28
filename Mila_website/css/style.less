@@ -1,256 +1,170 @@
-@luxant: #D6BB73;
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 @charset "utf-8";
-@import url('https://fonts.cdnfonts.com/css/valorant');
 
-// RESET 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
 
-  &::before, &::after {
-    content: '';
-    content: none;
-  }
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-} 
-
-// RESET 
-
-* {
+div,
+header,
+nav,
+article,
+section,
+aside,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+figure,
+figcaption,
+.class,
+img {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important;
 }
 
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
 
+html,
 body {
-  display: table;
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 1.6;
-  position: relative;
+  height: 100%;
+  background-color: #040404;
+  border: 0 solid transparent;
   font-size: 16px;
-  font-family: 'SF Pro Display', sans-serif;
-  overflow: hidden;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  width: 100%;
+  display: block;
+  font-family: 'Roboto', sans-serif;
 }
 
-
-body{
-  // MENU BAR
-  nav{
-    z-index: 10;
-    position: sticky;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    width: 100vw;
-    height: 141px;
-    mix-blend-mode: normal;
-    box-shadow: 0px 4px 31.5px -17px rgba(0, 0, 0, 0.25);
-    div.logo{
-      height: 100%;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      a{
-        img{
-          width: 80%;
-        }
-      }
-    }
-    div.menu{
-      display: flex;
-      align-items: center;
-      height: 100%;
-      width: 70%;
-
-      ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        li{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 30%;
-          border-radius: 10px;
-          a{
-            padding: 3% 0%;
-            width: 70%;
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 500;
-            font-size: 16px;
-            &:visited{
-              color: black;
-            }
-            &:hover{
-              color: @luxant;
-            }
-          }
-          &:nth-of-type(4){
-            a{
-              border-radius: 5px;
-              background-color: @luxant;
-              border: 2px solid transparent;
-              &:hover{
-                color: black;
-                background-color: #fff;
-                border: 2px solid @luxant;
-                transition: all 0.1s ease-in-out;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// END MENU BAR
-
-section.header {
-  height: 85%;
-  position: relative;
-
-  // Background effect
-.lines {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: auto;
-  width: 90vw;
+html::before,
+body::before {
+  position: fixed;
+  top: 500px;
+  left: 100px;
+  bottom: 0;
+  content: '';
+  width: 400px;
+  height: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  transform: rotate(20deg);
 }
 
-.line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: rgba(0, 0, 0, 0.11);
-  overflow: hidden;
+html::after,
+body::after {
+  position: fixed;
+  top: -150px;
+  right: -50px;
+  bottom: 0;
+  content: '';
+  width: 400px;
+  height: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  transform: rotate(-30deg);
+}
+
+img,
+object,
+embed,
+canvas,
+video,
+audio,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ------------------------------- RECURRENT -- */
+.btnt {
+  visibility: hidden;
+}
+
+.clear {
+  display: block;
+  zoom: 1;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
-    position: absolute;
-    height: 15vh;
-    width: 100%;
-    top: -50%;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #000000 75%, #000000 100%);
-    -webkit-animation: drop 7s 0s infinite;
-    animation: drop 7s 0s infinite;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-  }
-
-  &:nth-child(1) {
-    margin-left: -25%;
-
-    &::after {
-      -webkit-animation-delay: 2s;
-      animation-delay: 2s;
-    }
-  }
-
-  &:nth-child(3) {
-    margin-left: 25%;
-
-    &::after {
-      -webkit-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
   }
 }
 
-// End Bg Effect
-
-  div.bg_mila {
-    span {
-      /* MILA */
-      position: absolute;
-      left: calc(50% - 1335px/2 + 0.5px);
-      top: 160px;
-      font-family: 'VALORANT';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 400px;
-      line-height: 440px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: rgba(0, 0, 0, 0.04);
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: rgba(0, 0, 0, 0.1);
-    }
-  }
+.text-slider-items {
+  display: none;
 }
 
-
-@-webkit-keyframes drop {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
+.center {
+  width: 960px;
+  margin: 0 auto;
 }
 
-@keyframes drop {
-  0% {
-    top: -50%;
+.hide {
+  display: none;
+}
+
+.fancybox-caption {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  bottom: 13px;
+  text-align: center;
+  display: flex;
+
+  &::before {
+    background: 0 0;
   }
-  100% {
-    top: 110%;
+
+  &::after {
+    border-bottom: 0;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  > span {
+    background-color: transparent;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 5px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
   }
 }
+/* ------------------------------- END RECURRENT -- */
