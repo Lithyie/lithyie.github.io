@@ -1,3 +1,8 @@
+@luxant: #D6BB73;
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@charset "utf-8";
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
 // RESET 
 
 html, body, div, span, applet, object, iframe,
@@ -59,18 +64,102 @@ html, body {
 
 body {
   display: table;
-  width: 100%;
-  height: 100%;
   background-color: #ffffff;
   color: #000000;
   line-height: 1.6;
   position: relative;
-  font-family: sans-serif;
+  font-size: 16px;
+  font-family: 'SF Pro Display', sans-serif;
   overflow: hidden;
 }
 
-// Background effect
+
+body{
+  // MENU BAR
+  nav{
+    z-index: 10;
+    position: sticky;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    width: 100vw;
+    height: 141px;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 31.5px -17px rgba(0, 0, 0, 0.25);
+    div.logo{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      a{
+        img{
+          width: 80%;
+        }
+      }
+    }
+    div.menu{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 70%;
+
+      ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        li{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 30%;
+          border-radius: 10px;
+          a{
+            padding: 3% 0%;
+            width: 70%;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 16px;
+            &:visited{
+              color: black;
+            }
+            &:hover{
+              color: @luxant;
+            }
+          }
+          &:nth-of-type(4){
+            a{
+              border-radius: 5px;
+              background-color: @luxant;
+              border: 2px solid transparent;
+              &:hover{
+                color: black;
+                background-color: #fff;
+                border: 2px solid @luxant;
+                transition: all 0.1s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// END MENU BAR
+
+section.header {
+  height: 85%;
+  position: relative;
+
+  // Background effect
 .lines {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -107,7 +196,7 @@ body {
   }
 
   &:nth-child(1) {
-    margin-left: -35%;
+    margin-left: -25%;
 
     &::after {
       -webkit-animation-delay: 2s;
@@ -116,7 +205,7 @@ body {
   }
 
   &:nth-child(3) {
-    margin-left: 35%;
+    margin-left: 25%;
 
     &::after {
       -webkit-animation-delay: 2.5s;
@@ -127,55 +216,25 @@ body {
 
 // End Bg Effect
 
-body{
-  width: 100vw;
-  nav{
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 2%;
-    width: 100%;
-    div.logo{
-      a{
-        img{
-          width: 80%;
-        }
-      }
-    }
-    div.menu{
-      ul{
-        display: flex;
-        justify-content: space-between;
-        li{
-          padding: 2% 4%;
-          a{
-            color: white;
-            &:visited{
-              color: white;
-            }
-          }
-        }
-      }
+  div.bg_mila {
+    span {
+      /* MILA */
+      position: absolute;
+      left: calc(50% - 1335px/2 + 0.5px);
+      top: 160px;
+      font-family: 'VALORANT';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 400px;
+      line-height: 440px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(0, 0, 0, 0.04);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(0, 0, 0, 0.1);
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @-webkit-keyframes drop {
