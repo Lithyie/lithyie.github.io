@@ -1,6 +1,13 @@
 @charset "utf-8";
-@luxant: #d6bb73;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&display=swap');
 
+@luxant: #d6bb73;
+@light: 300;
+@regular: 400;
+@medium: 500;
+@semibold: 600;
+@bold: 700;
 
 header,
 section,
@@ -53,7 +60,10 @@ body {
   padding: 0;
   width: 100%;
   display: block;
-  font-family: 'Neue';
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: @regular;
+  font-style: normal;
 
   ::-webkit-scrollbar {
     display: none;
@@ -84,6 +94,7 @@ a {
 }
 
 /* ------------------------------- RECURRENT -- */
+
 .btnt {
   visibility: hidden;
 }
@@ -150,3 +161,94 @@ a {
 }
 
 /* ------------------------------- END RECURRENT -- */
+
+header {
+  height: 100vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  div.nav {
+    position: fixed;
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div.logo {
+      width: fit-content;
+    }
+
+    div.menu {
+      width: 50%;
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+          width: -webkit-fill-available;
+          list-style-type: none;
+          text-align: end;
+
+          a {
+            font-weight: @semibold;
+            font-size: 16px;
+
+            img {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.main{
+    display: flex;
+    height: 85%;
+    width: 100%;
+    align-self: flex-end;
+    align-items: flex-end;
+    
+    div.left{
+      height: 100%;
+      width: 100%/3;
+      background-color: rgb(178, 200, 136);
+    }
+    div.mid{
+      height: 100%;
+      width: 100%/3;
+
+      div.bg{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    div.right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3%;
+      height: 100%;
+      width: 100%/3;
+      background-color: grey;
+
+      h1{
+        font-family: 'Krub';
+        text-transform: uppercase;
+        font-weight: @semibold;
+      }
+      p{
+        font-family: 'krub';
+        font-weight: @semibold;
+        font-size: 20px;
+        width: 70%;
+      }
+    }
+  }
+}
