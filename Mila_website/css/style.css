@@ -301,7 +301,7 @@ a {
 /* ------------------------------- END RECURRENT -- */
 header {
   height: 100vh;
-  width: 90%;
+  width: 1440px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -309,7 +309,7 @@ header {
 header div.nav {
   position: fixed;
   height: 15%;
-  width: 90%;
+  width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -338,7 +338,7 @@ header div.nav div.menu ul li a img {
 }
 header div.main {
   display: flex;
-  height: 85%;
+  height: 70%;
   width: 100%;
   align-self: flex-end;
   align-items: flex-end;
@@ -346,35 +346,85 @@ header div.main {
 header div.main div.left {
   height: 100%;
   width: 33.33333333%;
-  background-color: #b2c888;
+  font-family: 'krub';
 }
-header div.main div.mid {
+header div.main div.left div.topline p {
+  font-size: 144px;
+  font-weight: 700;
+  letter-spacing: 15px;
+}
+header div.main div.left div.topline p span {
+  color: #d6bb73;
+}
+header div.main div.left div.content div {
+  position: relative;
+}
+header div.main div.left div.content div p:nth-of-type(1) {
+  font-weight: 400;
+  font-size: 36px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  letter-spacing: 15px;
+}
+header div.main div.left div.content div p:nth-of-type(2) {
+  position: absolute;
+  font-weight: 700;
+  left: 40%;
+  top: 50%;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+header div.main div.left div.content div p:nth-of-type(2)::before {
+  content: url('../assets/icons/square.svg');
+  position: absolute;
+  left: -20%;
+}
+div.mid {
   height: 100%;
   width: 33.33333333%;
 }
-header div.main div.mid div.bg {
+div.mid div.bg {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header div.main div.right {
+div.mid div.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+div.right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3%;
+  gap: 10%;
   height: 100%;
   width: 33.33333333%;
-  background-color: grey;
 }
-header div.main div.right h1 {
+div.right h1 {
   font-family: 'Krub';
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: 5px;
 }
-header div.main div.right p {
+div.right p {
   font-family: 'krub';
   font-weight: 600;
   font-size: 20px;
-  width: 70%;
+  width: 90%;
+  line-height: 170%;
+  letter-spacing: 3px;
+}
+div.right a {
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 2% 5%;
+  font-family: 'oswald';
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #d6bb73;
 }

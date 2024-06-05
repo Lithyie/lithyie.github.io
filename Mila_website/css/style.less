@@ -164,7 +164,7 @@ a {
 
 header {
   height: 100vh;
-  width: 90%;
+  width: 1440px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -172,7 +172,7 @@ header {
   div.nav {
     position: fixed;
     height: 15%;
-    width: 90%;
+    width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -206,49 +206,116 @@ header {
     }
   }
 
-  div.main{
+  div.main {
     display: flex;
-    height: 85%;
+    height: 70%;
     width: 100%;
     align-self: flex-end;
     align-items: flex-end;
-    
-    div.left{
-      height: 100%;
-      width: 100%/3;
-      background-color: rgb(178, 200, 136);
-    }
-    div.mid{
-      height: 100%;
-      width: 100%/3;
 
-      div.bg{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    div.right{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3%;
+    div.left {
       height: 100%;
       width: 100%/3;
-      background-color: grey;
+      font-family: 'krub';
 
-      h1{
-        font-family: 'Krub';
-        text-transform: uppercase;
-        font-weight: @semibold;
+      div.topline {
+        p {
+          font-size: 144px;
+          font-weight: @bold;
+          letter-spacing: 15px;
+
+          span {
+            color: @luxant;
+          }
+        }
       }
-      p{
-        font-family: 'krub';
-        font-weight: @semibold;
-        font-size: 20px;
-        width: 70%;
+
+      div.content {
+        div {
+            position: relative;
+            p {
+              &:nth-of-type(1){
+                font-weight: @regular;
+                font-size: 36px;
+                text-transform: uppercase;
+                writing-mode: vertical-rl;
+                transform: rotate(-180deg);
+                letter-spacing: 15px;
+              }
+
+              &:nth-of-type(2) {
+                position: absolute;
+                font-weight: @bold;
+                left: 40%;
+                top: 50%;
+                font-size: 14px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                &::before {
+                  content: url('../assets/icons/square.svg');
+                  position: absolute;
+                  left: -20%;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-}
+
+  div.mid {
+    height: 100%;
+    width: 100%/3;
+    div.bg {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div.hero{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      img{
+
+      }
+    }
+  }
+
+  div.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    height: 100%;
+    width: 100%/3;
+
+    h1 {
+      font-family: 'Krub';
+      text-transform: uppercase;
+      font-weight: @semibold;
+      letter-spacing: 5px;
+    }
+
+    p {
+      font-family: 'krub';
+      font-weight: @semibold;
+      font-size: 20px;
+      width: 90%;
+      line-height: 170%;
+      letter-spacing: 3px;
+    }
+
+    a{
+      text-transform: uppercase;
+      width: fit-content;
+      padding: 2% 5%;
+      font-family: 'oswald';
+      font-weight: @bold;
+      font-size: 18px;
+      background-color: @luxant;
+    }
+  }
