@@ -1,0 +1,373 @@
+@charset "utf-8";
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYREGULAR.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 100;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYULTRALIGHTITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 200;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYTHINITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 300;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYLIGHTITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 500;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYMEDIUM.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 600;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYSEMIBOLDITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 700;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBOLD.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 800;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYHEAVYITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 900;
+  src: local('SF Pro Display'), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBLACKITALIC.woff) format('woff');
+}
+@font-face {
+  font-family: valorant;
+  font-style: normal;
+  font-weight: 400;
+  src: local('VALORANT'), url('https://fonts.cdnfonts.com/s/37505/Valorant Font.woff') format('woff');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+q::before,
+blockquote::after,
+q::after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  width: 100%;
+  display: table;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  position: relative;
+  font-size: 16px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+body nav {
+  z-index: 10;
+  position: sticky;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  width: 100%;
+  height: 141px;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 31.5px -17px rgba(0, 0, 0, 0.25);
+}
+body nav div.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+body nav div.logo a img {
+  width: 80%;
+}
+body nav div.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+}
+body nav div.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+body nav div.menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  border-radius: 10px;
+}
+body nav div.menu ul li a {
+  padding: 3% 0%;
+  width: 70%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+}
+body nav div.menu ul li a:visited {
+  color: black;
+}
+body nav div.menu ul li a:hover {
+  color: #D6BB73;
+}
+body nav div.menu ul li:nth-of-type(4) a {
+  border-radius: 5px;
+  background-color: #D6BB73;
+  border: 2px solid transparent;
+}
+body nav div.menu ul li:nth-of-type(4) a:hover {
+  color: black;
+  background-color: #fff;
+  border: 2px solid #D6BB73;
+  transition: all 0.1s ease-in-out;
+}
+section.header {
+  background-image: url("../assets/img/bg.png");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85%;
+  position: relative;
+}
+section.header .lines {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+section.header .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+}
+section.header .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #000000 75%, #000000 100%);
+  -webkit-animation: drop 7s 0s infinite;
+  animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+section.header .line:nth-child(1) {
+  margin-left: -25%;
+}
+section.header .line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+section.header .line:nth-child(3) {
+  margin-left: 25%;
+}
+section.header .line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+section.header div.bg_mila span {
+  /* MILA */
+  position: absolute;
+  left: calc(50% - 1335px/2 + 0.5px);
+  top: 160px;
+  font-family: 'VALORANT';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 400px;
+  line-height: 440px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.04);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.1);
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1800px;
+  width: 100%;
+}
+div p {
+  margin: 0 auto;
+}
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
