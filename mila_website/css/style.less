@@ -563,7 +563,7 @@ section.target {
       flex: 1;
       position: relative;
       transition: 0.5s ease;
-      width: 100% /5;
+      width: 20%;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
@@ -581,10 +581,23 @@ section.target {
         position: relative;
 
         div.titre{
+          overflow: hidden;
           .texte{
-            width: 50%;
+            min-width: 55%;
+            max-width: 55%;
+            max-height: max-content;
+            overflow: hidden;
             padding: 2%;
-            display: none;
+            opacity: 0;
+            transition: opacity .5s ease;
+            transition-delay: 0.8s;
+            position: absolute;
+            font-family: 'krub';
+            font-weight: @medium;
+            border-radius: 20px;
+            p{
+              padding: 2% 0%;
+            }
           }
         }
 
@@ -603,7 +616,7 @@ section.target {
 
             .texte{
               background-color: white;
-              display: flex;
+              opacity: 1;
               position: absolute;
               top: 50%; 
               left: 25%;
@@ -620,13 +633,11 @@ section.target {
 
           &::before {
             background-image: url('../assets/img/mila_train.jpg');
-            /* Black and white image */
             opacity: 0;
           }
 
           &::after {
             background-image: url('../assets/img/mila_trainhover.jpg');
-            /* Color image */
             opacity: 1;
           }
         }
@@ -648,13 +659,11 @@ section.target {
 
         &::before {
           background-image: url('../assets/img/mila_train.jpg');
-          /* Black and white image */
           opacity: 1;
         }
 
         &::after {
           background-image: url('../assets/img/mila_trainhover.jpg');
-          /* Color image */
           opacity: 0;
         }
       }
@@ -692,13 +701,11 @@ section.target {
 
           &::before {
             background-image: url('../assets/img/mila_airport.jpg');
-            /* Black and white image */
             opacity: 0;
           }
 
           &::after {
             background-image: url('../assets/img/mila_airporttest.jpg');
-            /* Color image */
             opacity: 1;
           }
         }
@@ -720,13 +727,11 @@ section.target {
 
         &::before {
           background-image: url('../assets/img/mila_airport.jpg');
-          /* Black and white image */
           opacity: 1;
         }
 
         &::after {
           background-image: url('../assets/img/mila_airporttest.jpg');
-          /* Color image */
           opacity: 0;
         }
       }
@@ -739,7 +744,7 @@ section.target {
         align-items: center;
         flex-direction: column;
         transition: all 1.3s ease;
-        overflow: hidden;
+        overflow: hidden;   
 
         video {
           max-width: 80%;
@@ -764,13 +769,11 @@ section.target {
 
           &::before {
             background-image: url('../assets/img/mila_centres.jpg');
-            /* Black and white image */
             opacity: 0;
           }
 
           &::after {
             background-image: url('../assets/img/mila_centreshover.jpg');
-            /* Color image */
             opacity: 1;
           }
         }
@@ -792,13 +795,11 @@ section.target {
 
         &::before {
           background-image: url('../assets/img/mila_centres.jpg');
-          /* Black and white image */
           opacity: 1;
         }
 
         &::after {
           background-image: url('../assets/img/mila_centreshover.jpg');
-          /* Color image */
           opacity: 0;
         }
       }
@@ -836,13 +837,11 @@ section.target {
 
           &::before {
             background-image: url('../assets/img/mila_train.jpg');
-            /* Black and white image */
             opacity: 0;
           }
 
           &::after {
             background-image: url('../assets/img/mila_trainhover.jpg');
-            /* Color image */
             opacity: 1;
           }
         }
@@ -864,13 +863,11 @@ section.target {
 
         &::before {
           background-image: url('../assets/img/mila_train.jpg');
-          /* Black and white image */
           opacity: 1;
         }
 
         &::after {
           background-image: url('../assets/img/mila_trainhover.jpg');
-          /* Color image */
           opacity: 0;
         }
       }
@@ -908,13 +905,11 @@ section.target {
 
           &::before {
             background-image: url('../assets/img/mila_train.jpg');
-            /* Black and white image */
             opacity: 0;
           }
 
           &::after {
             background-image: url('../assets/img/mila_trainhover.jpg');
-            /* Color image */
             opacity: 1;
           }
         }
@@ -936,13 +931,11 @@ section.target {
 
         &::before {
           background-image: url('../assets/img/mila_train.jpg');
-          /* Black and white image */
           opacity: 1;
         }
 
         &::after {
           background-image: url('../assets/img/mila_trainhover.jpg');
-          /* Color image */
           opacity: 0;
         }
       }
@@ -958,17 +951,22 @@ section.target {
       div.titre {
         background-color: hsl(0, 0%, 100%);
         width: 100%;
-        padding: 1% 0%;
+        padding: 0% 0%;
 
         .title {
+          padding: 0 2%;
           p {
             color: @text;
             font-family: "krub";
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: @bold;
             text-align: center;
             text-transform: uppercase;
             transition: 1.3s ease;
+            transition: font-size 0.5s ease;
+            white-space: nowrap; // Empêche le texte de s'enrouler
+            overflow: hidden; // Cache le texte qui dépasse
+            text-overflow: ellipsis;
           }
         }
       }

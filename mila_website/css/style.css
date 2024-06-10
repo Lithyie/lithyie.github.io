@@ -639,10 +639,25 @@ section.target div.flexing div.section.section--yellow {
   overflow: hidden;
   position: relative;
 }
+section.target div.flexing div.section.section--yellow div.titre {
+  overflow: hidden;
+}
 section.target div.flexing div.section.section--yellow div.titre .texte {
-  width: 50%;
+  min-width: 55%;
+  max-width: 55%;
+  max-height: max-content;
+  overflow: hidden;
   padding: 2%;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 0.8s;
+  position: absolute;
+  font-family: 'krub';
+  font-weight: 500;
+  border-radius: 20px;
+}
+section.target div.flexing div.section.section--yellow div.titre .texte p {
+  padding: 2% 0%;
 }
 section.target div.flexing div.section.section--yellow video {
   max-width: 80%;
@@ -658,7 +673,7 @@ section.target div.flexing div.section.section--yellow:hover div.titre {
 }
 section.target div.flexing div.section.section--yellow:hover div.titre .texte {
   background-color: white;
-  display: flex;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 25%;
@@ -672,12 +687,10 @@ section.target div.flexing div.section.section--yellow:hover video {
 }
 section.target div.flexing div.section.section--yellow:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--yellow:hover::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--yellow::before,
@@ -696,12 +709,10 @@ section.target div.flexing div.section.section--yellow::after {
 }
 section.target div.flexing div.section.section--yellow::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--yellow::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--pink {
@@ -734,12 +745,10 @@ section.target div.flexing div.section.section--pink:hover video {
 }
 section.target div.flexing div.section.section--pink:hover::before {
   background-image: url('../assets/img/mila_airport.jpg');
-  /* Black and white image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--pink:hover::after {
   background-image: url('../assets/img/mila_airporttest.jpg');
-  /* Color image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--pink::before,
@@ -758,12 +767,10 @@ section.target div.flexing div.section.section--pink::after {
 }
 section.target div.flexing div.section.section--pink::before {
   background-image: url('../assets/img/mila_airport.jpg');
-  /* Black and white image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--pink::after {
   background-image: url('../assets/img/mila_airporttest.jpg');
-  /* Color image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--green {
@@ -796,12 +803,10 @@ section.target div.flexing div.section.section--green:hover video {
 }
 section.target div.flexing div.section.section--green:hover::before {
   background-image: url('../assets/img/mila_centres.jpg');
-  /* Black and white image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--green:hover::after {
   background-image: url('../assets/img/mila_centreshover.jpg');
-  /* Color image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--green::before,
@@ -820,12 +825,10 @@ section.target div.flexing div.section.section--green::after {
 }
 section.target div.flexing div.section.section--green::before {
   background-image: url('../assets/img/mila_centres.jpg');
-  /* Black and white image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--green::after {
   background-image: url('../assets/img/mila_centreshover.jpg');
-  /* Color image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--blue {
@@ -858,12 +861,10 @@ section.target div.flexing div.section.section--blue:hover video {
 }
 section.target div.flexing div.section.section--blue:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--blue:hover::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--blue::before,
@@ -882,12 +883,10 @@ section.target div.flexing div.section.section--blue::after {
 }
 section.target div.flexing div.section.section--blue::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--blue::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--orange {
@@ -920,12 +919,10 @@ section.target div.flexing div.section.section--orange:hover video {
 }
 section.target div.flexing div.section.section--orange:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 0;
 }
 section.target div.flexing div.section.section--orange:hover::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--orange::before,
@@ -944,12 +941,10 @@ section.target div.flexing div.section.section--orange::after {
 }
 section.target div.flexing div.section.section--orange::before {
   background-image: url('../assets/img/mila_train.jpg');
-  /* Black and white image */
   opacity: 1;
 }
 section.target div.flexing div.section.section--orange::after {
   background-image: url('../assets/img/mila_trainhover.jpg');
-  /* Color image */
   opacity: 0;
 }
 section.target div.flexing div.section:hover {
@@ -958,16 +953,23 @@ section.target div.flexing div.section:hover {
 section.target div.flexing div.section div.titre {
   background-color: hsl(0, 0%, 100%);
   width: 100%;
-  padding: 1% 0%;
+  padding: 0% 0%;
+}
+section.target div.flexing div.section div.titre .title {
+  padding: 0 2%;
 }
 section.target div.flexing div.section div.titre .title p {
   color: #181818;
   font-family: "krub";
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   transition: 1.3s ease;
+  transition: font-size 0.5s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 section.fonctions {
   height: 100vh;
