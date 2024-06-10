@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -226,16 +227,73 @@
     </section>
 
     <section class="video">
+        <div class="txt">
+            <svg width="30" height="75" viewBox="0 0 30 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_108)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M29.996 60.628L15.866 74.102V75.007H14.633V74.543L14.597 74.505L14.11 74.968L0.0169678 59.977L1.02497 59.019L14.557 73.413L14.633 73.341V0.0159912H15.866V72.165L29.038 59.604L29.996 60.628Z"
+                        fill="#A3A3A3" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_24_108">
+                        <rect width="30" height="75" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <p>Ready to <br>get started</p>
+        </div>
+        <div class="txt">
+            <p>get started<br>Ready to</p>
+            <svg width="30" height="75" viewBox="0 0 30 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_108)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M29.996 60.628L15.866 74.102V75.007H14.633V74.543L14.597 74.505L14.11 74.968L0.0169678 59.977L1.02497 59.019L14.557 73.413L14.633 73.341V0.0159912H15.866V72.165L29.038 59.604L29.996 60.628Z"
+                        fill="#A3A3A3" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_24_108">
+                        <rect width="30" height="75" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
         <div class="content">
             <div class="vid">
                 <video controls id="myVideo" preload="metadata">
-                    <source src="./assets/vid/test.mp4" type="video/mp4">
+                    <source src="https://storage.luxant-service.fr/s/gcPX8MRN3G8oD8p/download" type="video/mp4">
                 </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo">
+        <div class="content">
+            <div class="left">
+                <img src="./assets/img/mila_demo.png" alt="">
+            </div>
+            <div class="right">
+                <div class="titre">
+                    <p>Réservez une démo</p>
+                    <p>Venez découvrir nos produits</p>
+                </div>
+                <form action="./php/process_form.php" method="post">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
+                    <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
+                    <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea> 
+                    <button type="submit" class="custom-submit">Envoyer<i class="fas fa-envelope"></i></button>
+                </form>
             </div>
         </div>
     </section>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
+    <script>
+        document.querySelector('.vid').addEventListener('click', function() {
+            this.classList.toggle('hide-overlay');
+        });
+        </script>
 </body>
 
 </html>

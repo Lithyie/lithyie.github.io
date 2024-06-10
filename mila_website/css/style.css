@@ -301,7 +301,7 @@ a {
 /* ------------------------------- END RECURRENT -- */
 header {
   height: 100vh;
-  width: 1440px;
+  width: 75%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -317,7 +317,7 @@ header div.nav {
   transition: height 0.3s ease;
 }
 header div.nav div.navbar {
-  width: 1440px;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -363,7 +363,7 @@ header div.main {
 }
 header div.main div.left {
   height: 100%;
-  width: 33.33333333%;
+  flex: 1;
   font-family: 'krub';
 }
 header div.main div.left div.topline p {
@@ -401,7 +401,7 @@ header div.main div.left div.content div p:nth-of-type(2)::before {
 }
 div.mid {
   height: 100%;
-  width: 33.33333333%;
+  flex: 1.5;
 }
 div.mid .bg {
   height: 100%;
@@ -420,9 +420,8 @@ div.mid .hero {
   flex-direction: column;
   justify-content: center;
   gap: 10%;
-  padding-left: 4%;
   height: 100%;
-  width: 33.33333333%;
+  flex: 1;
 }
 .right h1 {
   font-family: 'Krub';
@@ -433,7 +432,7 @@ div.mid .hero {
 .right p {
   font-family: 'krub';
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 170%;
   text-align: left;
   letter-spacing: 2px;
@@ -572,7 +571,7 @@ section.target {
   height: 100vh;
 }
 section.target div.topline {
-  width: 1440px;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
@@ -615,7 +614,7 @@ section.target div.topline div.droite div p:nth-of-type(2) {
 section.target div.flexing {
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  width: 75%;
   box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
 }
 section.target div.flexing div.section {
@@ -979,7 +978,7 @@ section.fonctions {
 }
 section.fonctions div.content {
   display: flex;
-  width: 1440px;
+  width: 75%;
 }
 section.fonctions div.content .left {
   flex: 1;
@@ -1061,7 +1060,7 @@ section.custom {
 section.custom::after {
   position: absolute;
   content: 'EXPLORE';
-  right: 0;
+  right: 0%;
   bottom: 0;
   font-family: 'krub';
   font-weight: 700;
@@ -1071,10 +1070,9 @@ section.custom::after {
   transform: rotate(-180deg);
   letter-spacing: 0.8rem;
   color: #F1F1F1;
-  line-height: 5rem;
 }
 section.custom .content {
-  width: 1440px;
+  width: 75%;
   display: flex;
   justify-content: center;
   gap: 2%;
@@ -1113,14 +1111,161 @@ section.video {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+section.video .txt {
+  position: absolute;
+  left: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.video .txt svg path {
+  fill: #181818;
+}
+section.video .txt p {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  letter-spacing: 4px;
+  text-align: end;
+  color: #AEAEAE;
+  padding: 15% 0;
+}
+section.video .txt:nth-of-type(2) {
+  left: unset;
+  right: 1%;
+}
+section.video .txt:nth-of-type(2) svg {
+  transform: rotate(180deg);
+}
+section.video .txt:nth-of-type(2) p {
+  writing-mode: vertical-lr;
+  text-align: start;
+  padding: 15% 0;
 }
 section.video div.content {
   display: flex;
-  width: 1440px;
+  width: 75%;
   justify-content: center;
   position: relative;
 }
+section.video div.content .vid {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+section.video div.content .vid::after {
+  content: "";
+  background-image: url(../assets/img/video.png);
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+section.video div.content .vid.hide-overlay::after {
+  opacity: 0;
+  visibility: hidden;
+}
 section.video div.content video {
+  max-width: 90%;
+  border-radius: 10px;
+  display: inline;
+}
+section.demo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.demo div.content {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  align-items: center;
+}
+section.demo div.content .left {
+  flex: 1;
+  max-width: 50%;
+}
+section.demo div.content .right {
+  flex: 1;
+  max-width: 50%;
+}
+section.demo div.content .right .titre p {
+  text-align: center;
+  font-family: 'krub';
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+section.demo div.content .right .titre p:nth-of-type(2) {
+  color: #d6bb73;
+  font-weight: 400;
+  font-size: 36px;
+}
+section.demo div.content form {
+  display: flex;
+  flex-direction: column;
+  color: #AEAEAE;
+  padding: 2% 15%;
+}
+section.demo div.content form input {
+  margin: 5% 0%;
+  padding: 4% 2%;
+  border: #d6bb73 2px solid;
+  font-family: 'krub';
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f2f2f2;
+}
+section.demo div.content form textarea {
+  background-color: #f2f2f2;
   max-width: 100%;
-  border-radius: 20px;
+  min-width: 100%;
+  min-height: 15vh;
+  max-height: 30vh;
+  margin: 5% 0%;
+  padding: 4% 2%;
+  border: #d6bb73 2px solid;
+  font-family: 'krub';
+  font-size: 1rem;
+  font-weight: 600;
+}
+section.demo div.content form button {
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 2% 5%;
+  font-family: 'oswald';
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #d6bb73;
+  border: none;
+  align-self: center;
+  border: transparent 2px solid;
+  transition: all 0.3s ease;
+}
+section.demo div.content form button i {
+  display: none;
+  visibility: hidden;
+  margin: 0 15%;
+}
+section.demo div.content form button:hover {
+  cursor: pointer;
+  border: 2px solid #d6bb73;
+  background-color: #f2f2f2;
+}
+section.demo div.content form button:hover i {
+  margin: 0 15%;
+  visibility: visible;
+  display: inline;
+  opacity: 1;
 }

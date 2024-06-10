@@ -172,7 +172,7 @@ a {
 
 header {
   height: 100vh;
-  width: 1440px;
+  width: 75%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -188,7 +188,7 @@ header {
     transition: height 0.3s ease;
 
     div.navbar {
-      width: 1440px;
+      width: 75%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -250,7 +250,7 @@ header {
 
     div.left {
       height: 100%;
-      width: 100%/3;
+      flex: 1;
       font-family: 'krub';
 
       div.topline {
@@ -303,7 +303,7 @@ header {
 
 div.mid {
   height: 100%;
-  width: 100%/3;
+  flex: 1.5;
 
   .bg {
     height: 100%;
@@ -325,9 +325,8 @@ div.mid {
   flex-direction: column;
   justify-content: center;
   gap: 10%;
-  padding-left: 4%;
   height: 100%;
-  width: 100%/3;
+  flex: 1;
 
   h1 {
     font-family: 'Krub';
@@ -339,7 +338,7 @@ div.mid {
   p {
     font-family: 'krub';
     font-weight: @semibold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 170%;
     text-align: left;
     letter-spacing: 2px;
@@ -497,7 +496,7 @@ section.target {
   height: 100vh;
 
   div.topline {
-    width: 1440px;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;
@@ -555,7 +554,7 @@ section.target {
   div.flexing {
     display: flex;
     flex-direction: row;
-    width: 1440px;
+    width: 75%;
     box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
 
     div.section {
@@ -580,9 +579,10 @@ section.target {
         overflow: hidden;
         position: relative;
 
-        div.titre{
+        div.titre {
           overflow: hidden;
-          .texte{
+
+          .texte {
             min-width: 55%;
             max-width: 55%;
             max-height: max-content;
@@ -595,7 +595,8 @@ section.target {
             font-family: 'krub';
             font-weight: @medium;
             border-radius: 20px;
-            p{
+
+            p {
               padding: 2% 0%;
             }
           }
@@ -614,11 +615,11 @@ section.target {
           div.titre {
             transition: all 1.3s ease;
 
-            .texte{
+            .texte {
               background-color: white;
               opacity: 1;
               position: absolute;
-              top: 50%; 
+              top: 50%;
               left: 25%;
               transform: translate(-25%, -50%);
             }
@@ -744,7 +745,7 @@ section.target {
         align-items: center;
         flex-direction: column;
         transition: all 1.3s ease;
-        overflow: hidden;   
+        overflow: hidden;
 
         video {
           max-width: 80%;
@@ -955,6 +956,7 @@ section.target {
 
         .title {
           padding: 0 2%;
+
           p {
             color: @text;
             font-family: "krub";
@@ -982,7 +984,7 @@ section.fonctions {
 
   div.content {
     display: flex;
-    width: 1440px;
+    width: 75%;
 
     .left {
       flex: 1;
@@ -1086,7 +1088,7 @@ section.custom {
   &::after {
     position: absolute;
     content: 'EXPLORE';
-    right: 0;
+    right: 0%;
     bottom: 0;
     font-family: 'krub';
     font-weight: @bold;
@@ -1096,11 +1098,11 @@ section.custom {
     transform: rotate(-180deg);
     letter-spacing: 0.8rem;
     color: #F1F1F1;
-    line-height: 5rem;
+
   }
 
   .content {
-    width: 1440px;
+    width: 75%;
     display: flex;
     justify-content: center;
     gap: 2%;
@@ -1149,16 +1151,191 @@ section.video {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  .txt {
+    position: absolute;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      path {
+        fill: @text;
+      }
+
+    }
+
+    p {
+      font-weight: @semibold;
+      font-size: 16px;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      letter-spacing: 4px;
+      text-align: end;
+      color: #AEAEAE;
+      padding: 15% 0;
+
+    }
+
+    &:nth-of-type(2) {
+      left: unset;
+      right: 1%;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      p {
+        writing-mode: vertical-lr;
+        text-align: start;
+        padding: 15% 0;
+      }
+    }
+  }
 
   div.content {
     display: flex;
-    width: 1440px;
+    width: 75%;
     justify-content: center;
     position: relative;
 
+    .vid {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url(../assets/img/video.png);
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        width: 90%;
+        height: 100%;
+        border-radius: 10px;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+    }
+
+    .vid.hide-overlay::after {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     video {
-      max-width: 100%;
-      border-radius: 20px;
+      max-width: 90%;
+      border-radius: 10px;
+
+      display: inline;
+
+    }
+  }
+}
+
+section.demo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div.content {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+
+    .left {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .right {
+      flex: 1;
+      max-width: 50%;
+
+      .titre {
+        p {
+          text-align: center;
+          font-family: 'krub';
+          font-weight: @bold;
+          font-size: 40px;
+          text-transform: uppercase;
+
+          &:nth-of-type(2) {
+            color: @luxant;
+            font-weight: @regular;
+            font-size: 36px;
+          }
+        }
+      }
+    }
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      color: #AEAEAE;
+      padding: 2% 15%;
+
+      input {
+        margin: 5% 0%;
+        padding: 4% 2%;
+        border: @luxant 2px solid;
+        font-family: 'krub';
+        font-size: 1rem;
+        font-weight: @semibold;
+        background-color: rgb(242, 242, 242);
+      }
+
+      textarea {
+        background-color: rgb(242, 242, 242);
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 15vh;
+        max-height: 30vh;
+        margin: 5% 0%;
+        padding: 4% 2%;
+        border: @luxant 2px solid;
+        font-family: 'krub';
+        font-size: 1rem;
+        font-weight: @semibold;
+      }
+      button{
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 2% 5%;
+        font-family: 'oswald';
+        font-weight: @semibold;
+        font-size: 18px;
+        background-color: @luxant;
+        border: none;
+        align-self: center;
+        border: transparent 2px solid;
+        transition: all .3s ease;
+
+        i{
+          display: none;
+          visibility: hidden;
+          margin: 0 15%;
+        }
+        &:hover{
+          cursor: pointer;
+          border: 2px solid @luxant;
+          background-color: rgb(242, 242, 242);
+          i{
+            margin: 0 15%;
+            visibility: visible;
+            display: inline;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
