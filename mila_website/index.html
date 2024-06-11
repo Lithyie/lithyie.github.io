@@ -118,7 +118,7 @@
                         <p>Ils auront ainsi, en temps réel, toutes les informations liées à leur train, vol, quai,
                             retard éventuel … ils pourront également optimiser leurs visites des restaurants et
                             boutiques grâce aux offres promotionnelles proposées de manière customisée et ludique. Mila
-                            sera votre aout incontournable pour renforcer la relation avec vos clients !</p>
+                            sera votre aout incontournable pour renforcer la relation avec vos clients</p>
                     </div>
                 </div>
 
@@ -130,6 +130,11 @@
                 <div class="titre">
                     <div class="title">
                         <p>Hôtels et casinos</p>
+                    </div>
+                    <div class="texte">
+                        <p>Mila réinvente l'expérience de séjour dans les hôtels et casinos</p>
+                        <p> Grâce à son intelligence sémantique avancée, notre hôtesse d'accueil virtuelle et multilingue guide les clients, répond à leurs questions, recommande les meilleures attractions, met en avant les événements spéciaux, et bien plus encore !</p>
+                        <p>Avec Mila, innovez dans l'accueil des visiteurs et offrez une expérience captivante, unique et mémorable</p>
                     </div>
                 </div>
             </div>
@@ -281,19 +286,53 @@
                 <form action="./php/process_form.php" method="post">
                     <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
                     <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
-                    <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea> 
+                    <textarea name="message" class="form-control" id="message" placeholder="Message"
+                        required></textarea>
                     <button type="submit" class="custom-submit">Envoyer<i class="fas fa-envelope"></i></button>
                 </form>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="content">
+            <div class="left">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./assets/vid/illust.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="right">
+                <div class="news">
+                    <p>S'inscrire à notre</p>
+                    <p>
+                        <span>
+                            <svg width="71" height="3" viewBox="0 0 71 3" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="1.5" x2="71" y2="1.5" stroke="white" stroke-width="3" />
+                            </svg>
+                        </span>
+                        Newsletter
+                    </p>
+                </div>
+                <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
+                <button type="submit" class="custom-submit">Confirmer<i class="fas fa-envelope"></i></button>
+                <p>Suivez-nous<a href="#"> <i class="fab fa-facebook-square"></i></a> <a href="#"> <i class="fab fa-instagram"></i></a><a href="#"> <i class="fab fa-twitter"></i></a></p>
+            </div>
+        </div>
+        <div class="credit">
+            <p><i class="fas fa-phone"></i> 03 21 13 64 30</p>
+            <p><i class="far fa-envelope"></i> 24 rue de Beaumont - 62950 Noyelles-Godault</p>
+            <p><i class="fas fa-map-marker-alt"></i> contact@luxantinnovation.com</p>
+        </div>
+
+    </footer>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
     <script>
-        document.querySelector('.vid').addEventListener('click', function() {
+        document.querySelector('.vid').addEventListener('click', function () {
             this.classList.toggle('hide-overlay');
         });
-        </script>
+    </script>
 </body>
 
 </html>

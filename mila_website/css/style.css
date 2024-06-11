@@ -625,7 +625,7 @@ section.target div.flexing div.section {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 50vh;
+  height: 60vh;
 }
 section.target div.flexing div.section.section--yellow {
   background-position: center;
@@ -653,7 +653,7 @@ section.target div.flexing div.section.section--yellow div.titre .texte {
   position: absolute;
   font-family: 'krub';
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 section.target div.flexing div.section.section--yellow div.titre .texte p {
   padding: 2% 0%;
@@ -671,18 +671,27 @@ section.target div.flexing div.section.section--yellow:hover div.titre {
   transition: all 1.3s ease;
 }
 section.target div.flexing div.section.section--yellow:hover div.titre .texte {
-  background-color: white;
   opacity: 1;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 20%;
   transform: translate(-25%, -50%);
+}
+section.target div.flexing div.section.section--yellow:hover div.titre .texte p {
+  text-justify: justify;
+  font-family: 'oswald';
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 4% 0%;
+  padding: 2% 5%;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 section.target div.flexing div.section.section--yellow:hover video {
   transition: all 1.3s ease;
-  max-width: 30%;
-  width: 30%;
-  transform: translateX(100%);
+  max-width: 40%;
+  width: 40%;
+  transform: translateX(80%);
 }
 section.target div.flexing div.section.section--yellow:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
@@ -723,6 +732,27 @@ section.target div.flexing div.section.section--pink {
   flex-direction: column;
   transition: all 1.3s ease;
   overflow: hidden;
+  position: relative;
+}
+section.target div.flexing div.section.section--pink div.titre {
+  overflow: hidden;
+}
+section.target div.flexing div.section.section--pink div.titre .texte {
+  min-width: 55%;
+  max-width: 55%;
+  max-height: max-content;
+  overflow: hidden;
+  padding: 2%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 0.8s;
+  position: absolute;
+  font-family: 'krub';
+  font-weight: 500;
+  border-radius: 5px;
+}
+section.target div.flexing div.section.section--pink div.titre .texte p {
+  padding: 2% 0%;
 }
 section.target div.flexing div.section.section--pink video {
   max-width: 80%;
@@ -736,11 +766,28 @@ section.target div.flexing div.section.section--pink:hover {
 section.target div.flexing div.section.section--pink:hover div.titre {
   transition: all 1.3s ease;
 }
+section.target div.flexing div.section.section--pink:hover div.titre .texte {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-25%, -50%);
+}
+section.target div.flexing div.section.section--pink:hover div.titre .texte p {
+  text-justify: justify;
+  font-family: 'oswald';
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 4% 0%;
+  padding: 2% 5%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
 section.target div.flexing div.section.section--pink:hover video {
   transition: all 1.3s ease;
-  max-width: 30%;
-  width: 30%;
-  transform: translateX(100%);
+  max-width: 40%;
+  width: 40%;
+  transform: translateX(80%);
 }
 section.target div.flexing div.section.section--pink:hover::before {
   background-image: url('../assets/img/mila_airport.jpg');
@@ -796,9 +843,9 @@ section.target div.flexing div.section.section--green:hover div.titre {
 }
 section.target div.flexing div.section.section--green:hover video {
   transition: all 1.3s ease;
-  max-width: 30%;
-  width: 30%;
-  transform: translateX(100%);
+  max-width: 40%;
+  width: 40%;
+  transform: translateX(80%);
 }
 section.target div.flexing div.section.section--green:hover::before {
   background-image: url('../assets/img/mila_centres.jpg');
@@ -854,9 +901,9 @@ section.target div.flexing div.section.section--blue:hover div.titre {
 }
 section.target div.flexing div.section.section--blue:hover video {
   transition: all 1.3s ease;
-  max-width: 30%;
-  width: 30%;
-  transform: translateX(100%);
+  max-width: 40%;
+  width: 40%;
+  transform: translateX(80%);
 }
 section.target div.flexing div.section.section--blue:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
@@ -912,9 +959,9 @@ section.target div.flexing div.section.section--orange:hover div.titre {
 }
 section.target div.flexing div.section.section--orange:hover video {
   transition: all 1.3s ease;
-  max-width: 30%;
-  width: 30%;
-  transform: translateX(100%);
+  max-width: 40%;
+  width: 40%;
+  transform: translateX(80%);
 }
 section.target div.flexing div.section.section--orange:hover::before {
   background-image: url('../assets/img/mila_train.jpg');
@@ -1268,4 +1315,125 @@ section.demo div.content form button:hover i {
   visibility: visible;
   display: inline;
   opacity: 1;
+}
+footer {
+  background-color: #181818;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer div.content {
+  display: flex;
+  width: 75%;
+  height: 95%;
+  justify-content: center;
+}
+footer div.content .left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+footer div.content .left video {
+  align-self: flex-end;
+  height: 80%;
+  width: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+footer div.content .right {
+  flex: 1;
+  justify-content: center;
+  gap: 0;
+}
+footer div.content .right .news {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+footer div.content .right .news p {
+  font-family: 'krub';
+  font-weight: 700;
+  font-size: 36px;
+  color: white;
+  text-align: end;
+  margin: 0;
+}
+footer div.content .right input {
+  align-self: flex-end;
+  margin: 5% 0%;
+  padding: 2% 2%;
+  border: #d6bb73 2px solid;
+  font-family: 'krub';
+  font-size: 1rem;
+  font-weight: 600;
+  width: 50%;
+  background-color: #f2f2f2;
+}
+footer div.content .right button {
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 1% 4%;
+  font-family: 'oswald';
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #d6bb73;
+  border: none;
+  align-self: flex-end;
+  border: transparent 2px solid;
+  transition: all 0.3s ease;
+}
+footer div.content .right button i {
+  display: none;
+  visibility: hidden;
+  margin: 0 15%;
+}
+footer div.content .right button:hover {
+  cursor: pointer;
+  border: 2px solid #d6bb73;
+  background-color: #f2f2f2;
+}
+footer div.content .right button:hover i {
+  margin: 0 15%;
+  visibility: visible;
+  display: inline;
+  opacity: 1;
+}
+footer div.content .right p {
+  font-family: 'krub';
+  font-weight: 700;
+  font-size: 36px;
+  color: white;
+  text-align: end;
+  margin-top: 10%;
+}
+footer div.content .right p a {
+  color: white;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 36px;
+  background-color: transparent;
+}
+footer div.content .right p a i {
+  margin: 0 1%;
+}
+footer div.content .right p a:hover i {
+  color: #d6bb73;
+}
+footer .credit {
+  background-color: black;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .credit p {
+  text-align: center;
+  flex: 1;
+  color: white;
+}
+footer .credit p i {
+  margin: 0 2%;
 }
