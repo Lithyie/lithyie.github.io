@@ -115,7 +115,7 @@ a {
 /* ------------------------------- END RECURENTES -- */
 
 header{
-    height: 35vh;
+    height: 50vh;
     padding: 2%;
     display: flex;
     flex-direction: column;
@@ -180,21 +180,30 @@ header{
                 width: 40%;
                 display: flex;
                 justify-content: center;
+                align-items: flex-end;
             }
             .right{
                 width: 40%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 5%;
                 h1{
                     font-family: 'krub', sans-serif;
-                    font-style: 1rem;
+                    font-size: 2.5rem;
                     font-weight: @semibold;
                 }
                 p{
                     font-size: 1rem;
                     line-height: 1.5rem;
+                }
+                a{
+                    background-color: @luxant;
+                    padding: 2% 4%;
+                    width: fit-content;
+                    font-size: 1rem;
+                    font-weight: @semibold;
+                    text-transform: uppercase;
                 }
             }
         }
