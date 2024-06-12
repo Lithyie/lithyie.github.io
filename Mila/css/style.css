@@ -254,17 +254,17 @@ header .main .content {
   justify-content: space-between;
 }
 header .main .content .left {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 header .main .content .right {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 5%;
+  gap: 8%;
 }
 header .main .content .right h1 {
   font-family: 'krub', sans-serif;
@@ -272,14 +272,17 @@ header .main .content .right h1 {
   font-weight: 600;
 }
 header .main .content .right p {
-  font-size: 1rem;
+  font-family: 'krub', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
   line-height: 1.5rem;
 }
 header .main .content .right a {
+  align-self: center;
   background-color: #d6bb73;
   padding: 2% 4%;
   width: fit-content;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
 }
