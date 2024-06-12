@@ -167,6 +167,11 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
 }
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
 header,
 section,
 footer,
@@ -301,20 +306,23 @@ a {
 /* ------------------------------- END RECURRENT -- */
 header {
   height: 100vh;
-  width: 75%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
 }
 header div.nav {
-  z-index: 10;
   background-color: #ffffff;
-  position: fixed;
+  padding: 2% 0%;
   width: 100%;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
-  height: 10%;
-  transition: height 0.3s ease;
+  height: fit-content;
+  transition: all 0.3s ease;
 }
 header div.nav div.navbar {
   width: 75%;
@@ -322,8 +330,9 @@ header div.nav div.navbar {
   justify-content: space-between;
   align-items: center;
 }
-header div.nav div.navbar div.logo {
-  width: fit-content;
+header div.nav div.navbar div.logo a img {
+  width: 60%;
+  height: auto;
 }
 header div.nav div.navbar div.menu {
   width: 50%;
@@ -348,28 +357,31 @@ header div.nav div.navbar div.menu ul li a img {
   display: inline;
 }
 header div.nav.scrolled {
-  height: 5vh;
-  padding: 2% 0%;
+  z-index: 10;
+  position: fixed;
+  height: fit-content;
+  top: 0;
+  padding: 1% 0%;
 }
-header div.nav.scrolled div.navbar div.logo img {
-  width: 50%;
+header div.nav.scrolled div.navbar div.logo a img {
+  width: 60%;
+  height: auto;
 }
 header div.main {
   display: flex;
   height: 70%;
-  width: 100%;
-  align-self: flex-end;
+  padding: 0 5%;
   align-items: flex-end;
 }
 header div.main div.left {
   height: 100%;
-  flex: 1;
+  width: 33.33333333%;
   font-family: 'krub';
 }
 header div.main div.left div.topline p {
-  font-size: 144px;
+  font-size: 9rem;
   font-weight: 700;
-  letter-spacing: 15px;
+  letter-spacing: 0.938rem;
 }
 header div.main div.left div.topline p span {
   color: #d6bb73;
@@ -379,7 +391,7 @@ header div.main div.left div.content div {
 }
 header div.main div.left div.content div p:nth-of-type(1) {
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2.25rem;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
@@ -390,7 +402,7 @@ header div.main div.left div.content div p:nth-of-type(2) {
   font-weight: 700;
   left: 40%;
   top: 50%;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -399,45 +411,56 @@ header div.main div.left div.content div p:nth-of-type(2)::before {
   position: absolute;
   left: -20%;
 }
-div.mid {
+header div.mid {
   height: 100%;
-  flex: 1.5;
+  width: 33.33333333%;
 }
-div.mid .bg {
+header div.mid .bg {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.mid .hero {
+header div.mid .hero {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
 }
-.right {
+header div.mid .hero svg {
+  z-index: 1;
+  transform: scale(1);
+  animation: pulse 4s linear infinite;
+}
+header div.mid .hero img {
+  position: absolute;
+  z-index: 2;
+}
+header .right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10%;
   height: 100%;
-  flex: 1;
+  width: 33.33333333%;
 }
-.right h1 {
+header .right h1 {
   font-family: 'Krub';
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
+  font-size: 2rem;
 }
-.right p {
+header .right p {
   font-family: 'krub';
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 170%;
   text-align: left;
   letter-spacing: 2px;
 }
-.right a {
+header .right a {
   text-transform: uppercase;
   width: fit-content;
   padding: 2% 5%;
@@ -446,35 +469,35 @@ div.mid .hero {
   font-size: 18px;
   background-color: #d6bb73;
 }
-section.divider {
-  z-index: 9;
+header .divider {
   padding: 0% 10%;
-  height: 220px;
+  height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
 }
-section.divider div {
+header .divider div {
   display: flex;
   text-transform: uppercase;
   align-items: center;
   gap: 2%;
 }
-section.divider div p {
+header .divider div p {
   font-size: 48px;
   font-family: oswald;
   font-weight: 500;
   color: #d6bb73;
 }
-section.divider div p:nth-of-type(2) {
+header .divider div p:nth-of-type(2) {
   color: #181818;
   font-size: 48px;
   font-family: oswald;
   font-weight: 500;
   letter-spacing: 1px;
 }
-section.divider div p:nth-of-type(3) {
+header .divider div p:nth-of-type(3) {
   color: #181818;
   font-size: 24px;
   font-family: oswald;
@@ -482,7 +505,7 @@ section.divider div p:nth-of-type(3) {
   letter-spacing: 2px;
   line-height: 25px;
 }
-section.divider div p:nth-of-type(3) span {
+header .divider div p:nth-of-type(3) span {
   font-weight: 500;
 }
 section.innovation {
@@ -623,15 +646,14 @@ section.target div.flexing div.section {
   transition: 0.5s ease;
   width: 20%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
-  height: 60vh;
+  height: 40vh;
 }
 section.target div.flexing div.section.section--yellow {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   transition: all 1.3s ease;
@@ -790,11 +812,11 @@ section.target div.flexing div.section.section--pink:hover video {
   transform: translateX(80%);
 }
 section.target div.flexing div.section.section--pink:hover::before {
-  background-image: url('../assets/img/mila_airport.jpg');
+  background-image: url('../assets/img/casino.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--pink:hover::after {
-  background-image: url('../assets/img/mila_airporttest.jpg');
+  background-image: url('../assets/img/casinohover.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--pink::before,
@@ -812,11 +834,11 @@ section.target div.flexing div.section.section--pink::after {
   z-index: -1;
 }
 section.target div.flexing div.section.section--pink::before {
-  background-image: url('../assets/img/mila_airport.jpg');
+  background-image: url('../assets/img/casino.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--pink::after {
-  background-image: url('../assets/img/mila_airporttest.jpg');
+  background-image: url('../assets/img/casinohover.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--green {
@@ -828,6 +850,27 @@ section.target div.flexing div.section.section--green {
   flex-direction: column;
   transition: all 1.3s ease;
   overflow: hidden;
+  position: relative;
+}
+section.target div.flexing div.section.section--green div.titre {
+  overflow: hidden;
+}
+section.target div.flexing div.section.section--green div.titre .texte {
+  min-width: 55%;
+  max-width: 55%;
+  max-height: max-content;
+  overflow: hidden;
+  padding: 2%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 0.8s;
+  position: absolute;
+  font-family: 'krub';
+  font-weight: 500;
+  border-radius: 5px;
+}
+section.target div.flexing div.section.section--green div.titre .texte p {
+  padding: 2% 0%;
 }
 section.target div.flexing div.section.section--green video {
   max-width: 80%;
@@ -841,6 +884,23 @@ section.target div.flexing div.section.section--green:hover {
 section.target div.flexing div.section.section--green:hover div.titre {
   transition: all 1.3s ease;
 }
+section.target div.flexing div.section.section--green:hover div.titre .texte {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-25%, -50%);
+}
+section.target div.flexing div.section.section--green:hover div.titre .texte p {
+  text-justify: justify;
+  font-family: 'oswald';
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 4% 0%;
+  padding: 2% 5%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
 section.target div.flexing div.section.section--green:hover video {
   transition: all 1.3s ease;
   max-width: 40%;
@@ -852,7 +912,7 @@ section.target div.flexing div.section.section--green:hover::before {
   opacity: 0;
 }
 section.target div.flexing div.section.section--green:hover::after {
-  background-image: url('../assets/img/mila_centreshover.jpg');
+  background-image: url('../assets/img/mila_centreshover2.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--green::before,
@@ -874,7 +934,7 @@ section.target div.flexing div.section.section--green::before {
   opacity: 1;
 }
 section.target div.flexing div.section.section--green::after {
-  background-image: url('../assets/img/mila_centreshover.jpg');
+  background-image: url('../assets/img/mila_centreshover2.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--blue {
@@ -906,11 +966,11 @@ section.target div.flexing div.section.section--blue:hover video {
   transform: translateX(80%);
 }
 section.target div.flexing div.section.section--blue:hover::before {
-  background-image: url('../assets/img/mila_train.jpg');
+  background-image: url('../assets/img/pdv.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--blue:hover::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
+  background-image: url('../assets/img/pdvhover.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--blue::before,
@@ -928,11 +988,11 @@ section.target div.flexing div.section.section--blue::after {
   z-index: -1;
 }
 section.target div.flexing div.section.section--blue::before {
-  background-image: url('../assets/img/mila_train.jpg');
+  background-image: url('../assets/img/pdv.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--blue::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
+  background-image: url('../assets/img/pdvhover.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--orange {
@@ -964,11 +1024,11 @@ section.target div.flexing div.section.section--orange:hover video {
   transform: translateX(80%);
 }
 section.target div.flexing div.section.section--orange:hover::before {
-  background-image: url('../assets/img/mila_train.jpg');
+  background-image: url('../assets/img/musee.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section.section--orange:hover::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
+  background-image: url('../assets/img/museehover.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--orange::before,
@@ -986,11 +1046,11 @@ section.target div.flexing div.section.section--orange::after {
   z-index: -1;
 }
 section.target div.flexing div.section.section--orange::before {
-  background-image: url('../assets/img/mila_train.jpg');
+  background-image: url('../assets/img/musee.jpg');
   opacity: 1;
 }
 section.target div.flexing div.section.section--orange::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
+  background-image: url('../assets/img/museehover.jpg');
   opacity: 0;
 }
 section.target div.flexing div.section:hover {
@@ -1092,9 +1152,8 @@ section.fonctions div.content .left .details .droite ul li::marker {
 section.fonctions .right {
   padding: 0;
   flex: 1;
+  display: flex;
   justify-content: flex-end;
-  gap: 0;
-  flex-direction: row;
 }
 section.custom {
   display: flex;
@@ -1436,4 +1495,304 @@ footer .credit p {
 }
 footer .credit p i {
   margin: 0 2%;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+@media (max-width: 1600px) {
+  header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  header div.nav {
+    background-color: #ffffff;
+    padding: 2% 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    transition: all 0.3s ease;
+  }
+  header div.nav div.navbar {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div.nav div.navbar div.logo a img {
+    width: 60%;
+    height: auto;
+  }
+  header div.nav div.navbar div.menu {
+    width: 50%;
+  }
+  header div.nav div.navbar div.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header div.nav div.navbar div.menu ul li {
+    width: -webkit-fill-available;
+    list-style-type: none;
+    text-align: end;
+  }
+  header div.nav div.navbar div.menu ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  header div.nav div.navbar div.menu ul li a img {
+    display: inline;
+  }
+  header div.nav.scrolled {
+    z-index: 10;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    padding: 1% 0%;
+  }
+  header div.nav.scrolled div.navbar div.logo a img {
+    width: 60%;
+    height: auto;
+  }
+  header div.main {
+    justify-content: space-around;
+  }
+  header div.main div.left {
+    display: none;
+  }
+  header div.main div.left div.content div {
+    position: relative;
+  }
+  header div.main div.left div.content div p:nth-of-type(1) {
+    font-weight: 400;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    letter-spacing: 15px;
+  }
+  header div.main div.left div.content div p:nth-of-type(2) {
+    position: absolute;
+    font-weight: 700;
+    left: 40%;
+    top: 50%;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  header div.main div.left div.content div p:nth-of-type(2)::before {
+    content: url('../assets/icons/square.svg');
+    position: absolute;
+    left: -20%;
+  }
+  header div.mid {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  header div.mid .hero {
+    height: 100%;
+    position: relative;
+  }
+  header div.mid .hero svg {
+    width: 70%;
+  }
+  header div.mid .hero img {
+    height: auto;
+    width: 70%;
+  }
+  header .right {
+    gap: 5%;
+    width: 50%;
+    padding: 0% 5%;
+  }
+  header .divider {
+    padding: 0% 10%;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
+  }
+  header .divider div {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 2%;
+  }
+  header .divider div p {
+    font-size: 48px;
+    font-family: oswald;
+    font-weight: 500;
+    color: #d6bb73;
+  }
+  header .divider div p:nth-of-type(2) {
+    color: #181818;
+    font-size: 48px;
+    font-family: oswald;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  header .divider div p:nth-of-type(3) {
+    color: #181818;
+    font-size: 24px;
+    font-family: oswald;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+  header .divider div p:nth-of-type(3) span {
+    font-weight: 500;
+  }
+}
+/* ------------------------------------------------------------------------- */
+/* ----------------------- 1920px FLUID TYPO ------------------------------- */
+/* ------------------------------------------------------------------------- */
+@media (min-width: 1920px) {
+  header div.nav div.navbar div.menu ul li a {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  header div.main div.left div.topline p {
+    font-size: 144px;
+    letter-spacing: 15px;
+  }
+  header div.main div.left div.content div p:nth-of-type(1) {
+    font-size: 36px;
+    transform: rotate(-180deg);
+    letter-spacing: 15px;
+  }
+  header div.main div.left div.content div p:nth-of-type(2) {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  header .right h1 {
+    letter-spacing: 0.125rem;
+    font-size: 2rem;
+  }
+  header .right p {
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: 2px;
+  }
+  header .right a {
+    font-size: 18px;
+  }
+  header .divider div p {
+    font-size: 48px;
+  }
+  header .divider div p:nth-of-type(2) {
+    font-size: 48px;
+    letter-spacing: 1px;
+  }
+  header .divider div p:nth-of-type(3) {
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+}
+section.innovation div.main p {
+  font-size: 100px;
+}
+section.innovation div.main::before {
+  font-size: 20px;
+}
+section.innovation div.main::after {
+  font-size: 20px;
+}
+section.innovation div.bottom div p {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+/* ------------------------------------------------------------------------- */
+/* ------------------------ 300px FLUID TYPO ------------------------------- */
+/* ------------------------------------------------------------------------- */
+@media (min-width: 300px) {
+  header div.nav div.navbar div.menu ul li a {
+    font-size: calc(0.875rem + ((1vw - 3px) * 0.1235));
+    min-height: 0vw;
+    letter-spacing: 1px;
+  }
+  header div.main div.left div.topline p {
+    font-size: calc(2.375rem + ((1vw - 3px) * 6.5432));
+    min-height: 0vw;
+    letter-spacing: 15px;
+  }
+  header div.main div.left div.content div p:nth-of-type(1) {
+    font-size: calc(0.75rem + ((1vw - 3px) * 1.4815));
+    min-height: 0vw;
+    transform: rotate(-180deg);
+    letter-spacing: 15px;
+  }
+  header div.main div.left div.content div p:nth-of-type(2) {
+    font-size: calc(0.625rem + ((1vw - 3px) * 0.2469));
+    min-height: 0vw;
+    letter-spacing: 2px;
+  }
+  header .right h1 {
+    letter-spacing: 0.125rem;
+    font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
+    min-height: 0vw;
+  }
+  header .right p {
+    font-size: calc(0.875rem + ((1vw - 3px) * 0.1235));
+    min-height: 0vw;
+    line-height: 170%;
+    letter-spacing: 2px;
+  }
+  header .right a {
+    font-size: 18px;
+  }
+  header .divider div p {
+    font-size: calc(1.25rem + ((1vw - 3px) * 1.7284));
+    min-height: 0vw;
+  }
+  header .divider div p:nth-of-type(2) {
+    font-size: calc(1.25rem + ((1vw - 3px) * 1.7284));
+    min-height: 0vw;
+    letter-spacing: 1px;
+  }
+  header .divider div p:nth-of-type(3) {
+    font-size: calc(0.875rem + ((1vw - 3px) * 0.6173));
+    min-height: 0vw;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+  section.innovation div.main p {
+    font-size: calc(1.25rem + ((1vw - 3px) * 4.9383));
+    min-height: 0vw;
+  }
+  section.innovation div.main::before {
+    font-size: calc(0.625rem + ((1vw - 3px) * 0.6173));
+    min-height: 0vw;
+  }
+  section.innovation div.main::after {
+    font-size: calc(0.625rem + ((1vw - 3px) * 0.6173));
+    min-height: 0vw;
+  }
+  section.innovation div.bottom div p {
+    font-size: calc(1.25rem + ((1vw - 3px) * 1.2346));
+    min-height: 0vw;
+    letter-spacing: 2px;
+  }
 }
