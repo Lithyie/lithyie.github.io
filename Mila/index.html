@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Positionnement</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <header id="home">
+        <div class="nav">
+            <div class="burger">
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="#home" class="js-scrollTo"><img src="./img/logo_luxantinnovation.svg" alt="Logo Mila"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#marchés" class="js-scrollTo">Marchés</a></li>
+                    <li><a href="#fonctionnalités" class="js-scrollTo">Fonctionnalités</a></li>
+                    <li><a href="#personnalisations" class="js-scrollTo">Personnalisations</a></li>
+                    <li><a href="#contact" class="js-scrollTo">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="content">
+                <div class="left">
+                    <div>
+                        <img src="./img/mila/hero.png" alt="Mila">
+                    </div>
+                   </div>
+                <div class="right">
+                    <h1>Assistante Virtuelle Mila</h1>
+                    <p>Découvrez Mila, notre assistante virtuelle 3D révolutionnaire, animée par la technologie holographique</p>
+                    <a href="#marchés">Découvrir</a>
+                </div>
+            </div>
+            <div class="divider">
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //Menu burger
+        $(document).ready(function () {
+            $('.burger').click(function () {
+                $(this).toggleClass('burger-open');
+                $('.menu').toggleClass('is-open');
+                return false;
+            });
+            $('.menu ul li a').click(function (event) {
+                $('.menu').toggleClass('is-open');
+                $('.burger').toggleClass('burger-open');
+                event.stopPropagation();
+            });
+        });
+
+    </script>
+</body>
+</html>
