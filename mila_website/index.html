@@ -11,7 +11,7 @@
 
 <body>
     <header id="home">
-        <div class="nav">
+        <!-- <div class="nav">
             <div class="navbar">
                 <div class="logo"><a href="#home"><img src="./assets/img/logo_luxantinnovation.svg" alt=""></a></div>
                 <div class="menu">
@@ -22,6 +22,23 @@
                         <li><a href="#"><img src="./assets/icons/icon _switch.svg" alt=""></a></li>
                     </ul>
                 </div>
+            </div>
+        </div> -->
+
+        <div class="nav">
+            <div class="burger">
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="#home" class="js-scrollTo"><img src="./assets/img/logo_luxantinnovation.svg" alt="Logo Mila"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#marchés" class="js-scrollTo">Marchés</a></li>
+                    <li><a href="#fonctionnalités" class="js-scrollTo">Fonctionnalités</a></li>
+                    <li><a href="#personnalisations" class="js-scrollTo">Personnalisations</a></li>
+                    <li><a href="#contact" class="js-scrollTo">Contact</a></li>
+                </ul>
             </div>
         </div>
         <div class="main">
@@ -339,6 +356,26 @@
             this.classList.toggle('hide-overlay');
         });
     </script>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    //Menu burger
+    $(document).ready(function () {
+        $('.burger').click(function () {
+            $(this).toggleClass('burger-open');
+            $('.menu').toggleClass('is-open');
+            return false;
+        });
+        $('.menu ul li a').click(function (event) {
+            $('.menu').toggleClass('is-open');
+            $('.burger').toggleClass('burger-open');
+            event.stopPropagation();
+        });
+    });
+
+</script>
 </body>
 
 </html>
