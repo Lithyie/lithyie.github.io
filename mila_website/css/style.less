@@ -201,7 +201,7 @@ header {
   width: 100%;
   padding-top: 1%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
   margin: 0 auto;
 
@@ -333,7 +333,7 @@ header {
 
   div.main {
     display: flex;
-    height: 70%;
+    height: 100%;
     padding: 0 5%;
     align-items: flex-end;
 
@@ -1185,7 +1185,7 @@ section.fonctions {
     width: 75%;
 
     .left {
-      flex: 1;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -1195,20 +1195,8 @@ section.fonctions {
         text-transform: uppercase;
         font-size: 4rem;
         font-weight: @bold;
-        margin-bottom: 5%;
+        padding: 5% 0%;
 
-        p {
-          text-align: justify;
-          position: relative;
-
-          &:nth-of-type(2) {
-            position: absolute;
-            color: @luxant;
-            font-weight: @medium;
-            font-size: 36px;
-            left: 38%;
-          }
-        }
       }
 
       .desc {
@@ -1216,6 +1204,7 @@ section.fonctions {
           font-family: 'krub';
           font-size: 1.5rem;
           font-weight: @semibold;
+          padding: 5% 0%;
         }
       }
 
@@ -1224,10 +1213,10 @@ section.fonctions {
         font-family: 'krub';
         font-weight: 600;
         font-size: 1.25rem;
-        gap: 10%;
+        flex-direction: column;
+        padding: 5% 0%;
 
         .gauche {
-          flex: 1;
           padding-left: 2%;
 
           ul {
@@ -1244,32 +1233,30 @@ section.fonctions {
           }
         }
 
-        .droite {
-          flex: 1;
-          padding-left: 2%;
+        // .droite {
+        //   padding-left: 2%;
 
 
-          ul {
-            li {
-              list-style-type: '\25A0';
-              padding-left: 2%;
-              padding-top: 2%;
-              padding-bottom: 2%;
+        //   ul {
+        //     li {
+        //       list-style-type: '\25A0';
+        //       padding-left: 2%;
+        //       padding-top: 2%;
+        //       padding-bottom: 2%;
 
-              &::marker {
-                color: @luxant;
-              }
-            }
-          }
-        }
+        //       &::marker {
+        //         color: @luxant;
+        //       }
+        //     }
+        //   }
+        // }
       }
-
     }
   }
 
   .right {
     padding: 0;
-    flex: 1;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
   }
@@ -1301,10 +1288,12 @@ section.custom {
   }
 
   .content {
+    height: 100%;
     width: 80%;
     display: flex;
     justify-content: center;
     gap: 10%;
+
 
     .gauche {
       display: flex;
@@ -1314,19 +1303,28 @@ section.custom {
 
     .droite {
       width: 50%;
+      align-self: center;
 
       .title {
         font-family: 'krub';
         text-transform: uppercase;
         font-size: 4rem;
         font-weight: @bold;
-        margin-bottom: 5%;
+        padding: 5% 0%;
+      }
+
+      .desc{
+        font-family: 'krub', sans-serif;
+        font-size: 1.5rem;
+        font-weight: @semibold;
+        padding: 5% 0%;
       }
 
       .details {
         font-family: 'krub';
         font-weight: @semibold;
         font-size: 1.25rem;
+        padding: 5% 0%;
       }
 
       ul {
@@ -1346,7 +1344,7 @@ section.custom {
 }
 
 section.video {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1398,6 +1396,7 @@ section.video {
   div.content {
     display: flex;
     width: 75%;
+    height: 100%;
     justify-content: center;
     position: relative;
 
@@ -1405,6 +1404,7 @@ section.video {
       display: flex;
       justify-content: center;
       position: relative;
+      height: 100%;
 
       &::after {
         content: "";
@@ -1413,7 +1413,7 @@ section.video {
         background-size: cover;
         background-position: center;
         pointer-events: none;
-        width: 90%;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
         opacity: 1;
@@ -1428,9 +1428,7 @@ section.video {
     }
 
     video {
-      max-width: 90%;
       border-radius: 10px;
-
       display: inline;
 
     }
@@ -1442,6 +1440,7 @@ section.demo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10%;
 
   div.content {
     display: flex;
@@ -2526,11 +2525,11 @@ footer {
           display: flex;
           font-family: 'krub';
           font-weight: 600;
-          font-size: 1.15rem;
+          font-size: 1rem;
           gap: 10%;
 
           .gauche {
-            width: 50%;
+            width: 100%;
             padding-left: 2%;
 
             ul {
@@ -2594,7 +2593,7 @@ footer {
       bottom: 0;
       font-family: 'krub';
       font-weight: @bold;
-      font-size: 6rem;
+      font-size: 3rem;
       text-transform: uppercase;
       writing-mode: vertical-rl;
       transform: rotate(-180deg);
@@ -2607,7 +2606,7 @@ footer {
       width: 90%;
       display: flex;
       justify-content: center;
-      gap: 2%;
+      gap: 10%;
 
       .gauche {
         display: flex;
@@ -2638,8 +2637,390 @@ footer {
   }
 }
 
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ 1440px ----------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 
+@media (max-width: 1440px) {
+
+  section.fonctions {
+    .content{
+      .left {
+        .details {
+          .gauche {
+            width: 100%;
+            padding-left: 2%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ 1024px ----------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+
+@media (max-width: 1024px) {
+
+
+  section.fonctions {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div.content {
+      display: flex;
+      width: 80%;
+
+      .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .title {
+          font-size: 2.8rem;
+          margin-bottom: 0;
+        }
+
+        .desc {
+          p {
+            font-family: 'krub';
+            font-size: 1rem;
+            font-weight: @semibold;
+            padding-right: 0%;
+          }
+        }
+
+        .details {
+          display: flex;
+          font-family: 'krub';
+          font-weight: 600;
+          font-size: 0.85rem;
+          gap: 10%;
+
+          .gauche {
+            width: 50%;
+            padding-left: 2%;
+
+            ul {
+              li {
+                list-style-type: '\25A0';
+                padding-left: 2%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                &::marker {
+                  color: @luxant;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .right {
+      padding: 0;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      div{
+        width: 60%;
+      }
+    }
+  }
+
+
+
+  section.custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 0%;
+
+    &::after {
+      position: absolute;
+      content: 'EXPLORE';
+      right: 0%;
+      bottom: 0;
+      font-family: 'krub';
+      font-weight: @bold;
+      font-size: 3rem;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      letter-spacing: 0.8rem;
+      color: #F1F1F1;
+
+    }
+
+    .content {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+
+      .gauche {
+        display: flex;
+        width: 50%;
+        align-items: center;
+      }
+
+        .droite {
+          width: 50%;
+
+          .title {
+            font-size: 2.8rem;
+          }
+          .desc {
+            p {
+              font-family: 'krub';
+              font-size: 1rem;
+              font-weight: @semibold;
+              padding-right: 0%;
+            }
+          }
+
+          .details {
+            font-family: 'krub';
+            font-weight: @semibold;      
+
+          ul {
+            li {
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.video{
+    height: 90vh;
+
+
+  }
+
+section.demo {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    div.content {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+  
+      .left {
+        width: 40%;
+        max-width: 50%;
+      }
+  
+      .right {
+        width: 60%;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+  
+        .titre {
+          p {
+            text-align: center;
+            font-family: 'krub';
+            font-weight: @bold;
+            font-size: 2rem;
+            text-transform: uppercase;
+  
+            &:nth-of-type(2) {
+              color: @luxant;
+              font-weight: @semibold;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+  
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        color: #AEAEAE;
+        padding: 2% 15%;
+  
+        input {
+          margin: 5% 0%;
+          padding: 4% 2%;
+          border: @luxant 2px solid;
+          font-family: 'krub';
+          font-size: 1rem;
+          font-weight: @semibold;
+          background-color: rgb(247, 247, 247);
+        }
+  
+        textarea {
+          background-color: rgb(247, 247, 247);
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 15vh;
+          max-height: 30vh;
+          margin: 5% 0%;
+          padding: 4% 2%;
+          border: @luxant 2px solid;
+          font-family: 'krub';
+          font-size: 1rem;
+          font-weight: @semibold;
+        }
+  
+        button {
+          text-transform: uppercase;
+          width: fit-content;
+          padding: 2% 5%;
+          font-family: 'oswald';
+          font-weight: @semibold;
+          font-size: 18px;
+          background-color: @luxant;
+          border: none;
+          align-self: center;
+          border: transparent 2px solid;
+          transition: all .3s ease;
+  
+          i {
+            display: none;
+            visibility: hidden;
+            margin: 0 15%;
+          }
+  
+          &:hover {
+            cursor: pointer;
+            border: 2px solid @luxant;
+            background-color: rgb(242, 242, 242);
+  
+            i {
+              margin: 0 15%;
+              visibility: visible;
+              display: inline;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ 768px ----------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+
+@media (max-width: 1024px) {
+
+  section.fonctions {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div.content {
+      height: 100%;
+
+      .left {
+        justify-content: center;
+        gap: 5%;
+
+        .title {
+          font-size: 2rem;
+          padding: 2% 0;
+        }
+
+        .desc {
+          p {
+            font-family: 'krub';
+            font-size: 1rem;
+            font-weight: @semibold;
+            padding-right: 0%;
+          }
+        }
+
+        .details {
+          flex-direction: column;
+          gap: 0;
+
+          .gauche {
+            width: 100%;
+            padding-left: 2%;
+
+            ul {
+              li {
+                list-style-type: '\25A0';
+                padding-left: 2%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                &::marker {
+                  color: @luxant;
+                }
+              }
+            }
+          }
+
+          .droite {
+            width: 100%;
+            padding-left: 2%;
+
+            ul {
+              li {
+                list-style-type: '\25A0';
+                padding-left: 2%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                &::marker {
+                  color: @luxant;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .right {
+      align-items: center;
+      div{
+        width: 60%;
+      }
+    }
+  }
+
+section.custom{
+  .content{
+    .droite{
+      .title{
+        font-size: 2rem;
+      }
+    }
+  }
+  &::after{
+    font-size: 1.5rem;
+  }
+}
+}
 
 /* ------------------------------------------------------------------------- */
 /* ----------------------- 1920px FLUID TYPO ------------------------------- */
