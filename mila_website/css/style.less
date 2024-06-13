@@ -447,6 +447,7 @@ header {
     padding: 0% 10%;
     height: 10vh;
     width: 100%;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -2835,7 +2836,7 @@ footer {
         input {
           margin: 5% 0%;
           padding: 4% 2%;
-          border: @luxant 2px solid;
+          border: @luxant 1px solid;
           font-family: 'krub';
           font-size: 1rem;
           font-weight: @semibold;
@@ -2850,7 +2851,7 @@ footer {
           max-height: 30vh;
           margin: 5% 0%;
           padding: 4% 2%;
-          border: @luxant 2px solid;
+          border: @luxant 1px solid;
           font-family: 'krub';
           font-size: 1rem;
           font-weight: @semibold;
@@ -2926,32 +2927,40 @@ footer {
   header {
     div.main {
       flex-direction: column-reverse;
+      align-items: center;
       position: relative;
       padding: 0%;
 
       div.mid {
-        width: 100%;
-        position: absolute;
+        width: 60%;
+        height: 80%;
         background-color: #ffffff;
-        opacity: 0.1;
-        z-index: 1;
-
+        align-items: flex-end;
+        .hero{
+          svg{
+            width: 60%;
+            height: auto;
+          }
+          img{
+            width: 55%;
+            height: auto;
+          }
+        }
       }
 
       div.right {
         align-items: center;
         text-align: center;
-        z-index: 5;
         width: 100%;
 
         p {
           text-align: center;
           font-size: 1.1rem;
-          padding: 5% 0%;
+          padding: 2% 0%;
         }
 
         a {
-          font-weight: @medium;
+          display: none;
         }
       }
     }
@@ -3071,7 +3080,285 @@ footer {
 
   section.video{
     div.content{
+      div.vid{
+        height: 65%;
+      }
+    }
+    div.txt{
+      svg{
+        width: 20px;
+        height: 70px;
+      }
+      p{
+        font-size: .6rem;
+      }
+    }
+  }
 
+  section.demo{
+    div.content{
+      div.right{
+        .titre{
+          p{
+            &:nth-of-type(2){
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      form{
+        input{
+          font-size: .8rem;
+        }
+        textarea{
+          font-size: .8rem;
+        }
+        button{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  footer{
+    div.credit{
+      p{
+        width: calc(100%/3);
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ 425px ----------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+
+@media (max-width: 425px) {
+  header {
+    div.main {
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      padding: 0%;
+
+      div.mid {
+        width: 60%;
+        height: 80%;
+        background-color: #ffffff;
+        align-items: flex-end;
+        .hero{
+          svg{
+            width: 60%;
+            height: auto;
+          }
+          img{
+            width: 55%;
+            height: auto;
+          }
+        }
+      }
+
+      div.right {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        p {
+          text-align: center;
+          font-size: 1.1rem;
+          padding: 2% 0%;
+        }
+
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  section.target {
+    div.topline {
+      width: 80%;
+      div.gauche{
+        div{
+          p {
+            font-size: 2rem;
+          }
+          &:nth-of-type(2){
+            p{
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.fonctions {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div.content {
+      height: 100%;
+
+      .left {
+        justify-content: center;
+        gap: 5%;
+
+        .title {
+          font-size: 2rem;
+          padding: 2% 0;
+        }
+
+        .desc {
+          p {
+            font-family: 'krub';
+            font-size: 1rem;
+            font-weight: @semibold;
+            padding-right: 0%;
+          }
+        }
+
+        .details {
+          flex-direction: column;
+          gap: 0;
+
+          .gauche {
+            width: 100%;
+            padding-left: 2%;
+
+            ul {
+              li {
+                list-style-type: '\25A0';
+                padding-left: 2%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                &::marker {
+                  color: @luxant;
+                }
+              }
+            }
+          }
+
+          .droite {
+            width: 100%;
+            padding-left: 2%;
+
+            ul {
+              li {
+                list-style-type: '\25A0';
+                padding-left: 2%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                &::marker {
+                  color: @luxant;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .right {
+      align-items: center;
+
+      div {
+        width: 60%;
+      }
+    }
+  }
+
+  section.custom {
+    padding: 5% 0%;
+    .content {
+      flex-direction: column-reverse;
+  
+      gap: 0;
+      .droite {
+        width: 100%;
+        .title {
+          font-size: 1.5rem;
+          text-align: center;
+          width: 100%;
+          p{
+            width: 100%;
+          }
+        }
+      }
+      .gauche{
+        width: 100%;
+        div{
+
+          img{
+            margin: 0 auto;
+            width: 80%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    &::after {
+      font-size: 1.5rem;
+    }
+  }
+
+  section.video{
+    div.content{
+      div.vid{
+        height: 35%;
+      }
+    }
+    div.txt{
+      svg{
+        width: 20px;
+        height: 70px;
+      }
+      p{
+        font-size: .6rem;
+      }
+    }
+  }
+
+  section.demo{
+    div.content{
+      div.right{
+        .titre{
+          p{
+            &:nth-of-type(2){
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      form{
+        input{
+          font-size: .8rem;
+        }
+        textarea{
+          font-size: .8rem;
+        }
+        button{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  footer{
+    div.credit{
+      p{
+        width: calc(100%/3);
+        font-size: .8rem;
+      }
     }
   }
 }
