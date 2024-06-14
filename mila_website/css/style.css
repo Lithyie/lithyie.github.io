@@ -1780,7 +1780,6 @@ footer .credit p i {
     text-overflow: ellipsis;
   }
   section.fonctions {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1912,7 +1911,6 @@ footer .credit p i {
     font-size: 2.8rem;
   }
   section.fonctions {
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2175,7 +2173,6 @@ footer .credit p i {
     font-size: 1.3rem;
   }
   section.fonctions {
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2420,13 +2417,11 @@ footer .credit p i {
     background-image: url(../assets/img/pdv.jpg);
   }
   section.fonctions {
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
   }
   section.fonctions div.content {
-    height: 100%;
+    padding: 10% 0%;
     flex-direction: column;
   }
   section.fonctions div.content .left {
