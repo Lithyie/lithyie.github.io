@@ -2357,7 +2357,7 @@ footer .credit p i {
     margin-bottom: 10%;
     width: 80%;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #333;
   }
   section.target div.cards article:hover {
     transition: all 0.3s ease;
@@ -2427,16 +2427,20 @@ footer .credit p i {
   }
   section.fonctions div.content {
     height: 100%;
+    flex-direction: column;
   }
   section.fonctions div.content .left {
     justify-content: center;
+    width: 100%;
     gap: 5%;
   }
   section.fonctions div.content .left .title {
     font-size: 2rem;
     padding: 2% 0;
+    text-align: center;
   }
   section.fonctions div.content .left .desc p {
+    text-align: center;
     font-family: 'krub';
     font-size: 1rem;
     font-weight: 600;
@@ -2473,35 +2477,41 @@ footer .credit p i {
     color: #d6bb73;
   }
   section.fonctions .right {
-    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   section.fonctions .right div {
-    width: 60%;
+    width: 50%;
+    height: auto;
   }
   section.custom {
     padding: 5% 0%;
   }
   section.custom .content {
     flex-direction: column-reverse;
+    width: 80%;
     gap: 0;
   }
   section.custom .content .droite {
     width: 100%;
   }
   section.custom .content .droite .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     width: 100%;
   }
   section.custom .content .droite .title p {
     width: 100%;
   }
+  section.custom .content .droite .desc {
+    text-align: center;
+  }
   section.custom .content .gauche {
     width: 100%;
   }
   section.custom .content .gauche div img {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: auto;
   }
   section.custom::after {

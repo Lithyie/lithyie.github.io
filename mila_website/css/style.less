@@ -2915,7 +2915,7 @@ footer {
         margin-bottom: 10%;
         width: 80%;
         border-radius: 5px;
-        background-color: #f0f0f0;
+        background-color: #333;
 
         &:hover {
           transition: all 0.3s ease;
@@ -3020,18 +3020,22 @@ footer {
 
     div.content {
       height: 100%;
+      flex-direction: column;
 
       .left {
         justify-content: center;
+        width: 100%;
         gap: 5%;
 
         .title {
           font-size: 2rem;
           padding: 2% 0;
+          text-align: center;
         }
 
         .desc {
           p {
+            text-align: center;
             font-family: 'krub';
             font-size: 1rem;
             font-weight: @semibold;
@@ -3084,10 +3088,12 @@ footer {
     }
 
     .right {
-      align-items: center;
+      justify-content: center;
+      width: 100%;
 
       div {
-        width: 60%;
+        width: 50%;
+        height: auto;
       }
     }
   }
@@ -3097,6 +3103,7 @@ footer {
 
     .content {
       flex-direction: column-reverse;
+      width: 80%;
 
       gap: 0;
 
@@ -3104,7 +3111,7 @@ footer {
         width: 100%;
 
         .title {
-          font-size: 1.5rem;
+          font-size: 2rem;
           text-align: center;
           width: 100%;
 
@@ -3112,16 +3119,18 @@ footer {
             width: 100%;
           }
         }
+        .desc{
+          text-align: center;
+        }
       }
 
       .gauche {
         width: 100%;
 
         div {
-
           img {
             margin: 0 auto;
-            width: 80%;
+            width: 100%;
             height: auto;
           }
         }
