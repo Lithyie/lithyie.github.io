@@ -1052,7 +1052,6 @@ section.video {
 }
 
 section.demo {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2428,7 +2427,7 @@ footer {
   }
 
   section.demo {
-    height: 70vh;
+
     margin-top: 0;
 
     div.content {
@@ -3162,8 +3161,14 @@ footer {
   }
 
   section.demo {
+
     div.content {
+      flex-direction: column-reverse;
+      width: 80%;
       div.right {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
         .titre {
           p {
             &:nth-of-type(2) {
@@ -3171,6 +3176,20 @@ footer {
             }
           }
         }
+        form{
+          padding: 2% 5%;
+        }
+      }
+
+      div.left{
+        width: 100%;
+        max-width: 100%;
+        margin: 20% 0%;
+        div{
+          margin: 0 auto;
+          width: 80%;
+        }
+
       }
 
       form {

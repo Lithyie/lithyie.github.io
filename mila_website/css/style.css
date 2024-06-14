@@ -937,7 +937,6 @@ section.video div.content video {
   display: inline;
 }
 section.demo {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2022,7 +2021,6 @@ footer .credit p i {
     height: 100%;
   }
   section.demo {
-    height: 70vh;
     margin-top: 0;
   }
   section.demo div.content {
@@ -2527,8 +2525,29 @@ footer .credit p i {
   section.video div.txt p {
     font-size: 0.6rem;
   }
+  section.demo div.content {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+  section.demo div.content div.right {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
   section.demo div.content div.right .titre p:nth-of-type(2) {
     font-weight: 500;
+  }
+  section.demo div.content div.right form {
+    padding: 2% 5%;
+  }
+  section.demo div.content div.left {
+    width: 100%;
+    max-width: 100%;
+    margin: 20% 0%;
+  }
+  section.demo div.content div.left div {
+    margin: 0 auto;
+    width: 80%;
   }
   section.demo div.content form input {
     font-size: 0.8rem;
