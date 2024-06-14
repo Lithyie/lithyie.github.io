@@ -326,6 +326,12 @@ header div.nav div.burger {
 }
 header div.nav div.logo {
   align-self: center;
+  transition: width 0.5s ease;
+}
+header div.nav div.logo a img {
+  transition: width 0.5s ease;
+  width: 80%;
+  height: auto;
 }
 header div.nav div.menu ul {
   display: flex;
@@ -351,6 +357,22 @@ header div.nav div.menu ul li a {
 header div.nav div.menu ul li a:hover {
   background-color: rgba(240, 248, 255, 0.116);
   border-bottom: 3px solid #d6bb73;
+}
+header div.nav.scrolled {
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  height: 10%;
+  top: 0;
+  padding: 2% 5%;
+  transition: width 0.5s ease;
+}
+header div.nav.scrolled div.logo {
+  transition: width 0.5s ease;
+}
+header div.nav.scrolled div.logo a img {
+  width: 70%;
+  height: auto;
 }
 header div.main {
   display: flex;
@@ -580,7 +602,6 @@ section.target {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
 }
 section.target div.topline {
   width: 75%;
@@ -622,448 +643,102 @@ section.target div.topline div.droite div p {
 section.target div.topline div.droite div p:nth-of-type(2) {
   font-size: 20px;
 }
-section.target div.flexing {
+section.target div.cards {
+  width: 70%;
+  padding: 5% 0%;
   display: flex;
-  flex-direction: row;
-  width: 75%;
-  box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
 }
-section.target div.flexing div.section {
-  flex: 1;
-  position: relative;
-  transition: 0.5s ease;
-  width: 20%;
+section.target div.cards article {
+  margin-bottom: 10%;
+  width: 40%;
+  height: fit-content;
+  margin: 2%;
+  border-radius: 5px;
+  background-color: #333;
+}
+section.target div.cards article div.titre {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  height: 40vh;
-}
-section.target div.flexing div.section.section--yellow {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   align-items: center;
-  flex-direction: column;
-  transition: all 1.3s ease;
-  overflow: hidden;
-  position: relative;
-}
-section.target div.flexing div.section.section--yellow div.titre {
-  overflow: hidden;
-}
-section.target div.flexing div.section.section--yellow div.titre .texte {
-  min-width: 55%;
-  max-width: 55%;
-  max-height: max-content;
-  overflow: hidden;
-  padding: 2%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  transition-delay: 0.8s;
-  position: absolute;
-  font-family: 'krub';
-  font-weight: 500;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--yellow div.titre .texte p {
-  padding: 2% 0%;
-}
-section.target div.flexing div.section.section--yellow video {
-  max-width: 80%;
-  width: 90%;
-  max-height: 65%;
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--yellow:hover {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--yellow:hover div.titre {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--yellow:hover div.titre .texte {
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-25%, -50%);
-}
-section.target div.flexing div.section.section--yellow:hover div.titre .texte p {
-  text-justify: justify;
-  font-family: 'oswald';
-  font-weight: 400;
-  font-size: 1.1rem;
-  margin: 4% 0%;
-  padding: 2% 5%;
-  background-color: #ffffff;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--yellow:hover video {
-  transition: all 1.3s ease;
-  max-width: 40%;
-  width: 40%;
-  transform: translateX(80%);
-}
-section.target div.flexing div.section.section--yellow:hover::before {
-  background-image: url('../assets/img/mila_train.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--yellow:hover::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--yellow::before,
-section.target div.flexing div.section.section--yellow::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 1.3s ease;
-  z-index: -1;
-}
-section.target div.flexing div.section.section--yellow::before {
-  background-image: url('../assets/img/mila_train.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--yellow::after {
-  background-image: url('../assets/img/mila_trainhover.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--pink {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  transition: all 1.3s ease;
-  overflow: hidden;
-  position: relative;
-}
-section.target div.flexing div.section.section--pink div.titre {
-  overflow: hidden;
-}
-section.target div.flexing div.section.section--pink div.titre .texte {
-  min-width: 55%;
-  max-width: 55%;
-  max-height: max-content;
-  overflow: hidden;
-  padding: 2%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  transition-delay: 0.8s;
-  position: absolute;
-  font-family: 'krub';
-  font-weight: 500;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--pink div.titre .texte p {
-  padding: 2% 0%;
-}
-section.target div.flexing div.section.section--pink video {
-  max-width: 80%;
-  width: 90%;
-  max-height: 65%;
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--pink:hover {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--pink:hover div.titre {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--pink:hover div.titre .texte {
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-25%, -50%);
-}
-section.target div.flexing div.section.section--pink:hover div.titre .texte p {
-  text-justify: justify;
-  font-family: 'oswald';
-  font-weight: 400;
-  font-size: 1.1rem;
-  margin: 4% 0%;
-  padding: 2% 5%;
-  background-color: #ffffff;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--pink:hover video {
-  transition: all 1.3s ease;
-  max-width: 40%;
-  width: 40%;
-  transform: translateX(80%);
-}
-section.target div.flexing div.section.section--pink:hover::before {
-  background-image: url('../assets/img/casino.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--pink:hover::after {
-  background-image: url('../assets/img/casinohover.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--pink::before,
-section.target div.flexing div.section.section--pink::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 1.3s ease;
-  z-index: -1;
-}
-section.target div.flexing div.section.section--pink::before {
-  background-image: url('../assets/img/casino.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--pink::after {
-  background-image: url('../assets/img/casinohover.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--green {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  transition: all 1.3s ease;
-  overflow: hidden;
-  position: relative;
-}
-section.target div.flexing div.section.section--green div.titre {
-  overflow: hidden;
-}
-section.target div.flexing div.section.section--green div.titre .texte {
-  min-width: 55%;
-  max-width: 55%;
-  max-height: max-content;
-  overflow: hidden;
-  padding: 2%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  transition-delay: 0.8s;
-  position: absolute;
-  font-family: 'krub';
-  font-weight: 500;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--green div.titre .texte p {
-  padding: 2% 0%;
-}
-section.target div.flexing div.section.section--green video {
-  max-width: 80%;
-  width: 90%;
-  max-height: 65%;
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--green:hover {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--green:hover div.titre {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--green:hover div.titre .texte {
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-25%, -50%);
-}
-section.target div.flexing div.section.section--green:hover div.titre .texte p {
-  text-justify: justify;
-  font-family: 'oswald';
-  font-weight: 400;
-  font-size: 1.1rem;
-  margin: 4% 0%;
-  padding: 2% 5%;
-  background-color: #ffffff;
-  border-radius: 5px;
-}
-section.target div.flexing div.section.section--green:hover video {
-  transition: all 1.3s ease;
-  max-width: 40%;
-  width: 40%;
-  transform: translateX(80%);
-}
-section.target div.flexing div.section.section--green:hover::before {
-  background-image: url('../assets/img/mila_centres.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--green:hover::after {
-  background-image: url('../assets/img/mila_centreshover2.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--green::before,
-section.target div.flexing div.section.section--green::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 1.3s ease;
-  z-index: -1;
-}
-section.target div.flexing div.section.section--green::before {
-  background-image: url('../assets/img/mila_centres.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--green::after {
-  background-image: url('../assets/img/mila_centreshover2.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--blue {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  transition: all 1.3s ease;
-  overflow: hidden;
-}
-section.target div.flexing div.section.section--blue video {
-  max-width: 80%;
-  width: 90%;
-  max-height: 65%;
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--blue:hover {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--blue:hover div.titre {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--blue:hover video {
-  transition: all 1.3s ease;
-  max-width: 40%;
-  width: 40%;
-  transform: translateX(80%);
-}
-section.target div.flexing div.section.section--blue:hover::before {
-  background-image: url('../assets/img/pdv.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--blue:hover::after {
-  background-image: url('../assets/img/pdvhover.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--blue::before,
-section.target div.flexing div.section.section--blue::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 1.3s ease;
-  z-index: -1;
-}
-section.target div.flexing div.section.section--blue::before {
-  background-image: url('../assets/img/pdv.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--blue::after {
-  background-image: url('../assets/img/pdvhover.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--orange {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  transition: all 1.3s ease;
-  overflow: hidden;
-}
-section.target div.flexing div.section.section--orange video {
-  max-width: 80%;
-  width: 90%;
-  max-height: 65%;
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--orange:hover {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--orange:hover div.titre {
-  transition: all 1.3s ease;
-}
-section.target div.flexing div.section.section--orange:hover video {
-  transition: all 1.3s ease;
-  max-width: 40%;
-  width: 40%;
-  transform: translateX(80%);
-}
-section.target div.flexing div.section.section--orange:hover::before {
-  background-image: url('../assets/img/musee.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section.section--orange:hover::after {
-  background-image: url('../assets/img/museehover.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--orange::before,
-section.target div.flexing div.section.section--orange::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 1.3s ease;
-  z-index: -1;
-}
-section.target div.flexing div.section.section--orange::before {
-  background-image: url('../assets/img/musee.jpg');
-  opacity: 1;
-}
-section.target div.flexing div.section.section--orange::after {
-  background-image: url('../assets/img/museehover.jpg');
-  opacity: 0;
-}
-section.target div.flexing div.section:hover {
-  flex: 5;
-}
-section.target div.flexing div.section div.titre {
-  background-color: hsl(0, 0%, 100%);
-  width: 100%;
-  padding: 0% 0%;
-}
-section.target div.flexing div.section div.titre .title {
-  padding: 0 2%;
-}
-section.target div.flexing div.section div.titre .title p {
-  color: #181818;
-  font-family: "krub";
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-align: center;
+  padding: 2% 4%;
+  color: white;
+}
+section.target div.cards article div.titre p {
+  font-family: 'krub', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  transition: 1.3s ease;
-  transition: font-size 0.5s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+section.target div.cards article div.img_illu {
+  width: 100%;
+  padding: 30%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.target div.cards article div.text {
+  display: none;
+  padding: 4%;
+  font-family: 'krub', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #f9f9f9;
+}
+section.target div.cards article div.text p {
+  padding: 3% 0%;
+}
+section.target div.cards article:nth-of-type(1) div.img_illu {
+  background-image: url(../assets/img/mila_train.jpg);
+}
+section.target div.cards article:nth-of-type(1):hover {
+  transition: all 0.3s ease;
+}
+section.target div.cards article:nth-of-type(1):hover div.img_illu {
+  background-image: url(../assets/img/mila_trainhover.jpg);
+}
+section.target div.cards article:nth-of-type(1):hover div.text {
+  display: block;
+}
+section.target div.cards article:nth-of-type(2):hover {
+  transition: all 0.3s ease;
+}
+section.target div.cards article:nth-of-type(2):hover div.text {
+  display: block;
+}
+section.target div.cards article:nth-of-type(2):hover div.img_illu {
+  background-image: url(../assets/img/casinohover.jpg);
+}
+section.target div.cards article:nth-of-type(2) div.img_illu {
+  background-image: url(../assets/img/casino.jpg);
+}
+section.target div.cards article:nth-of-type(3):hover div.text {
+  display: block;
+}
+section.target div.cards article:nth-of-type(3):hover div.img_illu {
+  background-image: url(../assets/img/museehover.jpg);
+}
+section.target div.cards article:nth-of-type(3) div.img_illu {
+  background-image: url(../assets/img/musee.jpg);
+}
+section.target div.cards article:nth-of-type(4):hover div.text {
+  display: block;
+}
+section.target div.cards article:nth-of-type(4):hover div.img_illu {
+  background-image: url(../assets/img/mila_centreshover2.jpg);
+}
+section.target div.cards article:nth-of-type(4) div.img_illu {
+  background-image: url(../assets/img/mila_centres.jpg);
+}
+section.target div.cards article:nth-of-type(5):hover div.text {
+  display: block;
+}
+section.target div.cards article:nth-of-type(5):hover div.img_illu {
+  background-image: url(../assets/img/pdvhover.jpg);
+}
+section.target div.cards article:nth-of-type(5) div.img_illu {
+  background-image: url(../assets/img/pdv.jpg);
 }
 section.fonctions {
   height: 100vh;
@@ -1644,9 +1319,6 @@ footer .credit p i {
   header .divider div p:nth-of-type(3) span {
     font-weight: 500;
   }
-  section.target {
-    height: 100vh;
-  }
   section.target div.topline div.gauche div p {
     font-size: 2.8rem;
   }
@@ -2225,6 +1897,10 @@ footer .credit p i {
 /* ------------------------------ 1440px ----------------------------------- */
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1440px) {
+  header div.nav div.logo a img {
+    width: 80%;
+    height: auto;
+  }
   section.fonctions .content .left .details .gauche {
     width: 100%;
     padding-left: 2%;
@@ -2627,20 +2303,127 @@ footer .credit p i {
   header div.main div.right a {
     display: none;
   }
+  header div.nav div.logo a img {
+    width: 50%;
+    height: auto;
+  }
+  header div.nav.scrolled div.logo a img {
+    width: 50%;
+    height: auto;
+  }
+  section.innovation {
+    height: 60%;
+  }
+  section.target {
+    justify-content: flex-start;
+    margin-bottom: 5%;
+  }
   section.target div.topline {
     width: 80%;
+    padding: 15% 0%;
+    flex-direction: column;
+    gap: 30%;
+  }
+  section.target div.topline div.gauche {
+    width: 100%;
   }
   section.target div.topline div.gauche div p {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
   }
   section.target div.topline div.gauche div:nth-of-type(2) p {
-    font-size: 1.3rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  section.target div.topline div.droite {
+    align-self: flex-end;
+    display: none;
+  }
+  section.target div.topline div.droite div p {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  section.target div.topline div.droite div p:nth-of-type(2) {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  section.target div.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.target div.cards article {
+    margin-bottom: 10%;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  section.target div.cards article:hover {
+    transition: all 0.3s ease;
+  }
+  section.target div.cards article:hover div.img_illu {
+    background-image: url(../assets/img/mila_trainhover.jpg);
+  }
+  section.target div.cards article:hover div.text {
+    display: block;
+  }
+  section.target div.cards article div.titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+  }
+  section.target div.cards article div.titre p {
+    font-family: 'krub', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  section.target div.cards article div.img_illu {
+    width: 100%;
+    height: 200px;
+    background-image: url(../assets/img/mila_train.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section.target div.cards article div.text {
+    display: none;
+    padding: 4%;
+  }
+  section.target div.cards article div.text p {
+    padding: 3% 0%;
+  }
+  section.target div.cards article:nth-of-type(2):hover div.img_illu {
+    background-image: url(../assets/img/casinohover.jpg);
+  }
+  section.target div.cards article:nth-of-type(2) div.img_illu {
+    background-image: url(../assets/img/casino.jpg);
+  }
+  section.target div.cards article:nth-of-type(3):hover div.img_illu {
+    background-image: url(../assets/img/museehover.jpg);
+  }
+  section.target div.cards article:nth-of-type(3) div.img_illu {
+    background-image: url(../assets/img/musee.jpg);
+  }
+  section.target div.cards article:nth-of-type(4):hover div.img_illu {
+    background-image: url(../assets/img/mila_centreshover2.jpg);
+  }
+  section.target div.cards article:nth-of-type(4) div.img_illu {
+    background-image: url(../assets/img/mila_centres.jpg);
+  }
+  section.target div.cards article:nth-of-type(5):hover div.img_illu {
+    background-image: url(../assets/img/pdvhover.jpg);
+  }
+  section.target div.cards article:nth-of-type(5) div.img_illu {
+    background-image: url(../assets/img/pdv.jpg);
   }
   section.fonctions {
-    height: 80vh;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   section.fonctions div.content {
     height: 100%;
@@ -2758,6 +2541,22 @@ footer .credit p i {
   header div.nav div.navbar div.menu ul li a {
     font-size: 16px;
     letter-spacing: 1px;
+  }
+  header div.nav.scrolled {
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    height: 10%;
+    top: 0;
+    padding: 2% 5%;
+    transition: width 0.5s ease;
+  }
+  header div.nav.scrolled div.logo {
+    transition: width 0.5s ease;
+  }
+  header div.nav.scrolled div.logo a img {
+    width: 70%;
+    height: auto;
   }
   header div.main div.left div.topline p {
     font-size: 144px;

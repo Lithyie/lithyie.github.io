@@ -257,6 +257,15 @@ header {
 
     div.logo {
       align-self: center;
+      transition: width 0.5s ease;
+
+      a {
+        img {
+          transition: width 0.5s ease;
+          width: 80%;
+          height: auto;
+        }
+      }
     }
 
     div.menu {
@@ -293,24 +302,26 @@ header {
   }
 
 
-  // div.nav.scrolled {
-  //   z-index: 10;
-  //   position: fixed;
-  //   height: fit-content;
-  //   top: 0;
-  //   padding: 1% 0%;
+  div.nav.scrolled {
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    height: 10%;
+    top: 0;
+    padding: 2% 5%;
+    transition: width 0.5s ease;
 
-  //   div.navbar {
-  //     div.logo {
-  //       a {
-  //         img {
-  //           width: 60%;
-  //           height: auto;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+    div.logo {
+      transition: width 0.5s ease;
+
+      a {
+        img {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
+  }
 
   div.main {
     display: flex;
@@ -583,7 +594,6 @@ section.target {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
 
   div.topline {
     width: 75%;
@@ -640,520 +650,140 @@ section.target {
     }
   }
 
-  div.flexing {
+  div.cards {
+    width: 70%;
+    padding: 5% 0%;
     display: flex;
-    flex-direction: row;
-    width: 75%;
-    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
-
-    div.section {
-
-      flex: 1;
-      position: relative;
-      transition: 0.5s ease;
-      width: 20%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      height: 40vh;
-
-      &.section--yellow {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        align-items: center;
-        flex-direction: column;
-        transition: all 1.3s ease;
-        overflow: hidden;
-        position: relative;
-
-        div.titre {
-          overflow: hidden;
-
-          .texte {
-            min-width: 55%;
-            max-width: 55%;
-            max-height: max-content;
-            overflow: hidden;
-            padding: 2%;
-            opacity: 0;
-            transition: opacity .5s ease;
-            transition-delay: 0.8s;
-            position: absolute;
-            font-family: 'krub';
-            font-weight: @medium;
-            border-radius: 5px;
-
-            p {
-              padding: 2% 0%;
-            }
-          }
-        }
-
-        video {
-          max-width: 80%;
-          width: 90%;
-          max-height: 65%;
-          transition: all 1.3s ease;
-        }
-
-        &:hover {
-          transition: all 1.3s ease;
-
-          div.titre {
-            transition: all 1.3s ease;
-
-            .texte {
-              opacity: 1;
-              position: absolute;
-              top: 50%;
-              left: 20%;
-              transform: translate(-25%, -50%);
-
-              p {
-                text-justify: justify;
-                font-family: 'oswald';
-                font-weight: @regular;
-                font-size: 1.1rem;
-                margin: 4% 0%;
-                padding: 2% 5%;
-                background-color: rgb(255, 255, 255);
-                border-radius: 5px;
-              }
-            }
-          }
-
-          video {
-            transition: all 1.3s ease;
-            max-width: 40%;
-            width: 40%;
-            transform: translateX(80%);
-          }
-
-          &::before {
-            background-image: url('../assets/img/mila_train.jpg');
-            opacity: 0;
-          }
-
-          &::after {
-            background-image: url('../assets/img/mila_trainhover.jpg');
-            opacity: 1;
-          }
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          transition: opacity 1.3s ease;
-          z-index: -1;
-        }
-
-        &::before {
-          background-image: url('../assets/img/mila_train.jpg');
-          opacity: 1;
-        }
-
-        &::after {
-          background-image: url('../assets/img/mila_trainhover.jpg');
-          opacity: 0;
-        }
-      }
-
-      &.section--pink {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
-        transition: all 1.3s ease;
-        overflow: hidden;
-        position: relative;
-
-        div.titre {
-          overflow: hidden;
-
-          .texte {
-            min-width: 55%;
-            max-width: 55%;
-            max-height: max-content;
-            overflow: hidden;
-            padding: 2%;
-            opacity: 0;
-            transition: opacity .5s ease;
-            transition-delay: 0.8s;
-            position: absolute;
-            font-family: 'krub';
-            font-weight: @medium;
-            border-radius: 5px;
-
-            p {
-              padding: 2% 0%;
-            }
-          }
-        }
-
-        video {
-          max-width: 80%;
-          width: 90%;
-          max-height: 65%;
-          transition: all 1.3s ease;
-        }
-
-        &:hover {
-          transition: all 1.3s ease;
-
-          div.titre {
-            transition: all 1.3s ease;
-
-            .texte {
-              opacity: 1;
-              position: absolute;
-              top: 50%;
-              left: 20%;
-              transform: translate(-25%, -50%);
-
-              p {
-                text-justify: justify;
-                font-family: 'oswald';
-                font-weight: @regular;
-                font-size: 1.1rem;
-                margin: 4% 0%;
-                padding: 2% 5%;
-                background-color: rgb(255, 255, 255);
-                border-radius: 5px;
-              }
-            }
-          }
-
-          video {
-            transition: all 1.3s ease;
-            max-width: 40%;
-            width: 40%;
-            transform: translateX(80%);
-          }
-
-          &::before {
-            background-image: url('../assets/img/casino.jpg');
-            opacity: 0;
-          }
-
-          &::after {
-            background-image: url('../assets/img/casinohover.jpg');
-            opacity: 1;
-          }
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          transition: opacity 1.3s ease;
-          z-index: -1;
-        }
-
-        &::before {
-          background-image: url('../assets/img/casino.jpg');
-          opacity: 1;
-        }
-
-        &::after {
-          background-image: url('../assets/img/casinohover.jpg');
-          opacity: 0;
-        }
-      }
-
-      &.section--green {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
-        transition: all 1.3s ease;
-        overflow: hidden;
-        position: relative;
-
-        div.titre {
-          overflow: hidden;
-
-          .texte {
-            min-width: 55%;
-            max-width: 55%;
-            max-height: max-content;
-            overflow: hidden;
-            padding: 2%;
-            opacity: 0;
-            transition: opacity .5s ease;
-            transition-delay: 0.8s;
-            position: absolute;
-            font-family: 'krub';
-            font-weight: @medium;
-            border-radius: 5px;
-
-            p {
-              padding: 2% 0%;
-            }
-          }
-        }
-
-        video {
-          max-width: 80%;
-          width: 90%;
-          max-height: 65%;
-          transition: all 1.3s ease;
-        }
-
-        &:hover {
-          transition: all 1.3s ease;
-
-          div.titre {
-            transition: all 1.3s ease;
-
-            .texte {
-              opacity: 1;
-              position: absolute;
-              top: 50%;
-              left: 20%;
-              transform: translate(-25%, -50%);
-
-              p {
-                text-justify: justify;
-                font-family: 'oswald';
-                font-weight: @regular;
-                font-size: 1.1rem;
-                margin: 4% 0%;
-                padding: 2% 5%;
-                background-color: rgb(255, 255, 255);
-                border-radius: 5px;
-              }
-            }
-          }
-
-          video {
-            transition: all 1.3s ease;
-            max-width: 40%;
-            width: 40%;
-            transform: translateX(80%);
-          }
-
-          &::before {
-            background-image: url('../assets/img/mila_centres.jpg');
-            opacity: 0;
-          }
-
-          &::after {
-            background-image: url('../assets/img/mila_centreshover2.jpg');
-            opacity: 1;
-          }
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          transition: opacity 1.3s ease;
-          z-index: -1;
-        }
-
-        &::before {
-          background-image: url('../assets/img/mila_centres.jpg');
-          opacity: 1;
-        }
-
-        &::after {
-          background-image: url('../assets/img/mila_centreshover2.jpg');
-          opacity: 0;
-        }
-      }
-
-      &.section--blue {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
-        transition: all 1.3s ease;
-        overflow: hidden;
-
-        video {
-          max-width: 80%;
-          width: 90%;
-          max-height: 65%;
-          transition: all 1.3s ease;
-        }
-
-        &:hover {
-          transition: all 1.3s ease;
-
-          div.titre {
-            transition: all 1.3s ease;
-          }
-
-          video {
-            transition: all 1.3s ease;
-            max-width: 40%;
-            width: 40%;
-            transform: translateX(80%);
-          }
-
-          &::before {
-            background-image: url('../assets/img/pdv.jpg');
-            opacity: 0;
-          }
-
-          &::after {
-            background-image: url('../assets/img/pdvhover.jpg');
-            opacity: 1;
-          }
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          transition: opacity 1.3s ease;
-          z-index: -1;
-        }
-
-        &::before {
-          background-image: url('../assets/img/pdv.jpg');
-          opacity: 1;
-        }
-
-        &::after {
-          background-image: url('../assets/img/pdvhover.jpg');
-          opacity: 0;
-        }
-      }
-
-      &.section--orange {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
-        transition: all 1.3s ease;
-        overflow: hidden;
-
-        video {
-          max-width: 80%;
-          width: 90%;
-          max-height: 65%;
-          transition: all 1.3s ease;
-        }
-
-        &:hover {
-          transition: all 1.3s ease;
-
-          div.titre {
-            transition: all 1.3s ease;
-          }
-
-          video {
-            transition: all 1.3s ease;
-            max-width: 40%;
-            width: 40%;
-            transform: translateX(80%);
-          }
-
-          &::before {
-            background-image: url('../assets/img/musee.jpg');
-            opacity: 0;
-          }
-
-          &::after {
-            background-image: url('../assets/img/museehover.jpg');
-            opacity: 1;
-          }
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          transition: opacity 1.3s ease;
-          z-index: -1;
-        }
-
-        &::before {
-          background-image: url('../assets/img/musee.jpg');
-          opacity: 1;
-        }
-
-        &::after {
-          background-image: url('../assets/img/museehover.jpg');
-          opacity: 0;
-        }
-      }
-
-      &:hover {
-        flex: 5;
-      }
-
-      &:active {}
-
-      &:focus {}
+    flex-wrap: wrap;
+    justify-content: center;
+
+    article {
+      margin-bottom: 10%;
+      width: 40%;
+      height: fit-content;
+      margin: 2%;
+      border-radius: 5px;
+      background-color: #333;
 
       div.titre {
-        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 4%;
+        color: white;
+
+        p {
+          font-family: 'krub', sans-serif;
+          font-size: 1rem;
+          font-weight: @semibold;
+          text-transform: uppercase;
+        }
+      }
+
+      div.img_illu {
         width: 100%;
-        padding: 0% 0%;
+        padding: 30%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-        .title {
-          padding: 0 2%;
+      div.text {
+        display: none;
+        padding: 4%;
+        font-family: 'krub', sans-serif;
+        font-size: 1.1rem;
+        font-weight: @medium;
+        background-color: #f9f9f9;
+        
 
-          p {
-            color: @text;
-            font-family: "krub";
-            font-size: 1.1rem;
-            font-weight: @bold;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 1.3s ease;
-            transition: font-size 0.5s ease;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        p {
+          padding: 3% 0%;
+        }
+      }
+
+
+      &:nth-of-type(1) {
+        div.img_illu {
+          background-image: url(../assets/img/mila_train.jpg);
+        }
+
+        &:hover {
+          transition: all 0.3s ease;
+
+          div.img_illu {
+            background-image: url(../assets/img/mila_trainhover.jpg);
           }
+
+          div.text {
+            display: block;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        &:hover {
+          transition: all 0.3s ease;
+
+          div.text {
+            display: block;
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/casinohover.jpg);
+          }
+        }
+
+        div.img_illu {
+          background-image: url(../assets/img/casino.jpg);
+        }
+      }
+
+      &:nth-of-type(3) {
+        &:hover {
+          div.text {
+            display: block;
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/museehover.jpg);
+          }
+        }
+
+        div.img_illu {
+          background-image: url(../assets/img/musee.jpg);
+        }
+      }
+
+      &:nth-of-type(4) {
+        &:hover {
+          div.text {
+            display: block;
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/mila_centreshover2.jpg);
+          }
+        }
+
+        div.img_illu {
+          background-image: url(../assets/img/mila_centres.jpg);
+        }
+      }
+
+      &:nth-of-type(5) {
+        &:hover {
+          div.text {
+            display: block;
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/pdvhover.jpg);
+          }
+        }
+
+        div.img_illu {
+          background-image: url(../assets/img/pdv.jpg);
         }
       }
     }
@@ -1773,7 +1403,6 @@ footer {
           }
         }
       }
-
     }
 
     div.main {
@@ -1896,7 +1525,6 @@ footer {
   }
 
   section.target {
-    height: 100vh;
 
     div.topline {
       div.gauche {
@@ -2607,6 +2235,19 @@ footer {
 
 @media (max-width: 1440px) {
 
+  header {
+    div.nav {
+      div.logo {
+        a {
+          img {
+            width: 80%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
   section.fonctions {
     .content {
       .left {
@@ -2936,13 +2577,16 @@ footer {
         height: 60%;
         background-color: #ffffff;
         align-items: flex-end;
-        .hero{
+
+        .hero {
           height: 90%;
-          svg{
+
+          svg {
             width: auto;
             height: 80%;
           }
-          img{
+
+          img {
             width: auto;
             height: 100%;
           }
@@ -2970,13 +2614,15 @@ footer {
   section.target {
     div.topline {
       width: 80%;
-      div.gauche{
-        div{
+
+      div.gauche {
+        div {
           p {
             font-size: 2rem;
           }
-          &:nth-of-type(2){
-            p{
+
+          &:nth-of-type(2) {
+            p {
               font-size: 1.3rem;
             }
           }
@@ -3079,51 +2725,56 @@ footer {
     }
   }
 
-  section.video{
-    div.content{
-      div.vid{
+  section.video {
+    div.content {
+      div.vid {
         height: 65%;
       }
     }
-    div.txt{
-      svg{
+
+    div.txt {
+      svg {
         width: 20px;
         height: 70px;
       }
-      p{
+
+      p {
         font-size: .6rem;
       }
     }
   }
 
-  section.demo{
-    div.content{
-      div.right{
-        .titre{
-          p{
-            &:nth-of-type(2){
+  section.demo {
+    div.content {
+      div.right {
+        .titre {
+          p {
+            &:nth-of-type(2) {
               font-weight: 500;
             }
           }
         }
       }
-      form{
-        input{
+
+      form {
+        input {
           font-size: .8rem;
         }
-        textarea{
+
+        textarea {
           font-size: .8rem;
         }
-        button{
+
+        button {
           font-size: 1rem;
         }
       }
     }
   }
 
-  footer{
-    div.credit{
-      p{
+  footer {
+    div.credit {
+      p {
         width: calc(100%/3);
         font-size: .8rem;
       }
@@ -3149,12 +2800,14 @@ footer {
         height: 80%;
         background-color: #ffffff;
         align-items: flex-end;
-        .hero{
-          svg{
+
+        .hero {
+          svg {
             width: 60%;
             height: auto;
           }
-          img{
+
+          img {
             width: 55%;
             height: auto;
           }
@@ -3177,20 +2830,182 @@ footer {
         }
       }
     }
+
+    div.nav {
+      div.logo {
+        a {
+          img {
+            width: 50%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    div.nav.scrolled {
+      div.logo {
+        a {
+          img {
+            width: 50%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  section.innovation {
+    height: 60%;
   }
 
   section.target {
+    justify-content: flex-start;
+    margin-bottom: 5%;
+
     div.topline {
       width: 80%;
-      div.gauche{
-        div{
+      padding: 15% 0%;
+      flex-direction: column;
+      gap: 30%;
+
+      div.gauche {
+        width: 100%;
+
+        div {
           p {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
           }
-          &:nth-of-type(2){
-            p{
-              font-size: 1.3rem;
+
+          &:nth-of-type(2) {
+            p {
+              text-align: center;
+              font-size: 1.2rem;
             }
+          }
+        }
+      }
+
+      div.droite {
+        align-self: flex-end;
+        display: none;
+
+        div {
+          p {
+            text-align: center;
+            font-size: 0.75rem;
+
+            &:nth-of-type(2) {
+              text-align: center;
+              font-size: .9rem;
+            }
+          }
+
+        }
+      }
+    }
+
+    div.cards {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      article {
+        margin-bottom: 10%;
+        width: 80%;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+
+        &:hover {
+          transition: all 0.3s ease;
+
+          div.img_illu {
+            background-image: url(../assets/img/mila_trainhover.jpg);
+          }
+
+          div.text {
+            display: block;
+          }
+        }
+
+        div.titre {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2% 4%;
+
+          p {
+            font-family: 'krub', sans-serif;
+            font-size: 1rem;
+            font-weight: @semibold;
+            text-transform: uppercase;
+          }
+        }
+
+        div.img_illu {
+          width: 100%;
+          height: 200px;
+          background-image: url(../assets/img/mila_train.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        div.text {
+          display: none;
+          padding: 4%;
+
+          p {
+            padding: 3% 0%;
+          }
+        }
+
+        &:nth-of-type(2) {
+          &:hover {
+            div.img_illu {
+              background-image: url(../assets/img/casinohover.jpg);
+            }
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/casino.jpg);
+          }
+        }
+
+        &:nth-of-type(3) {
+          &:hover {
+            div.img_illu {
+              background-image: url(../assets/img/museehover.jpg);
+            }
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/musee.jpg);
+          }
+        }
+
+        &:nth-of-type(4) {
+          &:hover {
+            div.img_illu {
+              background-image: url(../assets/img/mila_centreshover2.jpg);
+            }
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/mila_centres.jpg);
+          }
+        }
+
+        &:nth-of-type(5) {
+          &:hover {
+            div.img_illu {
+              background-image: url(../assets/img/pdvhover.jpg);
+            }
+          }
+
+          div.img_illu {
+            background-image: url(../assets/img/pdv.jpg);
           }
         }
       }
@@ -3198,10 +3013,10 @@ footer {
   }
 
   section.fonctions {
-    height: 80vh;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     div.content {
       height: 100%;
@@ -3279,26 +3094,32 @@ footer {
 
   section.custom {
     padding: 5% 0%;
+
     .content {
       flex-direction: column-reverse;
-  
+
       gap: 0;
+
       .droite {
         width: 100%;
+
         .title {
           font-size: 1.5rem;
           text-align: center;
           width: 100%;
-          p{
+
+          p {
             width: 100%;
           }
         }
       }
-      .gauche{
-        width: 100%;
-        div{
 
-          img{
+      .gauche {
+        width: 100%;
+
+        div {
+
+          img {
             margin: 0 auto;
             width: 80%;
             height: auto;
@@ -3312,51 +3133,56 @@ footer {
     }
   }
 
-  section.video{
-    div.content{
-      div.vid{
+  section.video {
+    div.content {
+      div.vid {
         height: 35%;
       }
     }
-    div.txt{
-      svg{
+
+    div.txt {
+      svg {
         width: 20px;
         height: 70px;
       }
-      p{
+
+      p {
         font-size: .6rem;
       }
     }
   }
 
-  section.demo{
-    div.content{
-      div.right{
-        .titre{
-          p{
-            &:nth-of-type(2){
+  section.demo {
+    div.content {
+      div.right {
+        .titre {
+          p {
+            &:nth-of-type(2) {
               font-weight: 500;
             }
           }
         }
       }
-      form{
-        input{
+
+      form {
+        input {
           font-size: .8rem;
         }
-        textarea{
+
+        textarea {
           font-size: .8rem;
         }
-        button{
+
+        button {
           font-size: 1rem;
         }
       }
     }
   }
 
-  footer{
-    div.credit{
-      p{
+  footer {
+    div.credit {
+      p {
         width: calc(100%/3);
         font-size: .8rem;
       }
@@ -3382,6 +3208,28 @@ footer {
           }
         }
       }
+    }
+
+    div.nav.scrolled {
+      background-color: white;
+      z-index: 10;
+      position: fixed;
+      height: 10%;
+      top: 0;
+      padding: 2% 5%;
+      transition: width 0.5s ease;
+
+      div.logo {
+        transition: width 0.5s ease;
+
+        a {
+          img {
+            width: 70%;
+            height: auto;
+          }
+        }
+      }
+
     }
 
     div.main {
