@@ -524,84 +524,98 @@ section.innovation {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 3% 0%;
   position: relative;
 }
-section.innovation div.main {
+section.innovation div.container {
   width: 100%;
-  height: 100%;
+}
+section.innovation div.container div.content {
+  width: 100%;
+  padding: 10% 0%;
+  display: flex;
+  justify-content: space-between;
+}
+section.innovation div.container div.content div.textleft {
+  width: 5%;
+  display: flex;
+  align-items: center;
+}
+section.innovation div.container div.content div.textleft p {
+  font-family: Krub;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  color: #181818;
+}
+section.innovation div.container div.content div.textleft p::before {
+  position: absolute;
+  content: '\25A0';
+  top: -10%;
+  left: -10%;
+  font-size: 1.5rem;
+}
+section.innovation div.container div.content div.middle {
+  width: 90%;
   background-image: url('../assets/img/circle.svg');
-  background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
-section.innovation div.main p {
+section.innovation div.container div.content div.middle p {
+  text-align: center;
   font-family: 'krub';
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
 }
-section.innovation div.main p:nth-of-type(2) {
+section.innovation div.container div.content div.middle p:nth-of-type(2) {
   font-weight: 300;
 }
-section.innovation div.main::before {
-  font-family: Krub;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  content: '\25A0  Technologie innovante';
-  text-wrap: nowrap;
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  transform: rotate(-180deg);
-  color: #181818;
-  left: 0;
+section.innovation div.container div.content div.textright {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-section.innovation div.main::after {
+section.innovation div.container div.content div.textright p {
   font-family: Krub;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: absolute;
-  content: '\25A0  Technologie innovante';
   font-size: 20px;
-  text-wrap: nowrap;
   writing-mode: vertical-lr;
   transform: rotate(-360deg);
   color: #181818;
-  right: 0;
+  position: relative;
 }
-section.innovation div.bottom {
-  display: flex;
-  justify-content: center;
+section.innovation div.container div.content div.textright p::before {
+  position: absolute;
+  content: '\25A0';
+  top: -10%;
+  left: -10%;
+  font-size: 1.5rem;
+}
+section.innovation div.container div.bottom {
   width: 100%;
-}
-section.innovation div.bottom div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 33.33333333%;
+  justify-content: space-evenly;
 }
-section.innovation div.bottom div p {
-  font-family: 'krub';
+section.innovation div.container div.bottom div p {
+  font-family: 'krub', sans-serif;
   font-weight: 700;
-  color: #f1f1f1;
-  font-size: 40px;
+  font-size: 2rem;
+  color: #F1F1F1;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 section.target {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 section.target div.topline {
   width: 75%;
@@ -741,7 +755,6 @@ section.target div.cards article:nth-of-type(5) div.img_illu {
   background-image: url(../assets/img/pdv.jpg);
 }
 section.fonctions {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -749,6 +762,7 @@ section.fonctions {
 section.fonctions div.content {
   display: flex;
   width: 75%;
+  padding: 5% 0%;
 }
 section.fonctions div.content .left {
   width: 50%;
@@ -799,9 +813,7 @@ section.custom {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: relative;
-  margin-bottom: 15%;
 }
 section.custom::after {
   position: absolute;
@@ -818,7 +830,7 @@ section.custom::after {
   color: #F1F1F1;
 }
 section.custom .content {
-  height: 100%;
+  padding: 5% 0%;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -861,24 +873,24 @@ section.custom .content .droite ul li {
 section.custom .content .droite ul li::marker {
   color: #d6bb73;
 }
-section.video {
-  height: 60vh;
+section.video div.content {
+  padding: 10% 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-section.video .txt {
+section.video div.content .txt {
   position: absolute;
   left: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section.video .txt svg path {
+section.video div.content .txt svg path {
   fill: #181818;
 }
-section.video .txt p {
+section.video div.content .txt p {
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
@@ -889,32 +901,31 @@ section.video .txt p {
   color: #AEAEAE;
   padding: 15% 0;
 }
-section.video .txt:nth-of-type(2) {
+section.video div.content .txt:nth-of-type(2) {
   left: unset;
   right: 1%;
 }
-section.video .txt:nth-of-type(2) svg {
+section.video div.content .txt:nth-of-type(2) svg {
   transform: rotate(180deg);
 }
-section.video .txt:nth-of-type(2) p {
+section.video div.content .txt:nth-of-type(2) p {
   writing-mode: vertical-lr;
   text-align: start;
   padding: 15% 0;
 }
-section.video div.content {
+section.video div.content div.container {
   display: flex;
-  width: 75%;
-  height: 100%;
+  width: 65%;
   justify-content: center;
   position: relative;
 }
-section.video div.content .vid {
+section.video div.content div.container .vid {
   display: flex;
   justify-content: center;
   position: relative;
   height: 100%;
 }
-section.video div.content .vid::after {
+section.video div.content div.container .vid::after {
   content: "";
   background-image: url(../assets/img/video.png);
   position: absolute;
@@ -928,21 +939,23 @@ section.video div.content .vid::after {
   visibility: visible;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-section.video div.content .vid.hide-overlay::after {
+section.video div.content div.container .vid.hide-overlay::after {
   opacity: 0;
   visibility: hidden;
 }
-section.video div.content video {
+section.video div.content div.container video {
   border-radius: 10px;
   display: inline;
+  width: 100%;
+  height: auto;
 }
 section.demo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
 }
 section.demo div.content {
+  padding: 10% 0%;
   display: flex;
   width: 75%;
   justify-content: space-around;
@@ -1033,29 +1046,22 @@ footer {
   justify-content: center;
 }
 footer div.content {
-  padding: 15% 0%;
   display: flex;
-  width: 90%;
+  width: 75%;
   justify-content: center;
 }
 footer div.content .left {
   width: 50%;
   display: flex;
   justify-content: flex-start;
-}
-footer div.content .left video {
-  align-self: flex-end;
-  height: 80%;
-  width: auto;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  align-items: flex-end;
 }
 footer div.content .right {
+  margin: 10% 0%;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0;
 }
 footer div.content .right .news {
   display: flex;
@@ -1119,11 +1125,15 @@ footer div.content .right p {
   margin-top: 10%;
 }
 footer div.content .right p a {
+  margin-right: 1%;
   color: white;
   text-transform: uppercase;
   padding: 0;
   font-size: 2.3rem;
   background-color: transparent;
+}
+footer div.content .right p a:nth-of-type(1) {
+  margin-left: 1%;
 }
 footer div.content .right p a i {
   margin: 0 1%;
@@ -2021,6 +2031,7 @@ footer .credit p i {
     margin-top: 0;
   }
   section.demo div.content {
+    padding: 10% 0%;
     display: flex;
     width: 90%;
     justify-content: space-between;
@@ -2472,10 +2483,11 @@ footer .credit p i {
     color: #d6bb73;
   }
   section.fonctions .right {
-    justify-content: center;
+    margin: 5% 0%;
     width: 100%;
   }
   section.fonctions .right div {
+    margin: 0 auto;
     width: 50%;
     height: auto;
   }
