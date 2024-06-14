@@ -1157,17 +1157,17 @@ section.demo {
 }
 
 footer {
+
   background-color: @text;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   div.content {
+    padding: 15% 0%;
     display: flex;
     width: 90%;
-    height: 95%;
     justify-content: center;
 
     .left {
@@ -2534,7 +2534,9 @@ footer {
   }
 
   footer {
+
     div.content {
+      padding: 15% 0%;
       div.right {
         div.news {
           p {
@@ -3161,7 +3163,6 @@ footer {
   }
 
   section.demo {
-
     div.content {
       flex-direction: column-reverse;
       width: 80%;
@@ -3209,9 +3210,44 @@ footer {
   }
 
   footer {
+    
+    div.content{
+      padding: 15% 0%;
+      flex-direction: column;
+
+      div.right{
+        width: 100%;
+
+        input{
+          width: 80%;
+          align-self: center;
+        }
+        button{
+          align-self: center;
+        }
+        div.news{
+          width: 100%;
+          p{
+            text-align: center;
+          }
+
+        }
+        p{
+          text-align: center;
+        }
+      }
+      div.left{
+        display:none;
+      }
+    }
+
     div.credit {
+      flex-direction: column;
+      padding: 2% 0%;
+
       p {
-        width: calc(100%/3);
+        padding: 1% 0%;
+        width: 100%;
         font-size: .8rem;
       }
     }

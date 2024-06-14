@@ -1027,16 +1027,15 @@ section.demo div.content form button:hover i {
 }
 footer {
   background-color: #181818;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 footer div.content {
+  padding: 15% 0%;
   display: flex;
   width: 90%;
-  height: 95%;
   justify-content: center;
 }
 footer div.content .left {
@@ -2110,6 +2109,9 @@ footer .credit p i {
     display: inline;
     opacity: 1;
   }
+  footer div.content {
+    padding: 15% 0%;
+  }
   footer div.content div.right div.news p {
     font-size: 2rem;
   }
@@ -2558,8 +2560,39 @@ footer .credit p i {
   section.demo div.content form button {
     font-size: 1rem;
   }
+  footer div.content {
+    padding: 15% 0%;
+    flex-direction: column;
+  }
+  footer div.content div.right {
+    width: 100%;
+  }
+  footer div.content div.right input {
+    width: 80%;
+    align-self: center;
+  }
+  footer div.content div.right button {
+    align-self: center;
+  }
+  footer div.content div.right div.news {
+    width: 100%;
+  }
+  footer div.content div.right div.news p {
+    text-align: center;
+  }
+  footer div.content div.right p {
+    text-align: center;
+  }
+  footer div.content div.left {
+    display: none;
+  }
+  footer div.credit {
+    flex-direction: column;
+    padding: 2% 0%;
+  }
   footer div.credit p {
-    width: calc(100%/3);
+    padding: 1% 0%;
+    width: 100%;
     font-size: 0.8rem;
   }
 }
