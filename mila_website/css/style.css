@@ -899,7 +899,6 @@ section.video div.content .txt svg path {
 }
 section.video div.content .txt p {
   font-weight: 600;
-  font-size: 16px;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
@@ -1050,10 +1049,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 75vh;
 }
 footer div.content {
   display: flex;
-  width: 75%;
+  width: 80%;
+  height: 100%;
   justify-content: center;
 }
 footer div.content .left {
@@ -1063,7 +1064,6 @@ footer div.content .left {
   align-items: flex-end;
 }
 footer div.content .right {
-  margin: 10% 0%;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -1368,14 +1368,7 @@ footer .credit p i {
     justify-content: space-evenly;
   }
   section.fonctions div.content .left .title {
-    font-size: 3rem;
     margin-bottom: 0;
-  }
-  section.fonctions div.content .left .desc p {
-    font-family: 'krub';
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding-right: 25%;
   }
   section.fonctions div.content .left .details {
     display: flex;
@@ -1415,28 +1408,18 @@ footer .credit p i {
     width: 50%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+  }
+  section.fonctions .right div {
+    width: 60%;
+    height: auto;
   }
   section.custom {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
     margin-bottom: 15%;
-  }
-  section.custom::after {
-    position: absolute;
-    content: 'EXPLORE';
-    right: 0%;
-    bottom: 0;
-    font-family: 'krub';
-    font-weight: 700;
-    font-size: 3rem;
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
-    transform: rotate(-180deg);
-    letter-spacing: 0.8rem;
-    color: #F1F1F1;
   }
   section.custom .content {
     width: 90%;
@@ -1472,6 +1455,9 @@ footer .credit p i {
     width: 100%;
     padding-left: 2%;
   }
+  section.fonctions .content .left .desc p {
+    text-align: left;
+  }
 }
 /* ------------------------------------------------------------------------- */
 /* ------------------------------ 1024px ----------------------------------- */
@@ -1487,30 +1473,22 @@ footer .credit p i {
   }
   section.fonctions div.content {
     display: flex;
+    flex-direction: column;
     width: 80%;
   }
   section.fonctions div.content .left {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
   section.fonctions div.content .left .title {
-    font-size: 2.8rem;
+    text-align: center;
     margin-bottom: 0;
   }
   section.fonctions div.content .left .desc p {
-    font-family: 'krub';
-    font-size: 1rem;
-    font-weight: 600;
+    text-align: center;
     padding-right: 0%;
-  }
-  section.fonctions div.content .left .details {
-    display: flex;
-    font-family: 'krub';
-    font-weight: 600;
-    font-size: 1rem;
-    gap: 0%;
   }
   section.fonctions div.content .left .details .gauche {
     width: 100%;
@@ -1526,36 +1504,42 @@ footer .credit p i {
     color: #d6bb73;
   }
   section.fonctions .right {
-    padding: 0;
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  section.fonctions .right div {
-    width: 60%;
-  }
-  section.custom {
-    height: 100vh;
-    margin-bottom: 0%;
-  }
-  section.custom::after {
-    font-size: 1.8rem;
-  }
-  section.custom .content {
-    width: 90%;
+    padding: 5% 0%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 10%;
+  }
+  section.fonctions .right div {
+    width: 40%;
+    height: auto;
+  }
+  section.custom {
+    margin-bottom: 0;
+  }
+  section.custom .content {
+    padding: 5% 0%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
   section.custom .content .gauche {
     display: flex;
-    width: 50%;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  section.custom .content .gauche div {
+    width: 60%;
+    height: auto;
   }
   section.custom .content .droite {
-    width: 50%;
+    width: 100%;
+  }
+  section.custom .content .droite .title {
+    text-align: center;
   }
   section.custom .content .droite .desc p {
+    text-align: center;
     font-family: 'krub';
     font-size: 1rem;
     font-weight: 600;
@@ -1568,21 +1552,17 @@ footer .credit p i {
   section.custom .content .droite .details ul li {
     font-size: 1rem;
   }
-  section.video {
-    height: 60vh;
-  }
   section.video div.content {
-    width: 80%;
-    height: 90%;
+    width: 100%;
     align-items: center;
   }
   section.video div.content div.vid {
-    height: 85%;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
   section.video div.content div.vid video {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
   section.demo {
     margin-top: 0;
@@ -1675,9 +1655,6 @@ footer .credit p i {
     display: inline;
     opacity: 1;
   }
-  footer div.content {
-    padding: 15% 0%;
-  }
   footer div.content div.right div.news p {
     font-size: 2rem;
   }
@@ -1753,14 +1730,10 @@ footer .credit p i {
     gap: 5%;
   }
   section.fonctions div.content .left .title {
-    font-size: 2rem;
     padding: 2% 0;
   }
   section.fonctions div.content .left .desc p {
-    font-family: 'krub';
-    font-size: 1rem;
-    font-weight: 600;
-    padding-right: 0%;
+    text-align: center;
   }
   section.fonctions div.content .left .details {
     flex-direction: column;
@@ -1798,18 +1771,12 @@ footer .credit p i {
   section.fonctions .right div {
     width: 60%;
   }
-  section.custom::after {
-    font-size: 1.5rem;
-  }
   section.video div.content div.vid {
     height: 65%;
   }
   section.video div.txt svg {
     width: 20px;
     height: 70px;
-  }
-  section.video div.txt p {
-    font-size: 0.6rem;
   }
   section.demo div.content div.right .titre p:nth-of-type(2) {
     font-weight: 500;
@@ -1873,8 +1840,8 @@ footer .credit p i {
     width: 50%;
     height: auto;
   }
-  section.innovation {
-    height: 60%;
+  section.innovation div.container {
+    padding: 15% 0%;
   }
   section.target {
     justify-content: flex-start;
@@ -1882,7 +1849,7 @@ footer .credit p i {
   }
   section.target div.topline {
     width: 80%;
-    padding: 15% 0%;
+    padding: 0% 0%;
     flex-direction: column;
     gap: 30%;
   }
@@ -1995,16 +1962,8 @@ footer .credit p i {
     gap: 5%;
   }
   section.fonctions div.content .left .title {
-    font-size: 2rem;
     padding: 2% 0;
     text-align: center;
-  }
-  section.fonctions div.content .left .desc p {
-    text-align: center;
-    font-family: 'krub';
-    font-size: 1rem;
-    font-weight: 600;
-    padding-right: 0%;
   }
   section.fonctions div.content .left .details {
     flex-direction: column;
@@ -2074,18 +2033,12 @@ footer .credit p i {
     width: 100%;
     height: auto;
   }
-  section.custom::after {
-    font-size: 1.5rem;
-  }
   section.video div.content div.vid {
     height: 35%;
   }
   section.video div.txt svg {
     width: 20px;
     height: 70px;
-  }
-  section.video div.txt p {
-    font-size: 0.6rem;
   }
   section.demo div.content {
     flex-direction: column-reverse;
@@ -2435,6 +2388,29 @@ footer .credit p i {
   }
   section.custom div.content div.droite div.title p {
     font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
+    min-height: 0vw;
+  }
+  section.custom::after {
+    font-size: calc(0.7rem + ((1vw - 3px) * 5.2346));
+    min-height: 0vw;
+  }
+  section.video div.content div.vid {
+    height: 35%;
+  }
+  section.video div.txt svg {
+    width: 20px;
+    height: 70px;
+  }
+  section.video div.txt p {
+    font-size: calc(0.5rem + ((1vw - 3px) * 0.4938));
+    min-height: 0vw;
+  }
+  section.fonctions div.content .left .title {
+    font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
+    min-height: 0vw;
+  }
+  section.fonctions div.content .left .desc p {
+    font-size: calc(0.8rem + ((1vw - 3px) * 0.6914));
     min-height: 0vw;
   }
 }
