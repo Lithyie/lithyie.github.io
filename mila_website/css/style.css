@@ -664,102 +664,163 @@ section.target div.topline div.droite div p {
 section.target div.topline div.droite div p:nth-of-type(2) {
   font-size: 20px;
 }
-section.target div.cards {
-  width: 70%;
+section.target div.content {
+  width: 75%;
+}
+section.target div.content div.container {
+  width: 100%;
   padding: 5% 0%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5%;
 }
-section.target div.cards article {
-  margin-bottom: 10%;
-  width: 40%;
-  height: fit-content;
-  margin: 2%;
-  border-radius: 5px;
-  background-color: #333;
-}
-section.target div.cards article div.titre {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2% 4%;
-  color: white;
-}
-section.target div.cards article div.titre p {
-  font-family: 'krub', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-section.target div.cards article div.img_illu {
-  width: 100%;
-  padding: 30%;
-  background-size: cover;
+section.target div.content div.container div.card div.icon {
+  background: url('../assets/img/mila_train.jpg');
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+section.target div.content div.container div.card div.icon .fa {
+  color: #ffffff;
+  font-size: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.target div.content div.container div.card div.slide {
+  height: 300px;
+  transition: 0.5s;
+  width: 500px;
+}
+section.target div.content div.container div.card div.slide.slide1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateY(200px);
+  transition: 0.7s;
+  z-index: 1;
+}
+section.target div.content div.container div.card div.slide.slide1 .content .titre {
+  padding: 2% 0%;
+  position: absolute;
+  left: 0;
+  top: -13%;
+  width: 100%;
+  background-color: #181818;
+}
+section.target div.content div.container div.card div.slide.slide1 .content .titre p {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+section.target div.content div.container div.card:hover .icon {
+  transition: 0.7s;
+  background: url('../assets/img/mila_trainhover.jpg');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-section.target div.cards article div.text {
-  display: none;
-  padding: 4%;
-  font-family: 'krub', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  background-color: #f9f9f9;
+section.target div.content div.container div.card:hover .slide.slide1 {
+  transform: translateY(0px);
 }
-section.target div.cards article div.text p {
-  padding: 3% 0%;
+section.target div.content div.container div.card:hover .slide.slide2 {
+  transform: translateY(0);
 }
-section.target div.cards article:nth-of-type(1) div.img_illu {
-  background-image: url(../assets/img/mila_train.jpg);
+section.target div.content div.container div.card div.slide1:after {
+  background: #181818;
+  bottom: 15px;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 30px;
 }
-section.target div.cards article:nth-of-type(1):hover {
-  transition: all 0.3s ease;
+section.target div.content div.container div.card div.slide,
+section.target div.content div.container div.card div.slide2 {
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  position: relative;
+  transform: translateY(-100px);
+  transition: 0.8s;
 }
-section.target div.cards article:nth-of-type(1):hover div.img_illu {
-  background-image: url(../assets/img/mila_trainhover.jpg);
+section.target div.content div.container div.card div.slide div.content,
+section.target div.content div.container div.card div.slide2 div.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-section.target div.cards article:nth-of-type(1):hover div.text {
-  display: block;
+section.target div.content div.container div.card div.slide div.content p,
+section.target div.content div.container div.card div.slide2 div.content p {
+  color: #181818;
+  margin: 0;
+  padding: 0;
 }
-section.target div.cards article:nth-of-type(2):hover {
-  transition: all 0.3s ease;
+section.target div.content div.container div.card:nth-of-type(2) .icon {
+  background: url('../assets/img/casino.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(2):hover div.text {
-  display: block;
+section.target div.content div.container div.card:nth-of-type(2) .icon:hover {
+  transition: 0.7s;
+  background: url('../assets/img/casinohover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(2):hover div.img_illu {
-  background-image: url(../assets/img/casinohover.jpg);
+section.target div.content div.container div.card:nth-of-type(3) .icon {
+  background: url('../assets/img/musee.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(2) div.img_illu {
-  background-image: url(../assets/img/casino.jpg);
+section.target div.content div.container div.card:nth-of-type(3) .icon:hover {
+  transition: 0.7s;
+  background: url('../assets/img/museehover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(3):hover div.text {
-  display: block;
+section.target div.content div.container div.card:nth-of-type(4) .icon {
+  background: url('../assets/img/mila_centres.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(3):hover div.img_illu {
-  background-image: url(../assets/img/museehover.jpg);
+section.target div.content div.container div.card:nth-of-type(4) .icon:hover {
+  transition: 0.7s;
+  background: url('../assets/img/mila_centreshover2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(3) div.img_illu {
-  background-image: url(../assets/img/musee.jpg);
+section.target div.content div.container div.card:nth-of-type(5) .icon {
+  background: url('../assets/img/pdv.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section.target div.cards article:nth-of-type(4):hover div.text {
-  display: block;
-}
-section.target div.cards article:nth-of-type(4):hover div.img_illu {
-  background-image: url(../assets/img/mila_centreshover2.jpg);
-}
-section.target div.cards article:nth-of-type(4) div.img_illu {
-  background-image: url(../assets/img/mila_centres.jpg);
-}
-section.target div.cards article:nth-of-type(5):hover div.text {
-  display: block;
-}
-section.target div.cards article:nth-of-type(5):hover div.img_illu {
-  background-image: url(../assets/img/pdvhover.jpg);
-}
-section.target div.cards article:nth-of-type(5) div.img_illu {
-  background-image: url(../assets/img/pdv.jpg);
+section.target div.content div.container div.card:nth-of-type(5) .icon:hover {
+  transition: 0.7s;
+  background: url('../assets/img/pdvhover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 section.fonctions {
   display: flex;
@@ -1875,78 +1936,6 @@ footer .credit p i {
   section.target div.topline div.droite div p:nth-of-type(2) {
     text-align: center;
     font-size: 0.9rem;
-  }
-  section.target div.cards {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  section.target div.cards article {
-    margin-bottom: 10%;
-    width: 80%;
-    border-radius: 5px;
-    background-color: #333;
-  }
-  section.target div.cards article:hover {
-    transition: all 0.3s ease;
-  }
-  section.target div.cards article:hover div.img_illu {
-    background-image: url(../assets/img/mila_trainhover.jpg);
-  }
-  section.target div.cards article:hover div.text {
-    display: block;
-  }
-  section.target div.cards article div.titre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 4%;
-  }
-  section.target div.cards article div.titre p {
-    font-family: 'krub', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  section.target div.cards article div.img_illu {
-    width: 100%;
-    height: 200px;
-    background-image: url(../assets/img/mila_train.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  section.target div.cards article div.text {
-    display: none;
-    padding: 4%;
-  }
-  section.target div.cards article div.text p {
-    padding: 3% 0%;
-  }
-  section.target div.cards article:nth-of-type(2):hover div.img_illu {
-    background-image: url(../assets/img/casinohover.jpg);
-  }
-  section.target div.cards article:nth-of-type(2) div.img_illu {
-    background-image: url(../assets/img/casino.jpg);
-  }
-  section.target div.cards article:nth-of-type(3):hover div.img_illu {
-    background-image: url(../assets/img/museehover.jpg);
-  }
-  section.target div.cards article:nth-of-type(3) div.img_illu {
-    background-image: url(../assets/img/musee.jpg);
-  }
-  section.target div.cards article:nth-of-type(4):hover div.img_illu {
-    background-image: url(../assets/img/mila_centreshover2.jpg);
-  }
-  section.target div.cards article:nth-of-type(4) div.img_illu {
-    background-image: url(../assets/img/mila_centres.jpg);
-  }
-  section.target div.cards article:nth-of-type(5):hover div.img_illu {
-    background-image: url(../assets/img/pdvhover.jpg);
-  }
-  section.target div.cards article:nth-of-type(5) div.img_illu {
-    background-image: url(../assets/img/pdv.jpg);
   }
   section.fonctions {
     display: flex;
