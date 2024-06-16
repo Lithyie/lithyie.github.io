@@ -2293,10 +2293,12 @@ footer .credit p i {
 /* ------------------------ 300px FLUID TYPO ------------------------------- */
 /* ------------------------------------------------------------------------- */
 @media (min-width: 300px) {
-  header div.nav div.navbar div.menu ul li a {
-    font-size: calc(0.875rem + ((1vw - 3px) * 0.1235));
+  header div.nav div.menu ul li {
+    width: 80%;
+  }
+  header div.nav div.menu ul li a {
+    font-size: calc(1.25rem + ((1vw - 3px) * 0.3704));
     min-height: 0vw;
-    letter-spacing: 1px;
   }
   header div.main div.left div.topline p {
     font-size: calc(2.375rem + ((1vw - 3px) * 6.5432));
