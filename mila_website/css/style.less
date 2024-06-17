@@ -1224,7 +1224,7 @@ section.demo {
   div.content {
     padding: 10% 0%;
     display: flex;
-    width: 75%;
+    width: 85%;
     justify-content: space-around;
     align-items: center;
 
@@ -2078,22 +2078,6 @@ footer {
         flex-direction: column;
         justify-content: center;
         padding-left: 10%;
-
-        .titre {
-          p {
-            text-align: center;
-            font-family: 'krub';
-            font-weight: @bold;
-            font-size: 2rem;
-            text-transform: uppercase;
-
-            &:nth-of-type(2) {
-              color: @luxant;
-              font-weight: @semibold;
-              font-size: 1.1rem;
-            }
-          }
-        }
       }
 
 
@@ -2361,7 +2345,12 @@ footer {
 
   section.demo {
     div.content {
+      flex-direction: column-reverse;
       div.right {
+        margin-bottom: 15%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
         .titre {
           p {
             &:nth-of-type(2) {
@@ -2371,6 +2360,14 @@ footer {
         }
       }
 
+      .left{
+        max-width: 100%;
+        width: 100%;
+        div{
+          width: 60%; 
+          margin:  0 auto;
+        }
+      }
       form {
         input {
           font-size: .8rem;
@@ -3410,6 +3407,25 @@ footer {
           }
         }
       }
+    }
+  }
+
+  section.demo {
+    div.content {
+      .right {
+        .titre {
+          p {
+            font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
+            min-height: 0vw;
+  
+            &:nth-of-type(2) {
+              font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
+              min-height: 0vw;
+            }
+          }
+        }
+      }
+
     }
   }
 }

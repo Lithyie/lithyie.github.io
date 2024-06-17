@@ -1033,7 +1033,7 @@ section.demo {
 section.demo div.content {
   padding: 10% 0%;
   display: flex;
-  width: 75%;
+  width: 85%;
   justify-content: space-around;
   align-items: center;
 }
@@ -1669,18 +1669,6 @@ footer .credit p i {
     justify-content: center;
     padding-left: 10%;
   }
-  section.demo div.content .right .titre p {
-    text-align: center;
-    font-family: 'krub';
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
-  section.demo div.content .right .titre p:nth-of-type(2) {
-    color: #d6bb73;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
   section.demo div.content form {
     display: flex;
     flex-direction: column;
@@ -1858,8 +1846,25 @@ footer .credit p i {
     width: 20px;
     height: 70px;
   }
+  section.demo div.content {
+    flex-direction: column-reverse;
+  }
+  section.demo div.content div.right {
+    margin-bottom: 15%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
   section.demo div.content div.right .titre p:nth-of-type(2) {
     font-weight: 500;
+  }
+  section.demo div.content .left {
+    max-width: 100%;
+    width: 100%;
+  }
+  section.demo div.content .left div {
+    width: 60%;
+    margin: 0 auto;
   }
   section.demo div.content form input {
     font-size: 0.8rem;
@@ -2437,6 +2442,14 @@ footer .credit p i {
   }
   section.fonctions div.content .left .desc p {
     font-size: calc(0.8rem + ((1vw - 3px) * 0.6914));
+    min-height: 0vw;
+  }
+  section.demo div.content .right .titre p {
+    font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
+    min-height: 0vw;
+  }
+  section.demo div.content .right .titre p:nth-of-type(2) {
+    font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
     min-height: 0vw;
   }
 }
