@@ -676,7 +676,7 @@ section.target div.content div.container {
 }
 section.target div.content div.container div.card {
   position: relative;
-  margin: 3% 2%;
+  margin: 5% 2%;
 }
 section.target div.content div.container div.card div.icon {
   background: url('../assets/img/mila_train.jpg');
