@@ -19,3 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
+});

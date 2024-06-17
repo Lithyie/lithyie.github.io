@@ -20,3 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function (event) {
+  var cards = document.querySelectorAll('.card');
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      this.classList.toggle('active');
+    });
+  });
+});
