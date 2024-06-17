@@ -1134,6 +1134,10 @@ footer div.content .left {
   justify-content: flex-start;
   align-items: flex-end;
 }
+footer div.content .left div {
+  width: 70%;
+  height: auto;
+}
 footer div.content .right {
   width: 50%;
   display: flex;
@@ -1608,7 +1612,7 @@ footer .credit p i {
     justify-content: center;
   }
   section.custom .content .gauche div {
-    width: 60%;
+    width: 65%;
     height: auto;
   }
   section.custom .content .droite {
@@ -1843,6 +1847,9 @@ footer .credit p i {
   }
   section.fonctions .right div {
     width: 60%;
+  }
+  section.custom .content .gauche div {
+    width: 80%;
   }
   section.video div.content div.vid {
     height: 65%;
