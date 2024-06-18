@@ -205,7 +205,7 @@ header {
       a {
         img {
           transition: width 0.5s ease;
-          width: 50%;
+          width: 35%;
           height: auto;
         }
       }
@@ -259,7 +259,7 @@ header {
 
       a {
         img {
-          width: 50%;
+          width: 35%;
           height: auto;
         }
       }
@@ -564,7 +564,9 @@ section.target {
   flex-direction: column;
   justify-content: space-evenly;
   padding-top: 10%;
+  height: 100%;
   padding-bottom: 5%;
+  position: relative;
 
   div.topline {
     width: 75%;
@@ -621,352 +623,350 @@ section.target {
     }
   }
 
-  // div.cards {
-  //   width: 70%;
-  //   padding: 5% 0%;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-
-  //   article {
-  //     margin-bottom: 10%;
-  //     width: 40%;
-  //     height: fit-content;
-  //     margin: 2%;
-  //     border-radius: 5px;
-  //     background-color: #333;
-
-  //     div.titre {
-  //       display: flex;
-  //       justify-content: space-between;
-  //       align-items: center;
-  //       padding: 2% 4%;
-  //       color: white;
-
-  //       p {
-  //         font-family: 'krub', sans-serif;
-  //         font-size: 1rem;
-  //         font-weight: @semibold;
-  //         text-transform: uppercase;
-  //       }
-  //     }
-
-  //     div.img_illu {
-  //       width: 100%;
-  //       padding: 30%;
-  //       background-size: cover;
-  //       background-position: center;
-  //       background-repeat: no-repeat;
-  //     }
-
-  //     div.text {
-  //       display: none;
-  //       padding: 4%;
-  //       font-family: 'krub', sans-serif;
-  //       font-size: 1.1rem;
-  //       font-weight: @medium;
-  //       background-color: #f9f9f9;
-
-
-  //       p {
-  //         padding: 3% 0%;
-  //       }
-  //     }
-
-
-  //     &:nth-of-type(1) {
-  //       div.img_illu {
-  //         background-image: url(../assets/img/mila_train.jpg);
-  //       }
-
-  //       &:hover {
-  //         transition: all 0.3s ease;
-
-  //         div.img_illu {
-  //           background-image: url(../assets/img/mila_trainhover.jpg);
-  //         }
-
-  //         div.text {
-  //           display: block;
-  //         }
-  //       }
-  //     }
-
-  //     &:nth-of-type(2) {
-  //       &:hover {
-  //         transition: all 0.3s ease;
-
-  //         div.text {
-  //           display: block;
-  //         }
-
-  //         div.img_illu {
-  //           background-image: url(../assets/img/casinohover.jpg);
-  //         }
-  //       }
-
-  //       div.img_illu {
-  //         background-image: url(../assets/img/casino.jpg);
-  //       }
-  //     }
-
-  //     &:nth-of-type(3) {
-  //       &:hover {
-  //         div.text {
-  //           display: block;
-  //         }
-
-  //         div.img_illu {
-  //           background-image: url(../assets/img/museehover.jpg);
-  //         }
-  //       }
-
-  //       div.img_illu {
-  //         background-image: url(../assets/img/musee.jpg);
-  //       }
-  //     }
-
-  //     &:nth-of-type(4) {
-  //       &:hover {
-  //         div.text {
-  //           display: block;
-  //         }
-
-  //         div.img_illu {
-  //           background-image: url(../assets/img/mila_centreshover2.jpg);
-  //         }
-  //       }
-
-  //       div.img_illu {
-  //         background-image: url(../assets/img/mila_centres.jpg);
-  //       }
-  //     }
-
-  //     &:nth-of-type(5) {
-  //       &:hover {
-  //         div.text {
-  //           display: block;
-  //         }
-
-  //         div.img_illu {
-  //           background-image: url(../assets/img/pdvhover.jpg);
-  //         }
-  //       }
-
-  //       div.img_illu {
-  //         background-image: url(../assets/img/pdv.jpg);
-  //       }
-  //     }
-  //   }
-  // }
-
   div.content {
-    width: 75%;
+    width: 85%;
+    height: 100%;
+    padding: 5% 0%;
 
     div.container {
       width: 100%;
-      padding: 2% 0%;
+      height: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
-      div.card {
-        position: relative;
-        margin: 5% 2%;
-        div.icon {
-          background: url('../assets/img/mila_train.jpg');
+
+      // div.card {
+      //   position: relative;
+      //   margin: 5% 2%;
+      //   div.icon {
+      //     background: url('../assets/img/mila_train.jpg');
+      //     background-position: center;
+      //     background-size: cover;
+      //     background-repeat: no-repeat;
+      //     height: 100%;
+      //     left: 0;
+      //     position: absolute;
+      //     top: 0;
+      //     width: 100%;
+
+      //     .fa {
+      //       color: #ffffff;
+      //       font-size: 80px;
+      //       left: 50%;
+      //       position: absolute;
+      //       top: 50%;
+      //       transform: translate(-50%, -50%);
+      //     }
+
+      //     video{
+      //       position: absolute;
+      //       bottom: 0;
+      //       right: 0;
+      //       width: 40%;
+      //       height: auto;
+      //     }
+      //   }
+
+      //   div.slide {
+      //     height: 300px;
+      //     transition: 0.5s;
+      //     width: 500px;
+      //   }
+
+      //   div.slide.slide1 {
+      //     align-items: center;
+      //     display: flex;
+      //     justify-content: center;
+      //     position: relative;
+      //     transform: translateY(200px);
+      //     transition: .7s;
+      //     z-index: 1;
+
+      //     .content {
+      //       .titre {
+      //         padding: 2% 0%;
+      //         position: absolute;
+      //         left: 0;
+      //         top: -13%;
+      //         width: 100%;
+      //         background-color: #181818;
+
+      //         p {
+      //           color: white;
+      //           text-transform: uppercase;
+      //           text-align: center;
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   div.slide1{
+          
+      //     &:after {
+      //       background: @text;
+      //       bottom: 15px;
+      //       content: "";
+      //       height: 4px;
+      //       left: 50%;
+      //       position: absolute;
+      //       transform: translateX(-50%);
+      //       width: 30px;
+      //     }
+      //   }
+      //   div.slide,
+      //   div.slide2 {
+      //     align-items: center;
+      //     box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
+      //     box-sizing: border-box;
+      //     display: flex;
+      //     justify-content: center;
+      //     padding: 2%;
+      //     position: relative;
+      //     transform: translateY(-100px);
+      //     transition: .8s;
+
+
+      //     div.content {
+      //       width: 100%;
+      //       height: 100%;
+      //       display: flex;
+      //       flex-direction: column;
+      //       justify-content: space-evenly;
+
+      //       p {
+      //         color: @text;
+      //         margin: 0;
+      //         padding: 0;
+      //       }
+      //     }
+      //   }
+
+      //   &:nth-of-type(2) {
+      //     .icon {
+      //       background: url('../assets/img/casino.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(3) {
+      //     .icon {
+      //       background: url('../assets/img/musee.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(4) {
+      //     .icon {
+      //       background: url('../assets/img/mila_centres.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(5) {
+      //     .icon {
+      //       background: url('../assets/img/pdv.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+      // }
+      // div.card.active {
+      //   .icon {
+      //     transition: 0.7s;
+      //     background: url('../assets/img/mila_trainhover.jpg');
+      //     background-position: center;
+      //     background-size: cover;
+      //     background-repeat: no-repeat;
+      //   }
+
+      //   .slide.slide1 {
+      //     transform: translateY(0px);
+
+      //   }
+
+      //   .slide.slide2 {
+      //     transform: translateY(0);
+      //   }
+
+      //   &:nth-of-type(2){
+      //     .icon{
+      //       transition: 0.7s;
+      //       background: url('../assets/img/casinohover.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(3){
+      //     .icon{
+      //       transition: 0.7s;
+      //       background: url('../assets/img/museehover.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(4){
+      //     .icon{
+      //       transition: 0.7s;
+      //       background: url('../assets/img/mila_centreshover2.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(5){
+      //     .icon{
+      //       transition: 0.7s;
+      //       background: url('../assets/img/pdvhover.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+      // }
+
+      article{
+        flex: 1;
+        height: 100%;
+        transition: 1.2s ease;
+        .titre{
+          background-color: @text;
+          
+          p{
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+          }
+        }
+        .image{
+          transition: .7s ease;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          width: 100%;
+          height: 100%;
+          background-image: url('../assets/img/mila_train.jpg');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-
-          .fa {
-            color: #ffffff;
-            font-size: 80px;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-
+          position: relative;
           video{
             position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40%;
+            transition: .7s ease;
+            width: 60%;
             height: auto;
+            max-height: 80%;
           }
         }
-
-        div.slide {
-          height: 300px;
-          transition: 0.5s;
-          width: 500px;
+        .desc{
+          display: none;
+          position: absolute;
+          bottom: 0%;
+          left: 7%;
+          width: 85%;
+          p{
+            font-family: 'krub', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 1%;
+            text-align: center;
+          }
         }
-
-        div.slide.slide1 {
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          transform: translateY(200px);
-          transition: .7s;
-          z-index: 1;
-
-          .content {
-            .titre {
-              padding: 2% 0%;
+        &:hover{
+          transition: 1.2s ease;
+          flex: 3;
+          .image{
+            transition: .7s ease;
+            justify-content: flex-end;
+            position: relative;
+            video{
               position: absolute;
-              left: 0;
-              top: -13%;
-              width: 100%;
-              background-color: #181818;
-
-              p {
-                color: white;
-                text-transform: uppercase;
-                text-align: center;
-              }
+              transition: .7s ease;
+              transform: translateX(15%);
+              max-height: 70%;
+              right: 5%;
+              width: auto;
             }
           }
-        }
-
-        div.slide1{
           
-          &:after {
-            background: @text;
-            bottom: 15px;
-            content: "";
-            height: 4px;
-            left: 50%;
-            position: absolute;
-            transform: translateX(-50%);
-            width: 30px;
+          .desc{
+            display: block;
           }
-        }
-        div.slide,
-        div.slide2 {
-          align-items: center;
-          box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
-          box-sizing: border-box;
-          display: flex;
-          justify-content: center;
-          padding: 2%;
-          position: relative;
-          transform: translateY(-100px);
-          transition: .8s;
-
-
-          div.content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-
-            p {
-              color: @text;
-              margin: 0;
-              padding: 0;
-            }
+          .image{
+            background-image: url('../assets/img/mila_trainhover2.jpg');
           }
-        }
-
-        &:nth-of-type(2) {
-          .icon {
-            background: url('../assets/img/casino.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(3) {
-          .icon {
-            background: url('../assets/img/musee.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(4) {
-          .icon {
-            background: url('../assets/img/mila_centres.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(5) {
-          .icon {
-            background: url('../assets/img/pdv.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-      }
-      div.card.active {
-        .icon {
-          transition: 0.7s;
-          background: url('../assets/img/mila_trainhover.jpg');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-
-        .slide.slide1 {
-          transform: translateY(0px);
-
-        }
-
-        .slide.slide2 {
-          transform: translateY(0);
         }
 
         &:nth-of-type(2){
-          .icon{
-            transition: 0.7s;
-            background: url('../assets/img/casinohover.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+          .image{
+            background-image: url('../assets/img/casino.jpg');
+          }
+          &:hover{
+            transition: .7s ease;
+            flex: 3;
+            .image{
+              background-image: url('../assets/img/casinohover.jpg');
+            }
+            .desc{
+              display: block;
+            }
           }
         }
-
         &:nth-of-type(3){
-          .icon{
-            transition: 0.7s;
-            background: url('../assets/img/museehover.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+          .image{
+            background-image: url('../assets/img/musee.jpg');
+          }
+          &:hover{
+            transition: .7s ease;
+            flex: 3;
+            .image{
+              background-image: url('../assets/img/museehov.jpg');
+            }
+            .desc{
+              display: block;
+            }
           }
         }
-
         &:nth-of-type(4){
-          .icon{
-            transition: 0.7s;
-            background: url('../assets/img/mila_centreshover2.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+          .image{
+            background-image: url('../assets/img/mila_centres.jpg');
+          }
+          &:hover{
+            transition: .7s ease;
+            flex: 3;
+            .image{
+              background-image: url('../assets/img/mila_centreshover2.jpg');
+            }
+            .desc{
+              display: block;
+            }
           }
         }
-
         &:nth-of-type(5){
-          .icon{
-            transition: 0.7s;
-            background: url('../assets/img/pdvhover.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+          .image{
+            background-image: url('../assets/img/pdv.jpg');
+          }
+          &:hover{
+            transition: .7s ease;
+            flex: 3;
+            .image{
+              background-image: url('../assets/img/pdvhover.jpg');
+            }
+            .desc{
+              display: block;
+            }
           }
         }
       }
@@ -1850,7 +1850,7 @@ footer {
       div.logo {
         a {
           img {
-            width: 50%;
+            width: 35%;
             height: auto;
           }
         }
@@ -2202,8 +2202,8 @@ footer {
           }
 
           img {
-            width: auto;
-            height: 100%;
+            width: 80%;
+            height: auto;
           }
         }
       }
@@ -2215,7 +2215,6 @@ footer {
 
         p {
           text-align: center;
-          font-size: 1.1rem;
           padding: 2% 0%;
         }
 
@@ -2405,11 +2404,11 @@ footer {
     .content{
       width: 90%!important;
       .container{
-        .card {
-          .slide {
-            width: 100%!important;
-          }
-        }
+        // .card {
+          // .slide {
+          //   width: 100%!important;
+          // }
+        // }
         }
     }
   }
@@ -2469,7 +2468,7 @@ footer {
       div.logo {
         a {
           img {
-            width: 50%;
+            width: 35%;
             height: auto;
           }
         }
@@ -2480,7 +2479,7 @@ footer {
       div.logo {
         a {
           img {
-            width: 50%;
+            width: 25%;
             height: auto;
           }
         }
@@ -2915,7 +2914,7 @@ footer {
 
         a {
           img {
-            width: 70%;
+            width: 35%;
             height: auto;
           }
         }
@@ -3167,16 +3166,14 @@ footer {
   }
 }
 
-
 /* ------------------------------------------------------------------------- */
 /* ------------------------ 300px FLUID TYPO ------------------------------- */
 /* ------------------------------------------------------------------------- */
+
 @media (min-width: 300px) {
   header {
     div.nav {
-
       div.menu {
-
         ul {
           li {
             width: 80%;
@@ -3186,7 +3183,6 @@ footer {
           }
         }
       }
-
     }
 
     div.main {
@@ -3223,15 +3219,13 @@ footer {
     .right {
       h1 {
         letter-spacing: 0.125rem;
-        font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
+        font-size: calc(1.5rem + ((1vw - 3px) * 0.4938))!important;
         min-height: 0vw;
       }
 
       p {
-        font-size: calc(0.875rem + ((1vw - 3px) * 0.1235));
+        font-size: calc(0.875rem + ((1vw - 3px) * 0.1235))!important;
         min-height: 0vw;
-        line-height: 170%;
-        letter-spacing: 2px;
       }
 
       a {
