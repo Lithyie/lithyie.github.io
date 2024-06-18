@@ -1485,7 +1485,7 @@ footer .credit p i {
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1440px) {
   header div.nav div.logo a img {
-    width: 35%;
+    width: 20%;
     height: auto;
   }
   section.fonctions .content .left .details .gauche {
@@ -1893,11 +1893,11 @@ footer .credit p i {
     display: none;
   }
   header div.nav div.logo a img {
-    width: 35%;
+    width: 20%;
     height: auto;
   }
   header div.nav.scrolled div.logo a img {
-    width: 25%;
+    width: 15%;
     height: auto;
   }
   section.innovation div.container {
