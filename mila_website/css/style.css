@@ -314,7 +314,7 @@ header {
   margin: 0 auto;
 }
 header div.nav {
-  height: 10%;
+  height: 8%;
   width: 100%;
   padding: 0% 5%;
   display: flex;
@@ -330,7 +330,7 @@ header div.nav div.logo {
 }
 header div.nav div.logo a img {
   transition: width 0.5s ease;
-  width: 35%;
+  width: 20%;
   height: auto;
 }
 header div.nav div.menu ul {
@@ -362,16 +362,16 @@ header div.nav.scrolled {
   background-color: white;
   z-index: 10;
   position: fixed;
-  height: 10%;
+  height: 7%;
   top: 0;
-  padding: 2% 5%;
+  padding: 0% 5%;
   transition: width 0.5s ease;
 }
 header div.nav.scrolled div.logo {
   transition: width 0.5s ease;
 }
 header div.nav.scrolled div.logo a img {
-  width: 35%;
+  width: 15%;
   height: auto;
 }
 header div.main {
@@ -534,7 +534,7 @@ section.innovation div.container {
 }
 section.innovation div.container div.content {
   width: calc(100% - 2px);
-  padding: 15% 0%;
+  padding: 10% 0%;
   display: flex;
   justify-content: space-between;
 }
@@ -621,9 +621,10 @@ section.target {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-top: 10%;
+  padding-top: 5%;
   height: 100%;
   padding-bottom: 5%;
+  margin-bottom: 4%;
   position: relative;
 }
 section.target div.topline {
@@ -673,7 +674,7 @@ section.target div.content {
 }
 section.target div.content div.container {
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -694,7 +695,6 @@ section.target div.content div.container article .titre p {
 section.target div.content div.container article .image {
   transition: 0.7s ease;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   width: 100%;
   height: 100%;
@@ -707,21 +707,21 @@ section.target div.content div.container article .image {
 section.target div.content div.container article .image video {
   position: absolute;
   transition: 0.7s ease;
-  width: 60%;
   height: auto;
-  max-height: 80%;
+  max-height: 60%;
+  width: 100%;
 }
 section.target div.content div.container article .desc {
   display: none;
   position: absolute;
-  bottom: 0%;
+  bottom: 5%;
   left: 7%;
   width: 85%;
 }
 section.target div.content div.container article .desc p {
   font-family: 'krub', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1rem;
   padding-bottom: 1%;
   text-align: center;
 }
@@ -731,16 +731,14 @@ section.target div.content div.container article:hover {
 }
 section.target div.content div.container article:hover .image {
   transition: 0.7s ease;
-  justify-content: flex-end;
   position: relative;
 }
 section.target div.content div.container article:hover .image video {
   position: absolute;
   transition: 0.7s ease;
-  transform: translateX(15%);
-  max-height: 70%;
-  right: 5%;
-  width: auto;
+  transform: translateX(35%);
+  max-height: 80%;
+  width: 100%;
 }
 section.target div.content div.container article:hover .desc {
   display: block;
@@ -1243,6 +1241,8 @@ footer .credit p i {
     align-self: center;
   }
   header div.nav div.logo a img {
+    width: 20%;
+    height: auto;
     transition: width 0.5s ease;
   }
   header div.nav div.menu ul {
@@ -1280,7 +1280,7 @@ footer .credit p i {
     transition: width 0.5s ease;
   }
   header div.nav.scrolled div.logo a img {
-    width: 50%;
+    width: 20%;
     height: auto;
   }
   header div.main {
