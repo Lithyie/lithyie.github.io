@@ -622,7 +622,6 @@ section.target {
   flex-direction: column;
   justify-content: space-evenly;
   padding-top: 5%;
-  height: 100%;
   padding-bottom: 5%;
   margin-bottom: 4%;
   position: relative;
@@ -669,19 +668,179 @@ section.target div.topline div.droite div p:nth-of-type(2) {
 }
 section.target div.content {
   width: 85%;
-  height: 100%;
   padding: 5% 0%;
 }
 section.target div.content div.container {
   width: 100%;
-  height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+section.target div.content div.container div.mycard {
+  display: none;
+  position: relative;
+  margin: 5% 2%;
+}
+section.target div.content div.container div.mycard div.icon {
+  background: url('../assets/img/mila_train.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+section.target div.content div.container div.mycard div.icon .fa {
+  color: #ffffff;
+  font-size: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.target div.content div.container div.mycard div.icon video {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: auto;
+}
+section.target div.content div.container div.mycard div.slide {
+  height: 300px;
+  transition: 0.5s;
+  width: 500px;
+}
+section.target div.content div.container div.mycard div.slide.slide1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateY(200px);
+  transition: 0.7s;
+  z-index: 1;
+}
+section.target div.content div.container div.mycard div.slide.slide1 .content .titre {
+  padding: 2% 0%;
+  position: absolute;
+  left: 0;
+  top: -13%;
+  width: 100%;
+  background-color: #181818;
+}
+section.target div.content div.container div.mycard div.slide.slide1 .content .titre p {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+section.target div.content div.container div.mycard div.slide1:after {
+  background: #181818;
+  bottom: 15px;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 30px;
+}
+section.target div.content div.container div.mycard div.slide,
+section.target div.content div.container div.mycard div.slide2 {
+  align-items: center;
+  box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  position: relative;
+  transform: translateY(-100px);
+  transition: 0.8s;
+}
+section.target div.content div.container div.mycard div.slide div.content,
+section.target div.content div.container div.mycard div.slide2 div.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section.target div.content div.container div.mycard div.slide div.content p,
+section.target div.content div.container div.mycard div.slide2 div.content p {
+  color: #181818;
+  margin: 0;
+  padding: 0;
+}
+section.target div.content div.container div.mycard:nth-of-type(2) .icon {
+  background: url('../assets/img/casino.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard:nth-of-type(3) .icon {
+  background: url('../assets/img/musee.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard:nth-of-type(4) .icon {
+  background: url('../assets/img/mila_centres.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard:nth-of-type(5) .icon {
+  background: url('../assets/img/pdv.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard.active {
+  display: none;
+}
+section.target div.content div.container div.mycard.active .icon {
+  transition: 0.7s;
+  background: url('../assets/img/mila_trainhover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard.active .slide.slide1 {
+  transform: translateY(0px);
+}
+section.target div.content div.container div.mycard.active .slide.slide2 {
+  transform: translateY(0);
+}
+section.target div.content div.container div.mycard.active:nth-of-type(2) .icon {
+  transition: 0.7s;
+  background: url('../assets/img/casinohover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard.active:nth-of-type(3) .icon {
+  transition: 0.7s;
+  background: url('../assets/img/museehov.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard.active:nth-of-type(4) .icon {
+  transition: 0.7s;
+  background: url('../assets/img/mila_centreshover2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.target div.content div.container div.mycard.active:nth-of-type(5) .icon {
+  transition: 0.7s;
+  background: url('../assets/img/pdvhover.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 section.target div.content div.container article {
   flex: 1;
-  height: 100%;
+  height: 350px;
   transition: 1.2s ease;
 }
 section.target div.content div.container article .titre {
@@ -714,14 +873,14 @@ section.target div.content div.container article .image video {
 section.target div.content div.container article .desc {
   display: none;
   position: absolute;
-  bottom: 5%;
-  left: 7%;
-  width: 85%;
+  bottom: 0%;
+  left: 20%;
+  width: 60%;
 }
 section.target div.content div.container article .desc p {
   font-family: 'krub', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-bottom: 1%;
   text-align: center;
 }
@@ -1387,6 +1546,9 @@ footer .credit p i {
   section.target div.topline div.droite div p:nth-of-type(2) {
     font-size: 1.2rem;
   }
+  section.target div.content div.container article.card .desc {
+    bottom: -3%;
+  }
   section.fonctions {
     display: flex;
     justify-content: center;
@@ -1485,6 +1647,19 @@ footer .credit p i {
   header div.nav div.logo a img {
     width: 20%;
     height: auto;
+  }
+  section.target {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+  }
+  section.target div.content div.container article {
+    height: 250px;
+  }
+  section.target div.content div.container article .desc {
+    bottom: -3% !important;
+    left: 20%;
+    width: 60%;
   }
   section.fonctions .content .left .details .gauche {
     width: 100%;
@@ -1747,6 +1922,12 @@ footer .credit p i {
   section.target div.topline {
     width: 80%;
   }
+  section.target div.content div.container {
+    padding-top: 15%!important;
+  }
+  section.target div.content div.container div.mycard.active {
+    margin-bottom: 15%!important;
+  }
   section.fonctions {
     display: flex;
     justify-content: center;
@@ -1852,6 +2033,9 @@ footer .credit p i {
   section.target .content {
     width: 90%!important;
   }
+  section.target .content .container .mycard .slide {
+    width: 100%!important;
+  }
 }
 /* ------------------------------------------------------------------------- */
 /* ------------------------------ 425px ----------------------------------- */
@@ -1903,7 +2087,6 @@ footer .credit p i {
   }
   section.target {
     justify-content: flex-start;
-    margin-bottom: 5%;
   }
   section.target div.topline {
     width: 100%;
@@ -1931,6 +2114,12 @@ footer .credit p i {
   section.target div.topline div.droite div p:nth-of-type(2) {
     text-align: center;
     font-size: 0.9rem;
+  }
+  section.target div.content div.container {
+    padding-top: 20%!important;
+  }
+  section.target div.content div.container div.mycard.active {
+    margin-bottom: 20%!important;
   }
   section.fonctions {
     display: flex;
@@ -2281,6 +2470,37 @@ footer .credit p i {
     line-height: 48px;
     position: relative;
     text-align: center;
+  }
+  section.target {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  section.target div.content {
+    width: 100%;
+  }
+  section.target div.content div.container {
+    padding-top: 5%;
+  }
+  section.target div.content div.container article.card {
+    display: none;
+  }
+  section.target div.content div.container div.mycard {
+    margin: 0% 2%;
+    display: block;
+  }
+  section.target div.content div.container div.mycard div.slide1 {
+    transform: none !important;
+  }
+  section.target div.content div.container div.mycard div.slide2 {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  section.target div.content div.container div.mycard.active {
+    display: block;
+    margin-bottom: 8%;
+  }
+  section.target div.content div.container div.mycard.active .slide2 {
+    opacity: 1;
   }
 }
 /* ------------------------------------------------------------------------- */

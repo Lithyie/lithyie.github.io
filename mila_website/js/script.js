@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.mycard');
 
     cards.forEach(card => {
         card.addEventListener('click', function() {
