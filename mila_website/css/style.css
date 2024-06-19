@@ -561,10 +561,11 @@ section.innovation div.container div.content div.textleft p::before {
   font-size: 1.5rem;
 }
 section.innovation div.container div.content div.middle {
-  width: 90%;
-  background-image: url('../assets/img/circle.svg');
+  width: 45%;
+  background-image: url('../assets/img/test_ellipse.gif');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2084,6 +2085,9 @@ footer .credit p i {
   }
   section.innovation div.container {
     padding: 30% 0%;
+  }
+  section.innovation div.container div.content div.middle {
+    width: 65%;
   }
   section.target {
     padding-top: 15%;
