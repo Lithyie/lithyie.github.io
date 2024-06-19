@@ -2083,10 +2083,10 @@ footer .credit p i {
     height: auto;
   }
   section.innovation div.container {
-    padding: 15% 0%;
+    padding: 30% 0%;
   }
   section.target {
-    justify-content: flex-start;
+    padding-top: 15%;
   }
   section.target div.topline {
     width: 100%;
