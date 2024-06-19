@@ -1228,8 +1228,7 @@ footer .credit p i {
     margin: 0 auto;
   }
   header div.nav {
-    height: 10%;
-    padding: 0% 5%;
+    padding: 1% 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1271,16 +1270,15 @@ footer .credit p i {
     background-color: white;
     z-index: 10;
     position: fixed;
-    height: 10%;
     top: 0;
-    padding: 2% 5%;
+    padding: 1% 5%;
     transition: width 0.5s ease;
   }
   header div.nav.scrolled div.logo {
     transition: width 0.5s ease;
   }
   header div.nav.scrolled div.logo a img {
-    width: 20%;
+    width: 15%;
     height: auto;
   }
   header div.main {
@@ -2107,16 +2105,15 @@ footer .credit p i {
     background-color: white;
     z-index: 10;
     position: fixed;
-    height: 10%;
     top: 0;
-    padding: 2% 5%;
+    padding: 1% 5%;
     transition: width 0.5s ease;
   }
   header div.nav.scrolled div.logo {
     transition: width 0.5s ease;
   }
   header div.nav.scrolled div.logo a img {
-    width: 35%;
+    width: 15%;
     height: auto;
   }
   header div.main div.left div.topline p {
