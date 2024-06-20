@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Mila - Assistante Virtuelle</title>
 </head>
@@ -74,15 +75,15 @@
     <section class="innovation" id="innovation">
         <div class="container">
             <div class="content">
-                <div class="textleft">
+                <div class="textleft" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000">
                     <p>Technologie innovante</p>
                 </div>
-                <div class="middle">
+                <div class="middle" data-aos="zoom-in" data-aos-duration="2000">
                     <p>l'innovation</p>
                     <p>au service</p>
                     <p>des usagers</p>
                 </div>
-                <div class="textright">
+                <div class="textright" data-aos="fade-left" data-aos-delay="1200" data-aos-duration="1000">
                     <p>Technologie innovante</p>
                 </div>
             </div>
@@ -111,13 +112,11 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <section class="target" id="marchés">
         <div class="topline">
-            <div class="gauche">
+            <div class="gauche" data-aos="fade-right" data-aos-duration="2000">
                 <div>
                     <p>adapté aux besoins</p>
                 </div>
@@ -125,7 +124,7 @@
                     <p>de votre activité</p>
                 </div>
             </div>
-            <div class="droite">
+            <div class="droite" data-aos="fade-left" data-aos-duration="2000">
                 <div>
                     <p>intelligence</p>
                     <p>artificielle</p>
@@ -410,7 +409,7 @@
 
     </section>
 
-    <section class="fonctions" id="fonctionnalités">
+    <section class="fonctions" id="fonctionnalités" data-aos="fade-up" data-aos-duration="2000">
         <div class="content">
             <div class="left">
                 <div class="title">
@@ -420,7 +419,7 @@
                     <p>Grâce à son intelligence sémantique de pointe, notre hôtesse d'accueil virtuelle, parlant plus de
                         30 langues, propose les fonctionnalités suivantes</p>
                 </div>
-                <div class="details">
+                <div class="details" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
                     <div class="gauche">
                         <ul>
                             <li>Orientation / Guidage</li>
@@ -443,10 +442,10 @@
 
     <section class="custom" id="personnalisations">
         <div class="content">
-            <div class="gauche">
+            <div class="gauche" data-aos="fade-right" data-aos-duration="1200">
                 <div><img src="./assets/img/mila_custom.png" alt=""></div>
             </div>
-            <div class="droite">
+            <div class="droite" data-aos="fade-left" data-aos-duration="1200">
                 <div class="title">
                     <p>Personnalisations</p>
                 </div>
@@ -454,7 +453,7 @@
                     <p>Nous vous proposons une assistante virtuelle personnalisée, répondant parfaitement à vos besoins
                         spécifiques</p>
                 </div>
-                <div class="details">
+                <div class="details" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
                     <ul>
                         <li>Interface de configuration dédiée</li>
                         <li>Sélection des langues parlées (plus de 30 langues disponibles)</li>
@@ -470,7 +469,7 @@
         </div>
     </section>
 
-    <section class="video">
+    <section class="video" data-aos="zoom-out-up" data-aos-duration="1200">
         <div class="content">
             <div class="txt">
                 <svg width="30" height="75" viewBox="0 0 30 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,11 +515,11 @@
 
     <section class="demo" id="contact">
         <div class="content">
-            <div class="left">
+            <div class="left" data-aos="fade-right" data-aos-duration="1200">
                 <div><img src="./assets/img/mila_demo.png" alt="">
                 </div>
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left" data-aos-duration="1200">
                 <div class="titre">
                     <p>Réservez une démo</p>
                     <p>Venez découvrir nos produits</p>
@@ -578,13 +577,7 @@
     </footer>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
-    <script>
-        document.querySelector('.vid').addEventListener('click', function () {
-            this.classList.toggle('hide-overlay');
-        });
-    </script>
-
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -601,6 +594,12 @@
                 event.stopPropagation();
             });
         });
+
+        document.querySelector('.vid').addEventListener('click', function () {
+            this.classList.toggle('hide-overlay');
+        });
+
+        AOS.init();
     </script>
 </body>
 

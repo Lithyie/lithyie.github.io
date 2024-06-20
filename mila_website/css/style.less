@@ -175,6 +175,19 @@ a {
   }
 }
 
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10%); }
+  100% { transform: translateY(0%);}
+
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10%);}
+    100% { transform: translateY(0%);
+    }
+}
+
 /* ------------------------------- END RECURRENT -- */
 
 header {
@@ -561,6 +574,9 @@ section.innovation {
           font-size: 2rem;
           color: #F1F1F1;
           text-transform: uppercase;
+        }
+        svg{
+          animation: mover 2s infinite;
         }
       }
     }
@@ -3027,6 +3043,7 @@ footer {
             svg {
               width: 30px;
               height: 75px;
+              animation: bounce;
             }
           }
 
