@@ -2525,7 +2525,7 @@ footer .credit p i {
   header div.nav div.menu.is-open {
     display: flex;
     height: 100vh;
-    top: 10%;
+    top: 7%;
     align-items: center;
   }
   header div.nav div.menu a img {
