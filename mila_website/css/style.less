@@ -230,7 +230,7 @@ header {
             font-size: 0.9375vw;
             letter-spacing: 2px;
             font-weight: @bold;
-            border-bottom: 2px solid transparent;
+            border-bottom: 3px solid transparent;
             transition: all 0.3s ease-in-out;
 
             &:hover {
@@ -377,6 +377,7 @@ header {
     }
 
     p {
+      
       font-family: 'krub';
       font-weight: @semibold;
       font-size: 1.125rem;
@@ -394,9 +395,17 @@ header {
       width: fit-content;
       padding: 2% 5%;
       font-family: 'oswald';
-      font-weight: @bold;
+      font-weight: @semibold;
       font-size: 18px;
       background-color: @luxant;
+      border: 2px transparent solid;
+      transition: transform .3s ease;
+      &:hover{
+        transform: translateY(-20%);
+        border: 2px solid @luxant;
+        background-color: transparent;
+        box-shadow: 0px 5px 6px 4px rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
@@ -1325,12 +1334,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
 
   div.content {
     display: flex;
     width: 80%;
-    height: 100%;
+    padding-top: 4%;
     justify-content: center;
 
     .left {
@@ -1348,7 +1356,7 @@ footer {
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-end;
 
       .news {
         display: flex;
@@ -1358,7 +1366,7 @@ footer {
         p {
           font-family: 'krub';
           font-weight: @bold;
-          font-size: 3rem;
+          font-size: 2rem;
           color: white;
           text-align: end;
           margin: 0;
@@ -1413,10 +1421,9 @@ footer {
       p {
         font-family: 'krub';
         font-weight: @bold;
-        font-size: 2.3rem;
+        font-size: 2rem;
         color: white;
         text-align: end;
-        margin-top: 10%;
 
 
         a {
@@ -1425,7 +1432,7 @@ footer {
           color: white;
           text-transform: uppercase;
           padding: 0;
-          font-size: 2.3rem;
+          font-size: 2rem;
           background-color: transparent;
 
           &:nth-of-type(1) {
@@ -1435,12 +1442,32 @@ footer {
           i {
             margin: 0 1%;
           }
-
-          &:hover {
-            i {
-              color: @luxant;
+        }
+      }
+      div.follow{
+        padding: 5% 0%;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        p{
+          
+        }
+        div.socials{
+          padding: 5% 0%;
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          a{
+            margin: 0% 1%;
+            color: white;
+            i{
+              font-size: 1.8rem;
             }
-
+            &:hover {
+              i {
+                color: @luxant;
+              }
+            }
           }
         }
       }
@@ -1535,7 +1562,7 @@ footer {
               display: block;
               font-size: 0.9375vw;
               border-left: 3px solid transparent;
-              border-bottom: 2px solid transparent;
+              border-bottom: 3px solid transparent;
               transition: all 0.3s ease-in-out;
 
               &:hover {
@@ -1544,7 +1571,6 @@ footer {
               }
             }
           }
-
         }
       }
     }
@@ -2179,7 +2205,6 @@ footer {
       div.right {
         div.news {
           p {
-            font-size: 2rem;
           }
         }
 
@@ -2188,10 +2213,8 @@ footer {
         }
 
         p {
-          font-size: 1.8rem;
 
           a {
-            font-size: 1.5rem;
           }
         }
       }
@@ -2354,6 +2377,7 @@ footer {
       .gauche {
         div {
           width: 80%;
+          padding: 10% 0%;
         }
       }
     }
@@ -2417,6 +2441,40 @@ footer {
   }
 
   footer {
+    div.content{
+      flex-direction: column;
+      align-items: center;
+      div.left{
+        display: none;
+      }
+      div.right{
+        width: 100%;
+        align-items: center;
+        div.news{
+          width: 100%;
+          align-items: center;
+        }
+        input{
+          align-self: center;
+        }
+        button{
+          align-self: center;
+        }
+        div.follow{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          div.socials{
+            a{
+              i{
+                font-size: 1.5rem;
+
+              }
+            }
+          }
+        }
+      }
+    }
     div.credit {
       p {
         width: calc(100%/3);
@@ -2772,7 +2830,6 @@ footer {
   }
 
   footer {
-
     div.content {
       padding: 15% 0%;
       flex-direction: column;
@@ -2795,11 +2852,13 @@ footer {
           p {
             text-align: center;
           }
-
         }
 
         p {
           text-align: center;
+        }
+        div.follow{
+          margin-top: 10%;
         }
       }
 
@@ -3377,6 +3436,24 @@ section.target {
               font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
               min-height: 0vw;
             }
+          }
+        }
+      }
+
+    }
+  }
+
+  footer{
+    div.content{
+      .right{
+        p{
+          font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
+    min-height: 0vw;
+        }
+        div.news{
+          p{
+            font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
+      min-height: 0vw;
           }
         }
       }

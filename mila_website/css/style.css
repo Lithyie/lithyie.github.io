@@ -351,7 +351,7 @@ header div.nav div.menu ul li a {
   font-size: 0.9375vw;
   letter-spacing: 2px;
   font-weight: 700;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 header div.nav div.menu ul li a:hover {
@@ -478,9 +478,17 @@ header .right a {
   width: fit-content;
   padding: 2% 5%;
   font-family: 'oswald';
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   background-color: #d6bb73;
+  border: 2px transparent solid;
+  transition: transform 0.3s ease;
+}
+header .right a:hover {
+  transform: translateY(-20%);
+  border: 2px solid #d6bb73;
+  background-color: transparent;
+  box-shadow: 0px 5px 6px 4px rgba(0, 0, 0, 0.1);
 }
 header .divider {
   padding: 0% 10%;
@@ -1246,12 +1254,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
 }
 footer div.content {
   display: flex;
   width: 80%;
-  height: 100%;
+  padding-top: 4%;
   justify-content: center;
 }
 footer div.content .left {
@@ -1268,7 +1275,7 @@ footer div.content .right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-end;
 }
 footer div.content .right .news {
   display: flex;
@@ -1278,7 +1285,7 @@ footer div.content .right .news {
 footer div.content .right .news p {
   font-family: 'krub';
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   text-align: end;
   margin: 0;
@@ -1326,17 +1333,16 @@ footer div.content .right button:hover i {
 footer div.content .right p {
   font-family: 'krub';
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: white;
   text-align: end;
-  margin-top: 10%;
 }
 footer div.content .right p a {
   margin-right: 1%;
   color: white;
   text-transform: uppercase;
   padding: 0;
-  font-size: 2.3rem;
+  font-size: 2rem;
   background-color: transparent;
 }
 footer div.content .right p a:nth-of-type(1) {
@@ -1345,7 +1351,26 @@ footer div.content .right p a:nth-of-type(1) {
 footer div.content .right p a i {
   margin: 0 1%;
 }
-footer div.content .right p a:hover i {
+footer div.content .right div.follow {
+  padding: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+footer div.content .right div.follow div.socials {
+  padding: 5% 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer div.content .right div.follow div.socials a {
+  margin: 0% 1%;
+  color: white;
+}
+footer div.content .right div.follow div.socials a i {
+  font-size: 1.8rem;
+}
+footer div.content .right div.follow div.socials a:hover i {
   color: #d6bb73;
 }
 footer .credit {
@@ -1419,7 +1444,7 @@ footer .credit p i {
     display: block;
     font-size: 0.9375vw;
     border-left: 3px solid transparent;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: all 0.3s ease-in-out;
   }
   header div.nav div.menu ul li a:hover {
@@ -1868,17 +1893,8 @@ footer .credit p i {
     display: inline;
     opacity: 1;
   }
-  footer div.content div.right div.news p {
-    font-size: 2rem;
-  }
   footer div.content div.right button {
     font-size: 0.85rem;
-  }
-  footer div.content div.right p {
-    font-size: 1.8rem;
-  }
-  footer div.content div.right p a {
-    font-size: 1.5rem;
   }
 }
 /* ------------------------------------------------------------------------- */
@@ -1985,6 +2001,7 @@ footer .credit p i {
   }
   section.custom .content .gauche div {
     width: 80%;
+    padding: 10% 0%;
   }
   section.video div.content div.vid {
     height: 65%;
@@ -2021,6 +2038,35 @@ footer .credit p i {
   }
   section.demo div.content form button {
     font-size: 1rem;
+  }
+  footer div.content {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div.content div.left {
+    display: none;
+  }
+  footer div.content div.right {
+    width: 100%;
+    align-items: center;
+  }
+  footer div.content div.right div.news {
+    width: 100%;
+    align-items: center;
+  }
+  footer div.content div.right input {
+    align-self: center;
+  }
+  footer div.content div.right button {
+    align-self: center;
+  }
+  footer div.content div.right div.follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div.content div.right div.follow div.socials a i {
+    font-size: 1.5rem;
   }
   footer div.credit p {
     width: calc(100%/3);
@@ -2272,6 +2318,9 @@ footer .credit p i {
   }
   footer div.content div.right p {
     text-align: center;
+  }
+  footer div.content div.right div.follow {
+    margin-top: 10%;
   }
   footer div.content div.left {
     display: none;
@@ -2633,6 +2682,14 @@ footer .credit p i {
   }
   section.demo div.content .right .titre p:nth-of-type(2) {
     font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
+    min-height: 0vw;
+  }
+  footer div.content .right p {
+    font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
+    min-height: 0vw;
+  }
+  footer div.content .right div.news p {
+    font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
     min-height: 0vw;
   }
 }
