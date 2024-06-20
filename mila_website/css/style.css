@@ -1727,15 +1727,15 @@ footer .credit p i {
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   section.target .topline {
-    width: 100%!important;
-    justify-content: center!important;
+    width: 100% !important;
+    justify-content: center !important;
     padding: 0% 3%;
   }
   section.target .topline .gauche div p {
     text-align: center;
   }
   section.target .topline .gauche div:nth-of-type(2) p {
-    text-align: center!important;
+    text-align: center !important;
   }
   section.target .topline .droite {
     display: none;
@@ -1967,10 +1967,10 @@ footer .credit p i {
     width: 80%;
   }
   section.target div.content div.container {
-    padding-top: 15%!important;
+    padding-top: 15% !important;
   }
   section.target div.content div.container div.mycard.active {
-    margin-bottom: 15%!important;
+    margin-bottom: 15% !important;
   }
   section.fonctions {
     display: flex;
@@ -2105,10 +2105,10 @@ footer .credit p i {
 /* ------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   section.target .content {
-    width: 90%!important;
+    width: 90% !important;
   }
   section.target .content .container .mycard .slide {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
 /* ------------------------------------------------------------------------- */
@@ -2193,10 +2193,10 @@ footer .credit p i {
     font-size: 0.9rem;
   }
   section.target div.content div.container {
-    padding-top: 20%!important;
+    padding-top: 20% !important;
   }
   section.target div.content div.container div.mycard.active {
-    margin-bottom: 20%!important;
+    margin-bottom: 20% !important;
   }
   section.fonctions {
     display: flex;

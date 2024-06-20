@@ -80,6 +80,7 @@ body {
   font-weight: @regular;
   font-style: normal;
   scroll-behavior: smooth;
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -175,16 +176,32 @@ a {
 }
 
 @-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10%); }
-  100% { transform: translateY(0%);}
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 
 }
+
 @keyframes mover {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10%);}
-    100% { transform: translateY(0%);
-    }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* ------------------------------- END RECURRENT -- */
@@ -389,7 +406,7 @@ header {
     }
 
     p {
-      
+
       font-family: 'krub';
       font-weight: @semibold;
       font-size: 1.125rem;
@@ -412,7 +429,8 @@ header {
       background-color: @luxant;
       border: 2px transparent solid;
       transition: transform .3s ease;
-      &:hover{
+
+      &:hover {
         transform: translateY(-20%);
         border: 2px solid @luxant;
         background-color: transparent;
@@ -575,7 +593,8 @@ section.innovation {
           color: #F1F1F1;
           text-transform: uppercase;
         }
-        svg{
+
+        svg {
           animation: mover 2s infinite;
         }
       }
@@ -664,6 +683,7 @@ section.target {
         display: none;
         position: relative;
         margin: 5% 2%;
+
         div.icon {
           background: url('../assets/img/mila_train.jpg');
           background-position: center;
@@ -684,7 +704,7 @@ section.target {
             transform: translate(-50%, -50%);
           }
 
-          video{
+          video {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -726,8 +746,8 @@ section.target {
           }
         }
 
-        div.slide1{
-          
+        div.slide1 {
+
           &:after {
             background: @text;
             bottom: 15px;
@@ -739,6 +759,7 @@ section.target {
             width: 30px;
           }
         }
+
         div.slide,
         div.slide2 {
           align-items: center;
@@ -803,8 +824,10 @@ section.target {
           }
         }
       }
+
       div.mycard.active {
         display: none;
+
         .icon {
           transition: 0.7s;
           background: url('../assets/img/mila_trainhover.jpg');
@@ -822,8 +845,8 @@ section.target {
           transform: translateY(0);
         }
 
-        &:nth-of-type(2){
-          .icon{
+        &:nth-of-type(2) {
+          .icon {
             transition: 0.7s;
             background: url('../assets/img/casinohover.jpg');
             background-position: center;
@@ -832,8 +855,8 @@ section.target {
           }
         }
 
-        &:nth-of-type(3){
-          .icon{
+        &:nth-of-type(3) {
+          .icon {
             transition: 0.7s;
             background: url('../assets/img/museehov.jpg');
             background-position: center;
@@ -842,8 +865,8 @@ section.target {
           }
         }
 
-        &:nth-of-type(4){
-          .icon{
+        &:nth-of-type(4) {
+          .icon {
             transition: 0.7s;
             background: url('../assets/img/mila_centreshover2.jpg');
             background-position: center;
@@ -852,8 +875,8 @@ section.target {
           }
         }
 
-        &:nth-of-type(5){
-          .icon{
+        &:nth-of-type(5) {
+          .icon {
             transition: 0.7s;
             background: url('../assets/img/pdvhover.jpg');
             background-position: center;
@@ -863,20 +886,22 @@ section.target {
         }
       }
 
-      article{
+      article {
         flex: 1;
         height: 250px;
         transition: 1.2s ease;
-        .titre{
+
+        .titre {
           background-color: @text;
-          
-          p{
+
+          p {
             text-transform: uppercase;
             text-align: center;
             color: white;
           }
         }
-        .image{
+
+        .image {
           transition: .5s ease;
           display: flex;
           align-items: flex-end;
@@ -887,7 +912,8 @@ section.target {
           background-size: cover;
           background-repeat: no-repeat;
           position: relative;
-          video{
+
+          video {
             position: absolute;
             transition: .5s ease;
             height: auto;
@@ -895,13 +921,15 @@ section.target {
             width: 100%;
           }
         }
-        .desc{
+
+        .desc {
           display: none;
           position: absolute;
           bottom: -5%;
           left: 20%;
           width: 60%;
-          p{
+
+          p {
             font-family: 'krub', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
@@ -909,13 +937,16 @@ section.target {
             text-align: center;
           }
         }
-        &:hover{
+
+        &:hover {
           transition: 1s ease;
           flex: 3;
-          .image{
+
+          .image {
             transition: .5s ease;
             position: relative;
-            video{
+
+            video {
               position: absolute;
               transition: .5s ease;
               transform: translateX(35%);
@@ -923,71 +954,87 @@ section.target {
               width: 100%;
             }
           }
-          
-          .desc{
+
+          .desc {
             display: block;
           }
-          .image{
+
+          .image {
             background-image: url('../assets/img/mila_trainhover2.jpg');
           }
         }
 
-        &:nth-of-type(2){
-          .image{
+        &:nth-of-type(2) {
+          .image {
             background-image: url('../assets/img/casino.jpg');
           }
-          &:hover{
+
+          &:hover {
             transition: .7s ease;
             flex: 3;
-            .image{
+
+            .image {
               background-image: url('../assets/img/casinohover.jpg');
             }
-            .desc{
+
+            .desc {
               display: block;
             }
           }
         }
-        &:nth-of-type(3){
-          .image{
+
+        &:nth-of-type(3) {
+          .image {
             background-image: url('../assets/img/musee.jpg');
           }
-          &:hover{
+
+          &:hover {
             transition: .7s ease;
             flex: 3;
-            .image{
+
+            .image {
               background-image: url('../assets/img/museehov.jpg');
             }
-            .desc{
+
+            .desc {
               display: block;
             }
           }
         }
-        &:nth-of-type(4){
-          .image{
+
+        &:nth-of-type(4) {
+          .image {
             background-image: url('../assets/img/mila_centres.jpg');
           }
-          &:hover{
+
+          &:hover {
             transition: .7s ease;
             flex: 3;
-            .image{
+
+            .image {
               background-image: url('../assets/img/mila_centreshover2.jpg');
             }
-            .desc{
+
+            .desc {
               display: block;
             }
           }
         }
-        &:nth-of-type(5){
-          .image{
+
+        &:nth-of-type(5) {
+          .image {
             background-image: url('../assets/img/pdv.jpg');
           }
-          &:hover{
+
+          &:hover {
             transition: .7s ease;
             flex: 3;
-            .image{
+
+            .image {
               background-image: url('../assets/img/pdvhover.jpg');
             }
-            .desc{
+
+            .desc {
               display: block;
             }
           }
@@ -1363,7 +1410,8 @@ footer {
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
-      div{
+
+      div {
         width: 70%;
         height: auto;
       }
@@ -1461,25 +1509,29 @@ footer {
           }
         }
       }
-      div.follow{
+
+      div.follow {
         padding: 5% 0%;
         display: flex;
         flex-direction: column;
         width: fit-content;
-        p{
-          
-        }
-        div.socials{
+
+        p {}
+
+        div.socials {
           padding: 5% 0%;
           width: 100%;
           display: flex;
           justify-content: space-evenly;
-          a{
+
+          a {
             margin: 0% 1%;
             color: white;
-            i{
+
+            i {
               font-size: 1.8rem;
             }
+
             &:hover {
               i {
                 color: @luxant;
@@ -1754,10 +1806,10 @@ footer {
       }
     }
 
-    div.content{
-      div.container{
-        article.card{
-          .desc{
+    div.content {
+      div.container {
+        article.card {
+          .desc {
             bottom: -3%;
           }
         }
@@ -1908,16 +1960,18 @@ footer {
     }
   }
 
-  section.target{
+  section.target {
     padding-top: 10%;
     padding-bottom: 10%;
     margin-bottom: 10%;
-    div.content{
-      div.container{
-        article{
+
+    div.content {
+      div.container {
+        article {
           height: 250px;
-          .desc{
-            bottom: -3%!important;
+
+          .desc {
+            bottom: -3% !important;
             left: 20%;
             width: 60%;
           }
@@ -1958,28 +2012,32 @@ footer {
 
   section.target {
     .topline {
-      width: 100%!important;
-      justify-content: center!important;
+      width: 100% !important;
+      justify-content: center !important;
       padding: 0% 3%;
+
       .gauche {
         div {
           p {
             text-align: center;
 
           }
-          &:nth-of-type(2){
-            p{
-              text-align: center!important;
+
+          &:nth-of-type(2) {
+            p {
+              text-align: center !important;
 
             }
           }
         }
       }
-      .droite{
+
+      .droite {
         display: none;
       }
     }
-    .content{
+
+    .content {
       padding: 3% 0%;
     }
   }
@@ -2221,8 +2279,7 @@ footer {
 
       div.right {
         div.news {
-          p {
-          }
+          p {}
         }
 
         button {
@@ -2231,8 +2288,7 @@ footer {
 
         p {
 
-          a {
-          }
+          a {}
         }
       }
     }
@@ -2298,17 +2354,18 @@ footer {
         div {
 
           &:nth-of-type(2) {
-            p {
-            }
+            p {}
           }
         }
       }
     }
-    div.content{
-      div.container{
-        padding-top: 15%!important;
-        div.mycard.active{
-          margin-bottom: 15%!important;
+
+    div.content {
+      div.container {
+        padding-top: 15% !important;
+
+        div.mycard.active {
+          margin-bottom: 15% !important;
         }
       }
     }
@@ -2419,11 +2476,13 @@ footer {
   section.demo {
     div.content {
       flex-direction: column-reverse;
+
       div.right {
         margin-bottom: 15%;
         width: 100%;
         max-width: 100%;
         padding: 0;
+
         .titre {
           p {
             &:nth-of-type(2) {
@@ -2433,14 +2492,16 @@ footer {
         }
       }
 
-      .left{
+      .left {
         max-width: 100%;
         width: 100%;
-        div{
-          width: 60%; 
-          margin:  0 auto;
+
+        div {
+          width: 60%;
+          margin: 0 auto;
         }
       }
+
       form {
         input {
           font-size: .8rem;
@@ -2458,32 +2519,39 @@ footer {
   }
 
   footer {
-    div.content{
+    div.content {
       flex-direction: column;
       align-items: center;
-      div.left{
+
+      div.left {
         display: none;
       }
-      div.right{
+
+      div.right {
         width: 100%;
         align-items: center;
-        div.news{
+
+        div.news {
           width: 100%;
           align-items: center;
         }
-        input{
+
+        input {
           align-self: center;
         }
-        button{
+
+        button {
           align-self: center;
         }
-        div.follow{
+
+        div.follow {
           display: flex;
           flex-direction: column;
           align-items: center;
-          div.socials{
-            a{
-              i{
+
+          div.socials {
+            a {
+              i {
                 font-size: 1.5rem;
 
               }
@@ -2492,6 +2560,7 @@ footer {
         }
       }
     }
+
     div.credit {
       p {
         width: calc(100%/3);
@@ -2508,16 +2577,17 @@ footer {
 
 @media (max-width: 600px) {
 
-  section.target{
-    .content{
-      width: 90%!important;
-      .container{
+  section.target {
+    .content {
+      width: 90% !important;
+
+      .container {
         .mycard {
           .slide {
-            width: 100%!important;
+            width: 100% !important;
           }
         }
-        }
+      }
     }
   }
 
@@ -2598,8 +2668,9 @@ footer {
   section.innovation {
     div.container {
       padding: 30% 0%;
-      div.content{
-        div.middle{
+
+      div.content {
+        div.middle {
           width: 65%;
         }
       }
@@ -2651,10 +2722,11 @@ footer {
     }
 
     div.content {
-      div.container{
-        padding-top: 20%!important;
-        div.mycard.active{
-          margin-bottom: 20%!important;
+      div.container {
+        padding-top: 20% !important;
+
+        div.mycard.active {
+          margin-bottom: 20% !important;
         }
       }
 
@@ -2874,7 +2946,8 @@ footer {
         p {
           text-align: center;
         }
-        div.follow{
+
+        div.follow {
           margin-top: 10%;
         }
       }
@@ -3182,41 +3255,45 @@ footer {
     }
   }
 
-section.target {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  div.content {
-    width: 100%;
+  section.target {
+    padding-bottom: 0;
+    margin-bottom: 0;
 
-    div.container {
-      padding-top: 5%;
-      article.card {
-        display: none;
-      }
+    div.content {
+      width: 100%;
 
-      div.mycard {
-        margin: 0% 2%;
-        display: block;
+      div.container {
+        padding-top: 5%;
 
-        div.slide1 {
-          transform: none !important;
+        article.card {
+          display: none;
         }
-        div.slide2 {
-          opacity: 0;
-          transform: translateY(-100%);
-        }
-      }
 
-      div.mycard.active {
-        display: block;
-        margin-bottom: 8%;
-        .slide2{
-          opacity: 1;
+        div.mycard {
+          margin: 0% 2%;
+          display: block;
+
+          div.slide1 {
+            transform: none !important;
+          }
+
+          div.slide2 {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+        }
+
+        div.mycard.active {
+          display: block;
+          margin-bottom: 8%;
+
+          .slide2 {
+            opacity: 1;
+          }
         }
       }
     }
   }
-}
 }
 
 /* ------------------------------------------------------------------------- */
@@ -3230,8 +3307,9 @@ section.target {
         ul {
           li {
             width: 80%;
+
             a {
-            font-size: 0.8rem;
+              font-size: 0.8rem;
             }
           }
         }
@@ -3272,12 +3350,12 @@ section.target {
     .right {
       h1 {
         letter-spacing: 0.125rem;
-        font-size: calc(1.5rem + ((1vw - 3px) * 0.4938))!important;
+        font-size: calc(1.5rem + ((1vw - 3px) * 0.4938)) !important;
         min-height: 0vw;
       }
 
       p {
-        font-size: calc(0.875rem + ((1vw - 3px) * 0.1235))!important;
+        font-size: calc(0.875rem + ((1vw - 3px) * 0.1235)) !important;
         min-height: 0vw;
       }
 
@@ -3370,10 +3448,11 @@ section.target {
     div.topline {
       div.gauche {
         div {
-          p{
+          p {
             font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
             min-height: 0vw;
           }
+
           &:nth-of-type(2) {
             p {
               font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
@@ -3394,7 +3473,8 @@ section.target {
             min-height: 0vw;
           }
         }
-        div.desc{
+
+        div.desc {
           font-size: calc(0.8rem + ((1vw - 3px) * 0.6914));
         }
       }
@@ -3435,6 +3515,7 @@ section.target {
           font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
           min-height: 0vw;
         }
+
         .desc {
           p {
             font-size: calc(0.8rem + ((1vw - 3px) * 0.6914));
@@ -3452,7 +3533,7 @@ section.target {
           p {
             font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
             min-height: 0vw;
-  
+
             &:nth-of-type(2) {
               font-size: calc(1.125rem + ((1vw - 3px) * 0.8642));
               min-height: 0vw;
@@ -3464,17 +3545,18 @@ section.target {
     }
   }
 
-  footer{
-    div.content{
-      .right{
-        p{
+  footer {
+    div.content {
+      .right {
+        p {
           font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
-    min-height: 0vw;
+          min-height: 0vw;
         }
-        div.news{
-          p{
+
+        div.news {
+          p {
             font-size: calc(1.5rem + ((1vw - 3px) * 0.4938));
-      min-height: 0vw;
+            min-height: 0vw;
           }
         }
       }
