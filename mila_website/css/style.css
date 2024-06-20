@@ -2681,6 +2681,9 @@ footer .credit p i {
     font-size: calc(1.5rem + ((1vw - 3px) * 2.4691));
     min-height: 0vw;
   }
+  section.custom div.content div.droite div.desc {
+    font-size: calc(0.8rem + ((1vw - 3px) * 0.6914));
+  }
   section.custom::after {
     font-size: calc(0.7rem + ((1vw - 3px) * 5.2346));
     min-height: 0vw;
