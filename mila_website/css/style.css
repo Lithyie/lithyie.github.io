@@ -553,6 +553,7 @@ header .divider div p:nth-of-type(3) span {
   font-weight: 500;
 }
 section.innovation {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1188,6 +1189,7 @@ section.demo {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 section.demo div.content {
   padding: 10% 0%;
