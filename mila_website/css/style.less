@@ -709,212 +709,403 @@ section.target {
       flex-wrap: wrap;
       justify-content: center;
 
-      div.mycard {
+      // div.mycard {
+      //   display: none;
+      //   position: relative;
+      //   margin: 5% 2%;
+
+      //   div.icon {
+      //     background: url('../assets/img/mila_train.jpg');
+      //     background-position: center;
+      //     background-size: cover;
+      //     background-repeat: no-repeat;
+      //     height: 100%;
+      //     left: 0;
+      //     position: absolute;
+      //     top: 0;
+      //     width: 100%;
+
+      //     .fa {
+      //       color: #ffffff;
+      //       font-size: 80px;
+      //       left: 50%;
+      //       position: absolute;
+      //       top: 50%;
+      //       transform: translate(-50%, -50%);
+      //     }
+
+      //     video {
+      //       position: absolute;
+      //       bottom: 0;
+      //       right: 0;
+      //       width: 40%;
+      //       height: auto;
+      //     }
+      //   }
+
+      //   div.slide {
+      //     height: 300px;
+      //     transition: 0.5s;
+      //     width: 500px;
+      //   }
+
+      //   div.slide.slide1 {
+      //     align-items: center;
+      //     display: flex;
+      //     justify-content: center;
+      //     position: relative;
+      //     transform: translateY(200px);
+      //     transition: .7s;
+      //     z-index: 1;
+
+      //     .content {
+      //       .titre {
+      //         padding: 2% 0%;
+      //         position: absolute;
+      //         left: 0;
+      //         top: -13%;
+      //         width: 100%;
+      //         background-color: #181818;
+
+      //         p {
+      //           color: white;
+      //           text-transform: uppercase;
+      //           text-align: center;
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   div.slide1 {
+
+      //     &:after {
+      //       background: @text;
+      //       bottom: 15px;
+      //       content: "";
+      //       height: 4px;
+      //       left: 50%;
+      //       position: absolute;
+      //       transform: translateX(-50%);
+      //       width: 30px;
+      //     }
+      //   }
+
+      //   div.slide,
+      //   div.slide2 {
+      //     align-items: center;
+      //     box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
+      //     box-sizing: border-box;
+      //     display: flex;
+      //     justify-content: center;
+      //     padding: 2%;
+      //     position: relative;
+      //     transform: translateY(-100px);
+      //     transition: .8s;
+
+
+      //     div.content {
+      //       width: 100%;
+      //       height: 100%;
+      //       display: flex;
+      //       flex-direction: column;
+      //       justify-content: space-evenly;
+
+      //       p {
+      //         color: @text;
+      //         margin: 0;
+      //         padding: 0;
+      //       }
+      //     }
+      //   }
+
+      //   &:nth-of-type(2) {
+      //     .icon {
+      //       background: url('../assets/img/casino.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(3) {
+      //     .icon {
+      //       background: url('../assets/img/musee.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(4) {
+      //     .icon {
+      //       background: url('../assets/img/mila_centres.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(5) {
+      //     .icon {
+      //       background: url('../assets/img/pdv.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+      // }
+
+      // div.mycard.active {
+      //   display: none;
+
+      //   .icon {
+      //     transition: 0.7s;
+      //     background: url('../assets/img/mila_trainhover.jpg');
+      //     background-position: center;
+      //     background-size: cover;
+      //     background-repeat: no-repeat;
+      //   }
+
+      //   .slide.slide1 {
+      //     transform: translateY(0px);
+
+      //   }
+
+      //   .slide.slide2 {
+      //     transform: translateY(0);
+      //   }
+
+      //   &:nth-of-type(2) {
+      //     .icon {
+      //       transition: 0.7s;
+      //       background: url('../assets/img/casinohover.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(3) {
+      //     .icon {
+      //       transition: 0.7s;
+      //       background: url('../assets/img/museehov.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(4) {
+      //     .icon {
+      //       transition: 0.7s;
+      //       background: url('../assets/img/mila_centreshover2.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+
+      //   &:nth-of-type(5) {
+      //     .icon {
+      //       transition: 0.7s;
+      //       background: url('../assets/img/pdvhover.jpg');
+      //       background-position: center;
+      //       background-size: cover;
+      //       background-repeat: no-repeat;
+      //     }
+      //   }
+      // }
+
+      .mycard {
         display: none;
         position: relative;
         margin: 5% 2%;
-
-        div.icon {
-          background: url('../assets/img/mila_train.jpg');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-
-          .fa {
-            color: #ffffff;
-            font-size: 80px;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          video {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40%;
-            height: auto;
-          }
-        }
-
-        div.slide {
-          height: 300px;
-          transition: 0.5s;
-          width: 500px;
-        }
-
-        div.slide.slide1 {
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          transform: translateY(200px);
-          transition: .7s;
-          z-index: 1;
-
-          .content {
-            .titre {
-              padding: 2% 0%;
-              position: absolute;
-              left: 0;
-              top: -13%;
-              width: 100%;
-              background-color: #181818;
-
-              p {
-                color: white;
-                text-transform: uppercase;
-                text-align: center;
-              }
-            }
-          }
-        }
-
-        div.slide1 {
-
-          &:after {
-            background: @text;
-            bottom: 15px;
-            content: "";
-            height: 4px;
-            left: 50%;
-            position: absolute;
-            transform: translateX(-50%);
-            width: 30px;
-          }
-        }
-
-        div.slide,
-        div.slide2 {
-          align-items: center;
-          box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
-          box-sizing: border-box;
-          display: flex;
-          justify-content: center;
-          padding: 2%;
-          position: relative;
-          transform: translateY(-100px);
-          transition: .8s;
-
-
-          div.content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-
-            p {
-              color: @text;
-              margin: 0;
-              padding: 0;
-            }
-          }
-        }
-
-        &:nth-of-type(2) {
-          .icon {
-            background: url('../assets/img/casino.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(3) {
-          .icon {
-            background: url('../assets/img/musee.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(4) {
-          .icon {
-            background: url('../assets/img/mila_centres.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &:nth-of-type(5) {
-          .icon {
-            background: url('../assets/img/pdv.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-        }
-      }
-
-      div.mycard.active {
-        display: none;
-
+    
         .icon {
-          transition: 0.7s;
-          background: url('../assets/img/mila_trainhover.jpg');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
+            background: url('../assets/img/mila_train.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+    
+            .fa {
+                color: #ffffff;
+                font-size: 80px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            video {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 40%;
+                height: auto;
+            }
         }
-
+    
+        .slide {
+            height: 300px;
+            transition: 0.5s;
+            width: 500px;
+        }
+    
         .slide.slide1 {
-          transform: translateY(0px);
-
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            transform: translateY(200px);
+            transition: .7s;
+            z-index: 1;
+    
+            .content {
+                .titre {
+                    padding: 2% 0%;
+                    position: absolute;
+                    left: 0;
+                    top: -13%;
+                    width: 100%;
+                    background-color: #181818;
+    
+                    p {
+                        color: white;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+            }
         }
-
-        .slide.slide2 {
-          transform: translateY(0);
+    
+        .slide,
+        .slide2 {
+            align-items: center;
+            box-shadow: -1px -2px 40px rgba(0, 0, 0, 0.4);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            padding: 2%;
+            position: relative;
+            transform: translateY(-100px);
+            transition: .8s;
+    
+            .content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+    
+                p {
+                    color: @text;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
         }
-
+    
         &:nth-of-type(2) {
-          .icon {
-            transition: 0.7s;
-            background: url('../assets/img/casinohover.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+            .icon {
+                background: url('../assets/img/casino.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         }
-
+    
         &:nth-of-type(3) {
-          .icon {
-            transition: 0.7s;
-            background: url('../assets/img/museehov.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+            .icon {
+                background: url('../assets/img/musee.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         }
-
+    
         &:nth-of-type(4) {
-          .icon {
-            transition: 0.7s;
-            background: url('../assets/img/mila_centreshover2.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+            .icon {
+                background: url('../assets/img/mila_centres.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         }
-
+    
         &:nth-of-type(5) {
-          .icon {
+            .icon {
+                background: url('../assets/img/pdv.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    
+    .mycard.active {
+        display: block;
+    
+        .icon {
             transition: 0.7s;
-            background: url('../assets/img/pdvhover.jpg');
+            background: url('../assets/img/mila_trainhover.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-          }
         }
-      }
+    
+        .slide.slide1 {
+            transform: translateY(0px);
+        }
+    
+        .slide.slide2 {
+            transform: translateY(0);
+        }
+    
+        &:nth-of-type(2) {
+            .icon {
+                transition: 0.7s;
+                background: url('../assets/img/casinohover.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    
+        &:nth-of-type(3) {
+            .icon {
+                transition: 0.7s;
+                background: url('../assets/img/museehov.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    
+        &:nth-of-type(4) {
+            .icon {
+                transition: 0.7s;
+                background: url('../assets/img/mila_centreshover2.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    
+        &:nth-of-type(5) {
+            .icon {
+                transition: 0.7s;
+                background: url('../assets/img/pdvhover.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
 
       article {
         flex: 1;
