@@ -738,7 +738,7 @@ section.target div.content div.container {
 section.target div.content div.container .mycard {
   display: none;
   position: relative;
-  padding: 5% 0%;
+  padding: 10% 0%;
 }
 section.target div.content div.container .mycard .icon {
   background: url('../assets/img/mila_train.jpg');
@@ -845,6 +845,7 @@ section.target div.content div.container .mycard:nth-of-type(5) .icon {
 }
 section.target div.content div.container .mycard.active {
   display: block;
+  padding: 10% 0%;
 }
 section.target div.content div.container .mycard.active .icon {
   transition: 0.7s;
@@ -2004,6 +2005,9 @@ footer .credit p i {
   section.target div.content div.container {
     padding-top: 15% !important;
   }
+  section.target div.content div.container div.mycard.active {
+    padding: 10% 0%;
+  }
   section.fonctions {
     display: flex;
     justify-content: center;
@@ -2218,6 +2222,9 @@ footer .credit p i {
   }
   section.target div.content div.container {
     padding-top: 20% !important;
+  }
+  section.target div.content div.container div.mycard.active {
+    padding: 10% 0%;
   }
   section.fonctions {
     display: flex;
@@ -2590,7 +2597,7 @@ footer .credit p i {
     display: none;
   }
   section.target div.content div.container div.mycard {
-    padding: 5% 0%;
+    padding: 10% 0%;
     display: block;
   }
   section.target div.content div.container div.mycard div.slide1 {
@@ -2602,6 +2609,7 @@ footer .credit p i {
   }
   section.target div.content div.container div.mycard.active {
     display: block;
+    padding: 10% 0%;
   }
   section.target div.content div.container div.mycard.active .slide2 {
     opacity: 1;
