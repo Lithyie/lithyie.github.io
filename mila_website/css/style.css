@@ -2593,6 +2593,7 @@ footer .credit p i {
   }
   section.target div.content div.container {
     padding-top: 5%;
+    justify-content: space-evenly;
   }
   section.target div.content div.container article.card {
     display: none;
@@ -2603,6 +2604,13 @@ footer .credit p i {
   }
   section.target div.content div.container div.mycard div.slide1 {
     transform: none !important;
+  }
+  section.target div.content div.container div.mycard div.slide1 div.content div.icon img {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 40%;
+    height: auto;
   }
   section.target div.content div.container div.mycard div.slide2 {
     opacity: 0;
