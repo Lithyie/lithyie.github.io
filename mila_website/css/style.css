@@ -2004,9 +2004,6 @@ footer .credit p i {
   section.target div.content div.container {
     padding-top: 15% !important;
   }
-  section.target div.content div.container div.mycard.active {
-    margin-bottom: 15% !important;
-  }
   section.fonctions {
     display: flex;
     justify-content: center;
@@ -2221,9 +2218,6 @@ footer .credit p i {
   }
   section.target div.content div.container {
     padding-top: 20% !important;
-  }
-  section.target div.content div.container div.mycard.active {
-    margin-bottom: 20% !important;
   }
   section.fonctions {
     display: flex;
