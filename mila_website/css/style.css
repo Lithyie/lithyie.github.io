@@ -751,14 +751,6 @@ section.target div.content div.container .mycard .icon {
   top: 0;
   width: 100%;
 }
-section.target div.content div.container .mycard .icon .fa {
-  color: #ffffff;
-  font-size: 80px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 section.target div.content div.container .mycard .icon video {
   position: absolute;
   bottom: 0;
@@ -848,7 +840,7 @@ section.target div.content div.container .mycard.active {
   padding: 10% 0%;
 }
 section.target div.content div.container .mycard.active .icon {
-  transition: 0.7s;
+  transition: background 0.2s ease;
   background: url('../assets/img/mila_trainhover.jpg');
   background-position: center;
   background-size: cover;
@@ -862,28 +854,28 @@ section.target div.content div.container .mycard.active .slide.slide2 {
   transform: translateY(0);
 }
 section.target div.content div.container .mycard.active:nth-of-type(2) .icon {
-  transition: 0.7s;
+  transition: background 0.2s ease;
   background: url('../assets/img/casinohover.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 section.target div.content div.container .mycard.active:nth-of-type(3) .icon {
-  transition: 0.7s;
+  transition: background 0.2s ease;
   background: url('../assets/img/museehov.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 section.target div.content div.container .mycard.active:nth-of-type(4) .icon {
-  transition: 0.7s;
+  transition: background 0.2s ease;
   background: url('../assets/img/mila_centreshover2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 section.target div.content div.container .mycard.active:nth-of-type(5) .icon {
-  transition: 0.7s;
+  transition: background 0.2s ease;
   background: url('../assets/img/pdvhover.jpg');
   background-position: center;
   background-size: cover;
