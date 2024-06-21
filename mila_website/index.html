@@ -145,77 +145,6 @@
             </div>
         </div>
 
-        <!-- <div class="cards">
-            <article>
-                <div class="titre">
-                    <p>Transport</p>
-                    <i class="fas fa-arrow-alt-circle-down"></i>
-                </div>
-                <div class="img_illu"></div>
-                <div class="text">
-                    <p>Mila améliore l’accueil des passagers et optimise leur expérience de voyage</p>
-                    <p>Elle fournit en temps réel, toutes les informations liées à leur trajet, correspondance, retard
-                        éventuel, offres promotionnelles des boutiques et restaurants partenaires</p>
-                    <p>Mila sera votre aout incontournable pour renforcer la relation avec vos clients !</p>
-                </div>
-            </article>
-            <article>
-                <div class="titre">
-                    <p>Hôtels & Casinos</p>
-                    <i class="fas fa-arrow-alt-circle-down"></i>
-                </div>
-                <div class="img_illu"></div>
-                <div class="text">
-                    <p>Mila réinvente l'expérience de séjour dans les hôtels et casinos</p>
-                    <p>Elle guide les clients, répond à leurs questions, recommande les meilleures attractions, met en
-                        avant les événements spéciaux, et bien plus encore !</p>
-                    <p>Avec Mila, innovez dans l'accueil des visiteurs et offrez une expérience captivante, unique et
-                        mémorable !</p>
-                </div>
-            </article>
-            <article>
-                <div class="titre">
-                    <p>Musées</p>
-                    <i class="fas fa-arrow-alt-circle-down"></i>
-                </div>
-                <div class="img_illu"></div>
-                <div class="text">
-                    <p>Mila enrichit l'expérience de visite dans les musées</p>
-                    <p>Elle guide les visiteurs, répond à leurs questions, présente les œuvres d'art, met en avant les
-                        expositions et événements, et bien plus encore !</p>
-                    <p>Avec Mila, innovez dans l'accueil des visiteurs et proposez une expérience captivante, unique et
-                        mémorable !</p>
-                </div>
-            </article>
-            <article>
-                <div class="titre">
-                    <p>Galeries Marchandes</p>
-                    <i class="fas fa-arrow-alt-circle-down"></i>
-                </div>
-                <div class="img_illu"></div>
-                <div class="text">
-                    <p>Mila transforme l'expérience de visite dans vos centres commerciaux</p>
-                    <p>Elle offre une assistance continue pour orienter les clients, répondre à leurs questions, leurs
-                        proposer des offres promotionnelles personnalisées, et bien plus encore !</p>
-                    <p>Mila sera votre partenaire idéale pour améliorer la communication avec vos clients et renforcer
-                        leur fidélité</p>
-                </div>
-            </article>
-            <article>
-                <div class="titre">
-                    <p>Points de vente</p>
-                    <i class="fas fa-arrow-alt-circle-down"></i>
-                </div>
-                <div class="img_illu"></div>
-                <div class="text">
-                    <p>Mila révolutionne l'expérience d’achat dans vos points de vente</p>
-                    <p>Elle offre une assistance continue pour orienter les clients, répondre à leurs questions, leurs
-                        proposer des offres promotionnelles personnalisées, et bien plus encore !</p>
-                    <p>Mila sera votre alliée pour enrichir la communication avec vos clients et les fidéliser</p>
-                </div>
-            </article>
-        </div> -->
-
         <div class="content">
             <div class="container">
                 <div class="mycard" id="card">
@@ -247,7 +176,8 @@
                             </div>
 
                             <div class="icon">
-                            <img src="./assets/vid/casino.gif" alt="">                            </div>
+                                <img src="./assets/vid/casino.gif" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="slide slide2">
@@ -267,7 +197,8 @@
                                 <p>Musées</p>
                             </div>
                             <div class="icon">
-                            <img src="./assets/vid/musees.gif" alt="">                            </div>
+                                <img src="./assets/vid/musees.gif" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="slide slide2">
@@ -309,7 +240,7 @@
                                 <p>Points de vente</p>
                             </div>
                             <div class="icon">
-                                 <img src="./assets/vid/pdv.gif" alt="">
+                                <img src="./assets/vid/pdv.gif" alt="">
                             </div>
                         </div>
                     </div>
@@ -612,14 +543,13 @@
 
         AOS.init();
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const cards = document.querySelectorAll('.mycard');
 
-            // Intersection Observer pour détecter quand une carte est visible
             const observerOptions = {
-                root: null, // Utilise le viewport
+                root: null,
                 rootMargin: '0px',
-                threshold: 0.5 // 50% de l'élément doit être visible
+                threshold: 0.5
             };
 
             const observerCallback = (entries, observer) => {
@@ -640,17 +570,17 @@
         });
 
         const images = [
-        '../assets/img/mila_trainhover.jpg',
-        '../assets/img/casinohover.jpg',
-        '../assets/img/museehov.jpg',
-        '../assets/img/mila_centreshover2.jpg',
-        '../assets/img/pdvhover.jpg'
-    ];
+            '../assets/img/mila_trainhover.jpg',
+            '../assets/img/casinohover.jpg',
+            '../assets/img/museehov.jpg',
+            '../assets/img/mila_centreshover2.jpg',
+            '../assets/img/pdvhover.jpg'
+        ];
 
-    images.forEach((image) => {
-        const img = new Image();
-        img.src = image;
-    });
+        images.forEach((image) => {
+            const img = new Image();
+            img.src = image;
+        });
     </script>
 </body>
 
