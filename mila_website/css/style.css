@@ -738,7 +738,7 @@ section.target div.content div.container {
 section.target div.content div.container .mycard {
   display: none;
   position: relative;
-  margin: 5% 2%;
+  padding: 5% 0%;
 }
 section.target div.content div.container .mycard .icon {
   background: url('../assets/img/mila_train.jpg');
@@ -2590,7 +2590,7 @@ footer .credit p i {
     display: none;
   }
   section.target div.content div.container div.mycard {
-    margin: 0% 2%;
+    padding: 5% 0%;
     display: block;
   }
   section.target div.content div.container div.mycard div.slide1 {
@@ -2602,7 +2602,6 @@ footer .credit p i {
   }
   section.target div.content div.container div.mycard.active {
     display: block;
-    margin-bottom: 8%;
   }
   section.target div.content div.container div.mycard.active .slide2 {
     opacity: 1;
