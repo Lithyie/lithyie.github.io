@@ -636,48 +636,32 @@
 
         AOS.init();
 
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     const cards = document.querySelectorAll('.mycard');
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.mycard');
 
-        //     // Intersection Observer pour détecter quand une carte est visible
-        //     const observerOptions = {
-        //         root: null, // Utilise le viewport
-        //         rootMargin: '0px',
-        //         threshold: 0.5 // 50% de l'élément doit être visible
-        //     };
+            // Intersection Observer pour détecter quand une carte est visible
+            const observerOptions = {
+                root: null, // Utilise le viewport
+                rootMargin: '0px',
+                threshold: 0.5 // 50% de l'élément doit être visible
+            };
 
-        //     const observerCallback = (entries, observer) => {
-        //         entries.forEach(entry => {
-        //             if (entry.isIntersecting) {
-        //                 entry.target.classList.add('active');
-        //             } else {
-        //                 entry.target.classList.remove('active');
-        //             }
-        //         });
-        //     };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            };
 
-        //     const observer = new IntersectionObserver(observerCallback, observerOptions);
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        //     cards.forEach(card => {
-        //         observer.observe(card);
-        //     });
-        // });
-
-        document.addEventListener('scroll', function() {
-    const cards = document.querySelectorAll('.mycard');
-    const windowHeight = window.innerHeight;
-
-    cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= windowHeight;
-
-        if (isVisible) {
-            card.classList.add('active');
-        } else {
-            card.classList.remove('active');
-        }
-    });
-});
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
 
         const images = [
         '../assets/img/mila_trainhover.jpg',
