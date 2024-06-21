@@ -659,6 +659,10 @@ section.innovation div.container div.bottom {
   justify-content: space-evenly;
   align-items: center;
 }
+section.innovation div.container div.bottom div {
+  width: 100%;
+  text-align: center;
+}
 section.innovation div.container div.bottom div p {
   font-family: 'krub', sans-serif;
   font-weight: 700;
