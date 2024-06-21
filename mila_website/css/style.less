@@ -214,6 +214,29 @@ header {
   justify-content: flex-end;
   flex-direction: column;
   margin: 0 auto;
+  position: relative;
+
+  .reserve{
+
+    a{
+      font-family: 'krub', sans-serif;
+      font-weight: @bold;
+      font-size: 1rem;
+      border: 1.2px solid @text;
+      padding: 1% 1.5%;
+      letter-spacing: 1px;
+      position: absolute;
+      right: 0;
+      top: 25%;
+      transition: all .3s ease;
+
+      &:hover{
+        box-shadow: 0px 5px 6px 4px rgba(0, 0, 0, 0.1);
+        padding: 1% 2%;
+      }
+
+    }
+  }
 
   div.nav {
     height: 8%;
@@ -392,10 +415,11 @@ header {
   .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 10%;
     height: 100%;
     width: (100%/3);
+    padding-bottom: 7%;
 
     h1 {
       font-family: 'Krub';
@@ -613,6 +637,13 @@ section.target {
   margin-bottom: 4%;
   position: relative;
 
+  div.ellipse{
+    position: absolute;
+    left: 0;
+    top: 35%;
+    transform: scaleX(-1);
+  }
+
   div.topline {
     width: 75%;
     display: flex;
@@ -677,7 +708,6 @@ section.target {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
 
       div.mycard {
         display: none;
@@ -1048,6 +1078,13 @@ section.fonctions {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  div.ellipse{
+    position: absolute;
+    right: 0;
+    bottom: -30%;
+  }
 
   div.content {
     display: flex;
@@ -1194,7 +1231,14 @@ section.custom {
 }
 
 section.video {
+position: relative;
 
+div.ellipse{
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  transform: scaleX(-1);
+}
   div.content {
     padding: 10% 0%;
     display: flex;
@@ -1732,8 +1776,6 @@ footer {
 
     .right {
       gap: 5%;
-      width: 50%;
-      padding: 0% 5%;
     }
 
     .divider {
@@ -2009,6 +2051,15 @@ footer {
 
 
 @media (max-width: 1024px) {
+
+  header{
+    .right{
+      width: 50%;
+    }
+    .mid{
+      width: 50%;
+    }
+  }
 
   section.target {
     .topline {
@@ -2302,11 +2353,13 @@ footer {
 
 @media (max-width: 768px) {
   header {
+    .reserve{
+      display: none;
+    }
+
     div.main {
       flex-direction: column-reverse;
-      align-items: center;
-      position: relative;
-      padding: 0%;
+      justify-content: flex-end;
 
       div.mid {
         width: 100%;
@@ -2333,6 +2386,7 @@ footer {
         align-items: center;
         text-align: center;
         width: 100%;
+        padding: 0;
 
         p {
           text-align: center;
@@ -2601,10 +2655,6 @@ footer {
 @media (max-width: 425px) {
   header {
     div.main {
-      flex-direction: column-reverse;
-      align-items: center;
-      position: relative;
-      padding: 0%;
 
       div.mid {
         width: 100%;
@@ -2626,9 +2676,7 @@ footer {
       }
 
       div.right {
-        align-items: center;
-        text-align: center;
-        width: 100%;
+        justify-content: center;
 
         p {
           text-align: center;
@@ -3259,6 +3307,10 @@ footer {
     padding-bottom: 0;
     margin-bottom: 0;
 
+    .ellipse{
+      display: none;
+    }
+
     div.content {
       width: 100%;
 
@@ -3292,6 +3344,18 @@ footer {
           }
         }
       }
+    }
+  }
+
+  section.fonctions{
+    .ellipse{
+      display: none;
+    }
+  }
+
+  section.video{
+    .ellipse{
+      display: none;
     }
   }
 }
