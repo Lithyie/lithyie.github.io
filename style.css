@@ -63,10 +63,10 @@ html {
     color: #FFF;
     text-align: center;
     font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 50px;
+    font-weight: 400;
+    font-size: 5rem;
     letter-spacing: 10px;
-    margin-top: -60px;
+    margin-top: -80px;
     padding-left: 10px;
   }
   #title span {
