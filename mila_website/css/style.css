@@ -853,6 +853,7 @@ section.target div.content div.container .mycard.active .icon {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  filter: none;
 }
 section.target div.content div.container .mycard.active .slide.slide1 {
   transform: translateY(0px);
