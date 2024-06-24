@@ -845,7 +845,7 @@ section.target div.content div.container .mycard.active {
 }
 section.target div.content div.container .mycard.active .icon {
   transition: background 0.2s ease;
-  background: url('../assets/img/mila_trainhover.jpg');
+  background: url('../assets/img/mila_trainhover2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
