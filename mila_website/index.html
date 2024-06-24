@@ -29,7 +29,8 @@
 </head>
 
 <body>
-
+    <div class="loader" id="loader">
+        <video src="./assets/vid/animation_logo.webm" autoplay loop muted></video>    </div>
     <header id="home">
         <div class="nav">
             <div class="burger">
@@ -536,7 +537,6 @@
         </div>
 
     </footer>
-    <script src="./js/cursor.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -619,18 +619,27 @@
             });
         });
 
-        const images = [
-            '../assets/img/mila_trainhover2.jpg',
-            '../assets/img/casinohover.jpg',
-            '../assets/img/museehov.jpg',
-            '../assets/img/mila_centreshover2.jpg',
-            '../assets/img/pdvhover.jpg'
-        ];
+        (function() {
+    var minimumLoadTime = 5000;
+    var startTime = new Date().getTime();
 
-        images.forEach((image) => {
-            const img = new Image();
-            img.src = image;
-        });
+    document.body.classList.add('no-scroll');
+
+    window.addEventListener('load', function() {
+        var currentTime = new Date().getTime();
+        var elapsedTime = currentTime - startTime;
+
+        if (elapsedTime >= minimumLoadTime) {
+            document.getElementById('loader').classList.add('hidden');
+            document.body.classList.remove('no-scroll');
+        } else {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+                document.body.classList.remove('no-scroll');
+            }, minimumLoadTime - elapsedTime);
+        }
+    });
+})();
     </script>
 </body>
 
