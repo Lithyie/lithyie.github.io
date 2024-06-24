@@ -268,6 +268,9 @@ div.loader video {
   width: 60%;
   height: auto;
 }
+div.loader img {
+  display: none;
+}
 div.loader.hidden {
   display: none;
 }
@@ -2173,6 +2176,14 @@ footer .credit p i {
 /* ------------------------------ 425px ----------------------------------- */
 /* ------------------------------------------------------------------------- */
 @media (max-width: 425px) {
+  body div.loader video {
+    display: none;
+  }
+  body div.loader img {
+    display: block;
+    width: 60%;
+    height: auto;
+  }
   header div.main div.mid {
     width: 100%;
     height: 80%;

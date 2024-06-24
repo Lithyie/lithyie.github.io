@@ -131,6 +131,9 @@ div.loader {
     width: 60%;
     height: auto;
   }
+  img{
+    display: none;
+  }
 }
 
 div.loader.hidden {
@@ -2665,7 +2668,22 @@ footer {
 
 
 @media (max-width: 425px) {
+  body{
+    div.loader {
+      video{
+        display: none;
+      }
+      img{
+        display: block;
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
   header {
+
+
+
     div.main {
 
       div.mid {
