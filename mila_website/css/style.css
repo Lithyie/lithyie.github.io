@@ -1019,6 +1019,7 @@ section.fonctions div.content {
   display: flex;
   width: 75%;
   padding: 5% 0%;
+  overflow-x: hidden;
 }
 section.fonctions div.content .left {
   width: 50%;
@@ -1144,6 +1145,7 @@ section.video div.content {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 section.video div.content .txt {
   position: absolute;
@@ -1179,7 +1181,7 @@ section.video div.content .txt:nth-of-type(2) p {
 }
 section.video div.content div.container {
   display: flex;
-  width: 65%;
+  width: 50%;
   justify-content: center;
   position: relative;
 }
@@ -1224,6 +1226,7 @@ section.demo div.content {
   width: 85%;
   justify-content: space-around;
   align-items: center;
+  overflow-x: hidden;
 }
 section.demo div.content .left {
   width: 50%;

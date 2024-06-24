@@ -346,7 +346,7 @@
             </svg>
         </div>
         <div class="content">
-            <div class="left">
+            <div class="left" data-aos="fade-right" data-aos-duration="1000">
                 <div class="title">
                     <p>Fonctionnalités</p>
                 </div>
@@ -367,7 +367,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left" data-aos-duration="1000">
                 <div>
                     <img src=".//assets/img/mila_fonct.png" alt="">
                 </div>
@@ -446,7 +446,7 @@
                 </svg>
             </div>
 
-            <div class="container">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="vid">
                     <video controls id="myVideo" preload="metadata">
                         <source src="https://storage.luxant-service.fr/s/gcPX8MRN3G8oD8p/download" type="video/mp4">
@@ -458,11 +458,11 @@
 
     <section class="demo" id="contact">
         <div class="content">
-            <div class="left" data-aos="fade-up" data-aos-duration="1200">
+            <div class="left" data-aos="fade-right" data-aos-duration="1200">
                 <div><img src="./assets/img/mila_demo.png" alt="">
                 </div>
             </div>
-            <div class="right" data-aos="fade-up" data-aos-duration="1200">
+            <div class="right" data-aos="fade-left" data-aos-duration="1200">
                 <div class="titre">
                     <p>Réservez une démo</p>
                     <p>Venez découvrir nos produits</p>
@@ -542,6 +542,36 @@
         });
 
         AOS.init();
+                function updateAOSAnimations() {
+            var fadeLeftElements = document.querySelectorAll('[data-aos="fade-left"]');
+            var fadeRightElements = document.querySelectorAll('[data-aos="fade-right"]');
+            var fadeUpElements = document.querySelectorAll('[data-aos="fade-up"]');
+
+            if (window.innerWidth <= 1024) {
+                fadeLeftElements.forEach(function(element) {
+                    element.setAttribute('data-aos-original', 'fade-left');
+                    element.setAttribute('data-aos', 'fade-up');
+                });
+                fadeRightElements.forEach(function(element) {
+                    element.setAttribute('data-aos-original', 'fade-right');
+                    element.setAttribute('data-aos', 'fade-up');
+                });
+            } else {
+                fadeUpElements.forEach(function(element) {
+                    var originalAnimation = element.getAttribute('data-aos-original');
+                    if (originalAnimation === 'fade-left' || originalAnimation === 'fade-right') {
+                        element.setAttribute('data-aos', originalAnimation);
+                        element.removeAttribute('data-aos-original');
+                    }
+                });
+            }
+            AOS.refresh();
+        }
+        updateAOSAnimations();
+
+        window.addEventListener('resize', function() {
+            updateAOSAnimations();
+        });
 
         document.addEventListener('DOMContentLoaded', function () {
             const cards = document.querySelectorAll('.mycard');
