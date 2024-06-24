@@ -264,6 +264,10 @@ div.loader {
   align-items: center;
   z-index: 9999;
 }
+div.loader video {
+  width: 60%;
+  height: auto;
+}
 div.loader.hidden {
   display: none;
 }
