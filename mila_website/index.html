@@ -523,8 +523,10 @@
                         Newsletter
                     </p>
                 </div>
+                <form action="subscribe.php" method="post">
                 <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
                 <button type="submit" class="custom-submit">Confirmer<i class="fas fa-envelope"></i></button>
+            </form>
                 <div class="follow">
                     <p>Suivez-nous</p>
                     <div class="socials">
@@ -624,27 +626,38 @@
             });
         });
 
-        (function () {
-            var minimumLoadTime = 5000;
-            var startTime = new Date().getTime();
+        (function() {
+    // Temps minimum en millisecondes
+    var minimumLoadTime = 4000; // 3000 ms = 3 secondes
 
-            document.body.classList.add('no-scroll');
+    // Démarrer un timer au chargement du script
+    var startTime = new Date().getTime();
 
-            window.addEventListener('load', function () {
-                var currentTime = new Date().getTime();
-                var elapsedTime = currentTime - startTime;
+    // Ajouter une classe au body pour désactiver le scroll
+    document.body.classList.add('no-scroll');
 
-                if (elapsedTime >= minimumLoadTime) {
-                    document.getElementById('loader').classList.add('hidden');
-                    document.body.classList.remove('no-scroll');
-                } else {
-                    setTimeout(function () {
-                        document.getElementById('loader').classList.add('hidden');
-                        document.body.classList.remove('no-scroll');
-                    }, minimumLoadTime - elapsedTime);
-                }
-            });
-        })();
+    window.addEventListener('load', function() {
+        var currentTime = new Date().getTime();
+        var elapsedTime = currentTime - startTime;
+
+        var hideLoader = function() {
+            // Ajouter la classe pour commencer la transition
+            document.getElementById('loader').classList.add('fade-out');
+            // Réactiver le scroll après la transition
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+                document.body.classList.remove('no-scroll');
+            }, 1000); // Correspond à la durée de la transition CSS
+        };
+
+        if (elapsedTime >= minimumLoadTime) {
+            hideLoader();
+        } else {
+            // Sinon, attendre le temps restant avant de commencer la transition
+            setTimeout(hideLoader, minimumLoadTime - elapsedTime);
+        }
+    });
+})();
     </script>
 </body>
 

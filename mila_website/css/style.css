@@ -263,6 +263,9 @@ div.loader {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  transition: opacity 1s ease-out;
+  /* Transition douce */
+  opacity: 1;
 }
 div.loader video {
   width: 60%;
@@ -270,6 +273,9 @@ div.loader video {
 }
 div.loader img {
   display: none;
+}
+div.loader.fade-out {
+  opacity: 0;
 }
 div.loader.hidden {
   display: none;
@@ -1372,7 +1378,12 @@ footer div.content .right .news p {
   text-align: end;
   margin: 0;
 }
-footer div.content .right input {
+footer div.content .right form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+footer div.content .right form input {
   align-self: flex-end;
   margin: 5% 0%;
   padding: 2% 2%;
@@ -1383,7 +1394,7 @@ footer div.content .right input {
   width: 50%;
   background-color: #f2f2f2;
 }
-footer div.content .right button {
+footer div.content .right form button {
   text-transform: uppercase;
   width: fit-content;
   padding: 1% 4%;
@@ -1396,17 +1407,17 @@ footer div.content .right button {
   border: transparent 2px solid;
   transition: all 0.3s ease;
 }
-footer div.content .right button i {
+footer div.content .right form button i {
   display: none;
   visibility: hidden;
   margin: 0 15%;
 }
-footer div.content .right button:hover {
+footer div.content .right form button:hover {
   cursor: pointer;
   border: 2px solid #d6bb73;
   background-color: #f2f2f2;
 }
-footer div.content .right button:hover i {
+footer div.content .right form button:hover i {
   margin: 0 15%;
   visibility: visible;
   display: inline;
