@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta property="og:title" content="Mila - Assistante virtuelle 3D">
-    <meta property="og:description" content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
+    <meta property="og:description"
+        content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
     <meta property="og:image" content="https://www.mila3d.com/assets/img/ogfb.jpg">
     <meta property="og:url" content="URL de votre site">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Mila - Assistante virtuelle">
     <meta property="og:locale" content="fr_FR">
-    <meta name="description" content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
+    <meta name="description"
+        content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
     <meta name="keywords" content="Mila, intelligence artificelle, Assistante virtuelle, 3D">
     <meta name="author" content="Luxant Innovation">
     <meta name="robots" content="index, follow">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mila - Assistante virtuelle">
-    <meta name="twitter:description" content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
+    <meta name="twitter:description"
+        content="Découvrez Mila, une assistante virtuelle 3D animée par la technologie holographique.">
     <meta name="twitter:image" content="https://www.mila3d.com/assets/img/ogfb.jpg">
     <meta name="twitter:site" content="@luxantinnovation">
     <meta name="twitter:creator" content="@luxantinnovation">
@@ -31,7 +34,8 @@
 <body>
     <div class="loader" id="loader">
         <img src="./assets/vid/animation logo.gif" alt="loader">
-        <video src="./assets/vid/animation_logo.webm" autoplay loop muted></video>    </div>
+        <video src="./assets/vid/animation_logo.webm" autoplay loop muted></video>
+    </div>
     <header id="home">
         <div class="nav">
             <div class="burger">
@@ -562,22 +566,23 @@
         });
 
         AOS.init();
-                function updateAOSAnimations() {
+
+        function updateAOSAnimations() {
             var fadeLeftElements = document.querySelectorAll('[data-aos="fade-left"]');
             var fadeRightElements = document.querySelectorAll('[data-aos="fade-right"]');
             var fadeUpElements = document.querySelectorAll('[data-aos="fade-up"]');
 
             if (window.innerWidth <= 1024) {
-                fadeLeftElements.forEach(function(element) {
+                fadeLeftElements.forEach(function (element) {
                     element.setAttribute('data-aos-original', 'fade-left');
                     element.setAttribute('data-aos', 'fade-up');
                 });
-                fadeRightElements.forEach(function(element) {
+                fadeRightElements.forEach(function (element) {
                     element.setAttribute('data-aos-original', 'fade-right');
                     element.setAttribute('data-aos', 'fade-up');
                 });
             } else {
-                fadeUpElements.forEach(function(element) {
+                fadeUpElements.forEach(function (element) {
                     var originalAnimation = element.getAttribute('data-aos-original');
                     if (originalAnimation === 'fade-left' || originalAnimation === 'fade-right') {
                         element.setAttribute('data-aos', originalAnimation);
@@ -589,7 +594,7 @@
         }
         updateAOSAnimations();
 
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             updateAOSAnimations();
         });
 
@@ -619,27 +624,27 @@
             });
         });
 
-        (function() {
-    var minimumLoadTime = 5000;
-    var startTime = new Date().getTime();
+        (function () {
+            var minimumLoadTime = 5000;
+            var startTime = new Date().getTime();
 
-    document.body.classList.add('no-scroll');
+            document.body.classList.add('no-scroll');
 
-    window.addEventListener('load', function() {
-        var currentTime = new Date().getTime();
-        var elapsedTime = currentTime - startTime;
+            window.addEventListener('load', function () {
+                var currentTime = new Date().getTime();
+                var elapsedTime = currentTime - startTime;
 
-        if (elapsedTime >= minimumLoadTime) {
-            document.getElementById('loader').classList.add('hidden');
-            document.body.classList.remove('no-scroll');
-        } else {
-            setTimeout(function() {
-                document.getElementById('loader').classList.add('hidden');
-                document.body.classList.remove('no-scroll');
-            }, minimumLoadTime - elapsedTime);
-        }
-    });
-})();
+                if (elapsedTime >= minimumLoadTime) {
+                    document.getElementById('loader').classList.add('hidden');
+                    document.body.classList.remove('no-scroll');
+                } else {
+                    setTimeout(function () {
+                        document.getElementById('loader').classList.add('hidden');
+                        document.body.classList.remove('no-scroll');
+                    }, minimumLoadTime - elapsedTime);
+                }
+            });
+        })();
     </script>
 </body>
 
