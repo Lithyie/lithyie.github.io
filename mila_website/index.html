@@ -493,7 +493,7 @@
                     <p>Venez découvrir nos produits</p>
                 </div>
                 <form action="./php/process_form.php" method="post">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" autocomplete="family-name" required>
                     <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
                     <textarea name="message" class="form-control" id="message" placeholder="Message"
                         required></textarea>
@@ -523,7 +523,7 @@
                         Newsletter
                     </p>
                 </div>
-                <form action="subscribe.php" method="post">
+                <form action="./php/subscribe.php" method="post">
                 <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
                 <button type="submit" class="custom-submit">Confirmer<i class="fas fa-envelope"></i></button>
             </form>
