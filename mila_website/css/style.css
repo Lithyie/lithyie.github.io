@@ -1468,6 +1468,12 @@ footer .credit p {
   flex: 1;
   color: white;
 }
+footer .credit p a {
+  color: white;
+}
+footer .credit p a:hover {
+  color: #d6bb73;
+}
 footer .credit p i {
   margin: 0 2%;
 }
