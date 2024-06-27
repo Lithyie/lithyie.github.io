@@ -519,11 +519,12 @@ header div.mid .hero img {
   height: auto;
   width: 120%;
   max-width: 120%;
+  display: none;
 }
 header div.mid .hero video {
   position: absolute;
   z-index: 2;
-  width: 120%;
+  width: 140%;
   height: auto;
 }
 header .right {
@@ -1623,6 +1624,10 @@ footer .credit p i {
     height: auto;
     width: 70%;
   }
+  header div.mid .hero video {
+    height: auto;
+    width: 160%;
+  }
   header .right {
     gap: 5%;
   }
@@ -1810,6 +1815,9 @@ footer .credit p i {
   }
   header .mid {
     width: 50%;
+  }
+  header .mid .hero video {
+    width: 140%!important;
   }
   section.target .topline {
     width: 100% !important;
@@ -2019,6 +2027,7 @@ footer .credit p i {
   header div.main {
     flex-direction: column-reverse;
     justify-content: flex-end;
+    padding-top: 15%;
   }
   header div.main div.mid {
     width: 100%;
@@ -2036,6 +2045,9 @@ footer .credit p i {
   header div.main div.mid .hero img {
     width: 80%;
     height: auto;
+  }
+  header div.main div.mid .hero video {
+    width: 170%!important;
   }
   header div.main div.right {
     align-items: center;
@@ -2221,8 +2233,12 @@ footer .credit p i {
     height: auto;
   }
   header div.main div.mid .hero img {
-    width: 55%;
+    display: block;
+    width: 100%;
     height: auto;
+  }
+  header div.main div.mid .hero video {
+    display: none;
   }
   header div.main div.right {
     justify-content: center;
