@@ -517,14 +517,14 @@ header div.mid .hero img {
   position: absolute;
   z-index: 2;
   height: auto;
-  width: 120%;
+  width: 100%;
   max-width: 120%;
   display: none;
 }
 header div.mid .hero video {
   position: absolute;
   z-index: 2;
-  width: 140%;
+  width: 100%;
   height: auto;
 }
 header .right {
@@ -1615,10 +1615,11 @@ footer .credit p i {
   }
   header div.mid .hero {
     height: 100%;
+    width: 100%;
     position: relative;
   }
   header div.mid .hero svg {
-    width: 70%;
+    width: 100%;
   }
   header div.mid .hero img {
     height: auto;
@@ -1626,10 +1627,14 @@ footer .credit p i {
   }
   header div.mid .hero video {
     height: auto;
-    width: 160%;
+    width: 85%;
   }
   header .right {
     gap: 5%;
+    width: 50%;
+  }
+  header .right p {
+    width: 80%;
   }
   header .divider {
     padding: 0% 10%;
@@ -1816,8 +1821,11 @@ footer .credit p i {
   header .mid {
     width: 50%;
   }
+  header .mid .hero svg {
+    width: 60%!important;
+  }
   header .mid .hero video {
-    width: 140%!important;
+    width: 100%!important;
   }
   section.target .topline {
     width: 100% !important;
@@ -2047,7 +2055,7 @@ footer .credit p i {
     height: auto;
   }
   header div.main div.mid .hero video {
-    width: 170%!important;
+    width: 60%!important;
   }
   header div.main div.right {
     align-items: center;
