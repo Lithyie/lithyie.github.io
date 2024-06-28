@@ -76,7 +76,6 @@
                     <svg width="357" height="357" viewBox="0 0 457 457" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="228.5" cy="228.5" r="228.5" fill="#D6BB73" />
                     </svg>
-                    <!-- <img src="./assets/img/mila_header2.png" alt=""> -->
                     <img src="./assets/vid/mila_hero_3.gif" alt="">
                     <video loop autoplay muted src="./assets/vid/mila_hero_3.webm"></video>
 
@@ -630,13 +629,10 @@
         });
 
         (function() {
-    // Temps minimum en millisecondes
-    var minimumLoadTime = 4000; // 3000 ms = 3 secondes
+    var minimumLoadTime = 4000; // 4000 ms = 4 secondes
 
-    // Démarrer un timer au chargement du script
     var startTime = new Date().getTime();
 
-    // Ajouter une classe au body pour désactiver le scroll
     document.body.classList.add('no-scroll');
 
     window.addEventListener('load', function() {
@@ -644,24 +640,20 @@
         var elapsedTime = currentTime - startTime;
 
         var hideLoader = function() {
-            // Ajouter la classe pour commencer la transition
             document.getElementById('loader').classList.add('fade-out');
-            // Réactiver le scroll après la transition
             setTimeout(function() {
                 document.getElementById('loader').classList.add('hidden');
                 document.body.classList.remove('no-scroll');
-            }, 1000); // Correspond à la durée de la transition CSS
+            }, 1000);
         };
 
         if (elapsedTime >= minimumLoadTime) {
             hideLoader();
         } else {
-            // Sinon, attendre le temps restant avant de commencer la transition
             setTimeout(hideLoader, minimumLoadTime - elapsedTime);
         }
     });
 })();
     </script>
 </body>
-
 </html>
