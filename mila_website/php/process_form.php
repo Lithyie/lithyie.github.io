@@ -1,34 +1,53 @@
 <?php
+require '../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+// Charger les variables d'environnement
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to_email = "contact@luxantinnovation.com";
-    $subject = "Nouveau message depuis le formulaire de contact";
+    // Valider et assainir les entrées
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['mail']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-    $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
-    $mail = filter_var(trim($_POST["mail"]), FILTER_SANITIZE_EMAIL);
-    $message = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
-
-    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-        echo "Adresse e-mail invalide.";
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Format d'email invalide";
         exit;
     }
 
-    if (preg_match("/[\r\n]/", $name) || preg_match("/[\r\n]/", $mail)) {
-        echo "Tentative d'injection d'en-tête détectée.";
-        exit;
-    }
+    // Envoyer l'email en utilisant PHPMailer
+    sendEmail($name, $email, $message);
+}
 
-    $email_body = "Nom: $name\n";
-    $email_body .= "E-mail: $mail\n\n";
-    $email_body .= "Message:\n$message\n";
+function sendEmail($name, $email, $message) {
+    $mail = new PHPMailer(true);
+    try {
+        // Paramètres du serveur
+        $mail->isSMTP();
+        $mail->Host = $_ENV['SMTP_HOST'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['SMTP_USERNAME'];
+        $mail->Password = $_ENV['SMTP_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    $headers = "From: $mail\n";
-    $headers .= "Reply-To: $mail\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+        // Destinataires
+        $mail->setFrom('from@example.com', 'Formulaire de Contact');
+        $mail->addAddress('recipient@example.com', 'Nom du destinataire');
 
-    if (mail($to_email, $subject, $email_body, $headers)) {
-        echo "Message envoyé avec succès!";
-    } else {
-        echo "Erreur lors de l'envoi du message.";
+        // Contenu
+        $mail->isHTML(true);
+        $mail->Subject = 'Nouvelle soumission de formulaire de contact';
+        $mail->Body    = "Nom: $name<br>Email: $email<br>Message: $message";
+
+        $mail->send();
+        echo 'Le message a été envoyé';
+    } catch (Exception $e) {
+        echo "Le message n'a pas pu être envoyé. Erreur Mailer : {$mail->ErrorInfo}";
     }
 }
 ?>
