@@ -25,10 +25,23 @@
     <meta name="twitter:creator" content="@luxantinnovation">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/img/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeSKBMqAAAAAHMEHn_LL93ByuRv6VRSR56kvZj1"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Mila - Assistante Virtuelle</title>
+    <style>
+        #charCount {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .maxLengthWarning {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -494,13 +507,18 @@
                     <p>Réservez une démo</p>
                     <p>Venez découvrir nos produits</p>
                 </div>
-                <form action="./php/process_form.php" method="post">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" autocomplete="family-name" required>
+
+
+                <form id="contactForm" action="./php/process_form.php" method="post">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom"
+                        autocomplete="family-name" required>
                     <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
-                    <textarea name="message" class="form-control" id="message" placeholder="Message"
+                    <textarea name="message" class="form-control" id="message" placeholder="Message" maxlength="2000"
                         required></textarea>
+                        <div id="charCount">0 / 2000 caractères</div><br>
                     <button type="submit" class="custom-submit">Envoyer<i class="fas fa-envelope"></i></button>
                 </form>
+                <div class="confirm" id="confirmationMessage" style="display: none; color:red;"></div>
             </div>
         </div>
     </section>
@@ -525,10 +543,16 @@
                         Newsletter
                     </p>
                 </div>
-                <form action="./php/subscribe.php" method="post">
-                <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
-                <button type="submit" class="custom-submit">Confirmer<i class="fas fa-envelope"></i></button>
-            </form>
+
+                <form id="newsletterForm" action="./php/subscribe.php" method="post">
+                    <input type="email" class="form-control" name="mail" id="mail" placeholder="Mail" required>
+                    <div class="checkbox-container">
+                            <input style="width: fit-content; margin: 0% 2%; text-align:right" type="checkbox" name="consent" id="consent" required>
+                            <label for="consent" style="color:white;text-align:right">Je consens à recevoir la newsletter</label>
+                    </div>
+                    <button type="submit" class="custom-submit">Confirmer<i class="fas fa-envelope"></i></button>
+                </form>
+
                 <div class="follow">
                     <p>Suivez-nous</p>
                     <div class="socials">
@@ -541,16 +565,21 @@
         </div>
         <div class="credit">
             <p><i class="fas fa-phone"></i><a href="tel:+33321136430">03 21 13 64 30</a></p>
-            <p><i class="far fa-envelope"></i><a href="mailto:contact@luxantinnovation.comr">contact@luxantinnovation.com</a></p>
+            <p><i class="far fa-envelope"></i><a
+                    href="mailto:contact@luxantinnovation.comr">contact@luxantinnovation.com</a></p>
             <p><i class="fas fa-map-marker-alt"></i>24 rue de Beaumont - 62950 Noyelles-Godault</p>
         </div>
     </footer>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
+    <script src="./js/menuAOS.js"></script>
+    <script src="./js/observer.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/formHandling.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
+ <script>
         //Menu burger
         $(document).ready(function () {
             $('.burger').click(function () {
@@ -602,58 +631,247 @@
             updateAOSAnimations();
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.mycard');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
+//         document.addEventListener('DOMContentLoaded', function () {
+//             const cards = document.querySelectorAll('.mycard');
 
-            const observerCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    } else {
-                        entry.target.classList.remove('active');
-                    }
-                });
-            };
+//             const observerOptions = {
+//                 root: null,
+//                 rootMargin: '0px',
+//                 threshold: 0.5
+//             };
 
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
+//             const observerCallback = (entries, observer) => {
+//                 entries.forEach(entry => {
+//                     if (entry.isIntersecting) {
+//                         entry.target.classList.add('active');
+//                     } else {
+//                         entry.target.classList.remove('active');
+//                     }
+//                 });
+//             };
 
-            cards.forEach(card => {
-                observer.observe(card);
-            });
-        });
+//             const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        (function() {
-    var minimumLoadTime = 4000; // 4000 ms = 4 secondes
+//             cards.forEach(card => {
+//                 observer.observe(card);
+//             });
+//         });
 
-    var startTime = new Date().getTime();
+//         (function () {
+//             var minimumLoadTime = 4000; // 4000 ms = 4 secondes
 
-    document.body.classList.add('no-scroll');
+//             var startTime = new Date().getTime();
 
-    window.addEventListener('load', function() {
-        var currentTime = new Date().getTime();
-        var elapsedTime = currentTime - startTime;
+//             document.body.classList.add('no-scroll');
 
-        var hideLoader = function() {
-            document.getElementById('loader').classList.add('fade-out');
-            setTimeout(function() {
-                document.getElementById('loader').classList.add('hidden');
-                document.body.classList.remove('no-scroll');
-            }, 1000);
-        };
+//             window.addEventListener('load', function () {
+//                 var currentTime = new Date().getTime();
+//                 var elapsedTime = currentTime - startTime;
 
-        if (elapsedTime >= minimumLoadTime) {
-            hideLoader();
-        } else {
-            setTimeout(hideLoader, minimumLoadTime - elapsedTime);
-        }
-    });
-})();
-    </script>
+//                 var hideLoader = function () {
+//                     document.getElementById('loader').classList.add('fade-out');
+//                     setTimeout(function () {
+//                         document.getElementById('loader').classList.add('hidden');
+//                         document.body.classList.remove('no-scroll');
+//                     }, 1000);
+//                 };
+
+//                 if (elapsedTime >= minimumLoadTime) {
+//                     hideLoader();
+//                 } else {
+//                     setTimeout(hideLoader, minimumLoadTime - elapsedTime);
+//                 }
+//             });
+//         })
+//         ();
+
+//         document.getElementById('contactForm').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Empêche le formulaire de se soumettre de manière classique
+
+//     var form = event.target;
+//     var formData = new FormData(form);
+
+//     grecaptcha.ready(function () {
+//         grecaptcha.execute('6LeSKBMqAAAAAHMEHn_LL93ByuRv6VRSR56kvZj1', { action: 'submit' })
+//             .then(function (token) {
+//                 formData.append('recaptcha_token', token);
+
+//                 var xhr = new XMLHttpRequest();
+//                 xhr.open('POST', form.action, true);
+//                 xhr.onload = function () {
+//                     if (xhr.status === 200) {
+//                         try {
+//                             var response = JSON.parse(xhr.responseText);
+//                             console.log('Server Response:', response); // Log response
+//                             if (response.status === 'success') {
+//                                 Swal.fire({
+//                                     title: 'Merci !',
+//                                     text: 'Votre message a été envoyé !',
+//                                     icon: 'success',
+//                                     confirmButtonText: 'OK',
+//                                     customClass: {
+//                                         popup: 'my-popup-class',
+//                                         title: 'my-title-class',
+//                                         content: 'my-content-class',
+//                                         confirmButton: 'my-confirm-button-class',
+//                                         icon: 'my-icon-class'
+//                                     }
+//                                 });
+//                                 form.reset(); // Réinitialiser le formulaire après l'envoi réussi
+//                             } else {
+//                                 Swal.fire({
+//                                     title: 'Erreur',
+//                                     text: response.message,
+//                                     icon: 'error',
+//                                     confirmButtonText: 'OK',
+//                                     customClass: {
+//                                         popup: 'my-popup-class',
+//                                         title: 'my-title-class',
+//                                         content: 'my-content-class',
+//                                         confirmButton: 'my-confirm-button-class',
+//                                         icon: 'my-icon-class'
+//                                     }
+//                                 });
+//                             }
+//                         } catch (e) {
+//                             console.error('Erreur lors de la lecture de la réponse JSON', e);
+//                             Swal.fire({
+//                                 title: 'Erreur',
+//                                 text: 'Erreur lors de la lecture de la réponse du serveur.',
+//                                 icon: 'error',
+//                                 confirmButtonText: 'OK',
+//                                 customClass: {
+//                                     popup: 'my-popup-class',
+//                                     title: 'my-title-class',
+//                                     content: 'my-content-class',
+//                                     confirmButton: 'my-confirm-button-class',
+//                                     icon: 'my-icon-class'
+//                                 }
+//                             });
+//                         }
+//                     } else {
+//                         console.error('Erreur lors de la requête AJAX');
+//                         Swal.fire({
+//                             title: 'Erreur',
+//                             text: 'Erreur lors de la requête AJAX.',
+//                             icon: 'error',
+//                             confirmButtonText: 'OK',
+//                             customClass: {
+//                                 popup: 'my-popup-class',
+//                                 title: 'my-title-class',
+//                                 content: 'my-content-class',
+//                                 confirmButton: 'my-confirm-button-class',
+//                                 icon: 'my-icon-class'
+//                             }
+//                         });
+//                     }
+//                 };
+//                 xhr.send(new URLSearchParams(formData));
+//             });
+//     });
+// });
+
+// document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Empêche le formulaire de se soumettre de manière classique
+
+//     var form = event.target;
+//     var formData = new FormData(form);
+
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', form.action, true);
+//     xhr.onload = function () {
+//         if (xhr.status === 200) {
+//             try {
+//                 var response = JSON.parse(xhr.responseText);
+//                 if (response.status === 'success') {
+//                     Swal.fire({
+//                         title: 'Inscription réussie!',
+//                         text: 'Merci pour votre inscription à notre newsletter.',
+//                         icon: 'success',
+//                         confirmButtonText: 'OK',
+//                         customClass: {
+//                             popup: 'my-popup-class',
+//                             title: 'my-title-class',
+//                             content: 'my-content-class',
+//                             confirmButton: 'my-confirm-button-class',
+//                             icon: 'my-icon-class'
+//                         }
+//                     });
+//                     form.reset(); // Réinitialiser le formulaire après l'envoi réussi
+//                 } else {
+//                     Swal.fire({
+//                         title: 'Erreur',
+//                         text: response.message,
+//                         icon: 'error',
+//                         confirmButtonText: 'OK',
+//                         customClass: {
+//                             popup: 'my-popup-class',
+//                             title: 'my-title-class',
+//                             content: 'my-content-class',
+//                             confirmButton: 'my-confirm-button-class',
+//                             icon: 'my-icon-class'
+//                         }
+//                     });
+//                 }
+//             } catch (e) {
+//                 console.error('Erreur lors de la lecture de la réponse JSON', e);
+//                 Swal.fire({
+//                     title: 'Erreur',
+//                     text: 'Erreur lors de la lecture de la réponse du serveur.',
+//                     icon: 'error',
+//                     confirmButtonText: 'OK',
+//                     customClass: {
+//                         popup: 'my-popup-class',
+//                         title: 'my-title-class',
+//                         content: 'my-content-class',
+//                         confirmButton: 'my-confirm-button-class',
+//                         icon: 'my-icon-class'
+//                     }
+//                 });
+//             }
+//         } else {
+//             console.error('Erreur lors de la requête AJAX');
+//             Swal.fire({
+//                 title: 'Erreur',
+//                 text: 'Erreur lors de la requête AJAX.',
+//                 icon: 'error',
+//                 confirmButtonText: 'OK',
+//                 customClass: {
+//                     popup: 'my-popup-class',
+//                     title: 'my-title-class',
+//                     content: 'my-content-class',
+//                     confirmButton: 'my-confirm-button-class',
+//                     icon: 'my-icon-class'
+//                 }
+//             });
+//         }
+//     };
+//     xhr.send(new URLSearchParams(formData));
+// });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const messageField = document.getElementById('message');
+//     const charCountDiv = document.getElementById('charCount');
+//     const maxLength = messageField.maxLength;
+
+//     function updateCharCount() {
+//         const currentLength = messageField.value.length;
+//         charCountDiv.textContent = `${currentLength} / ${maxLength} caractères`;
+//         if (currentLength > maxLength) {
+//             charCountDiv.classList.add('maxLengthWarning');
+//         } else {
+//             charCountDiv.classList.remove('maxLengthWarning');
+//         }
+//     }
+
+//     // Met à jour le compteur à chaque frappe
+//     messageField.addEventListener('input', updateCharCount);
+
+//     // Initialise le compteur au chargement
+//     updateCharCount();
+// });
+    </script> 
 </body>
+
 </html>
