@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="email-content">
                     Bonjour,<br><br>
                     Merci pour votre inscription à notre newsletter.<br><br>
-                    Vous pouvez vous désinscrire via ce bouton <br> <a href="http://localhost/mila_website/php/unsubscribe.php?email=' . urlencode($email) . '" class="email-button">Se désinscrire</a>
+                    Vous pouvez vous désinscrire via ce bouton <br> <a href="URL/unsubscribe.php?email=' . urlencode($email) . '" class="email-button">Se désinscrire</a>
                 </div>
             </div>
         </body>
