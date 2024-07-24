@@ -639,33 +639,6 @@
             updateAOSAnimations();
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-  // Détection des appareils Android
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  var isAndroid = /android/i.test(userAgent);
-
-  var videoContainer = document.getElementById("videoContainer");
-  var videoElement = document.getElementById("myVideo");
-
-  // Si l'appareil est Android, ajoutez la classe pour masquer la miniature
-  if (isAndroid && videoContainer) {
-    videoContainer.classList.add("hide-overlay");
-  }
-
-  // Ajoutez un événement de clic pour lire la vidéo et cacher la miniature
-  videoElement.addEventListener("click", function() {
-    if (videoElement.paused) {
-      // Lire la vidéo et cacher la miniature
-      videoElement.play();
-      if (videoContainer) {
-        videoContainer.classList.add("hide-overlay");
-      }
-    } else {
-      // Mettre la vidéo en pause si elle est en lecture
-      videoElement.pause();
-    }
-  });
-});
 
     </script>
 </body>

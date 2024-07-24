@@ -257,7 +257,8 @@ header {
       font-family: 'krub', sans-serif;
       font-weight: @bold;
       font-size: 1rem;
-      border: 1.2px solid @text;
+      border: 2px solid @luxant;
+      background: @luxant;
       padding: 1% 1.5%;
       letter-spacing: 1px;
       position: absolute;
@@ -268,6 +269,10 @@ header {
       &:hover {
         box-shadow: -1px 8px 6px 0px rgba(0, 0, 0, 0.1);
         padding: 1% 2%;
+      }
+
+      &:active{
+        background: transparent;
       }
 
     }
@@ -1324,26 +1329,26 @@ section.video {
         justify-content: center;
         position: relative;
 
-        &::after {
-          content: "";
-          background-image: url(../assets/img/video.png);
-          position: absolute;
-          background-size: cover;
-          background-position: center;
-          pointer-events: none;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          opacity: 1;
-          visibility: visible;
-          transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
+        // &::after {
+        //   content: "";
+        //   background-image: url(../assets/img/video.png);
+        //   position: absolute;
+        //   background-size: cover;
+        //   background-position: center;
+        //   pointer-events: none;
+        //   width: 100%;
+        //   height: 100%;
+        //   border-radius: 10px;
+        //   opacity: 1;
+        //   visibility: visible;
+        //   transition: opacity 0.5s ease, visibility 0.5s ease;
+        // }
       }
 
-      .vid.hide-overlay::after {
-        opacity: 0;
-        visibility: hidden;
-      }
+      // .vid.hide-overlay::after {
+      //   opacity: 0;
+      //   visibility: hidden;
+      // }
 
       video {
         border-radius: 10px;
@@ -1448,7 +1453,8 @@ section.demo {
           cursor: pointer;
           border: 2px solid @luxant;
           background-color: rgb(242, 242, 242);
-
+        }
+        &:active{
           i {
             margin: 0 15%;
             visibility: visible;
@@ -1547,7 +1553,8 @@ footer {
             cursor: pointer;
             border: 2px solid @luxant;
             background-color: rgb(242, 242, 242);
-  
+          }
+          &:active{
             i {
               margin: 0 15%;
               visibility: visible;
