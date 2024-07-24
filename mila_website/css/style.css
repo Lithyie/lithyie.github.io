@@ -371,7 +371,8 @@ header .reserve a {
   font-family: 'krub', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  border: 1.2px solid #181818;
+  border: 1.2px solid #18181800;
+  background-color: #d6bb74;
   padding: 1% 1.5%;
   letter-spacing: 1px;
   position: absolute;
@@ -382,6 +383,10 @@ header .reserve a {
 header .reserve a:hover {
   box-shadow: -1px 8px 6px 0px rgba(0, 0, 0, 0.1);
   padding: 1% 2%;
+}
+header .reserve a:active {
+  background: transparent;
+  border: 1.2px solid #d6bb74;
 }
 header div.nav {
   height: 8%;
@@ -568,9 +573,12 @@ header .right a {
 header .right a:hover {
   transform: translateY(-20%);
   border: 2px solid #d6bb73;
-  background-color: transparent;
   box-shadow: -1px 8px 6px 0px rgba(0, 0, 0, 0.1);
 }
+header .right a:active {
+  background: transparent;
+}
+
 header .divider {
   padding: 0% 10%;
   height: 10vh;
@@ -1340,7 +1348,7 @@ section.demo div.content form button:hover {
   border: 2px solid #d6bb73;
   background-color: #f2f2f2;
 }
-section.demo div.content form button:hover i {
+section.demo div.content form button:active i {
   margin: 0 15%;
   visibility: visible;
   display: inline;
@@ -1427,7 +1435,7 @@ footer div.content .right form button:hover {
   border: 2px solid #d6bb73;
   background-color: #f2f2f2;
 }
-footer div.content .right form button:hover i {
+footer div.content .right form button:active i {
   margin: 0 15%;
   visibility: visible;
   display: inline;
@@ -2911,4 +2919,8 @@ footer .content .right form .checkbox-container label {
   margin: auto;
   color: #4caf50;
   margin-bottom: 10px;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
