@@ -268,7 +268,6 @@ div.loader {
   opacity: 1;
 }
 div.loader video {
-  width: 60%;
   height: auto;
 }
 div.loader img {
@@ -1226,22 +1225,42 @@ section.video div.content .txt:nth-of-type(2) p {
   text-align: start;
   padding: 15% 0;
 }
-section.video div.content div.container {
+section.video div.content .container {
+  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  justify-content: center;
-  position: relative;
+  margin: auto;
 }
-section.video div.content div.container .vid {
+section.video div.content .vid {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
+  align-items: center;
 }
-section.video div.content div.container video {
+section.video div.content .thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
-  display: inline;
+  z-index: 2;
+  cursor: pointer;
+}
+section.video div.content video {
+  border-radius: 10px;
+  display: block;
   width: 100%;
   height: auto;
+  z-index: 1;
+  position: relative;
+}
+section.video div.content .hide-thumbnail .thumbnail {
+  display: none;
 }
 section.demo {
   display: flex;
