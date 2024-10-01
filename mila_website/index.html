@@ -573,6 +573,55 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  function canPlayWebM() {
+    const video = document.createElement('video');
+    return video.canPlayType('video/webm; codecs="vp8, vorbis"') !== "";
+  }
+
+  function canPlayMP4() {
+    const video = document.createElement('video');
+    return video.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"') !== "";
+  }
+
+  function fileExists(url, callback) {
+    const http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // Synchronous request
+    http.onload = function () {
+      callback(http.status !== 404);
+    };
+    http.send();
+  }
+
+  const videoElements = document.querySelectorAll('video');
+
+  videoElements.forEach(function (videoElement) {
+    const originalSrc = videoElement.src;
+
+    if (canPlayWebM()) {
+      const webmSrc = originalSrc.replace('.mp4', '.webm');
+      fileExists(webmSrc, function (exists) {
+        if (exists) {
+          videoElement.src = webmSrc;
+          videoElement.load();
+          console.log("WebM loaded:", webmSrc);
+        } else {
+          console.log("WebM file does not exist:", webmSrc);
+        }
+      });
+    } else if (canPlayMP4()) {
+      videoElement.src = originalSrc;
+      videoElement.load();
+      console.log("MP4 loaded:", originalSrc);
+    } else {
+      console.log("Neither WebM nor MP4 supported.");
+    }
+  });
+});
+
+
+
         //Menu burger
         $(document).ready(function () {
             $('.burger').click(function () {
