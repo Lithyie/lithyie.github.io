@@ -2092,6 +2092,7 @@ footer .content .right form .checkbox-container label {
     text-align: center;
     width: 100%;
     padding: 0;
+    justify-content: center;
   }
   header div.main div.right p {
     text-align: center;
