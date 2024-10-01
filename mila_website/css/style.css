@@ -1836,14 +1836,23 @@ footer .content .right form .checkbox-container label {
 /* ------------------------------ 1024px ----------------------------------- */
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  header .main {
+    flex-direction: column-reverse;
+    align-items: center!important;
+  }
   header .right {
-    width: 50%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  header .right p {
+    text-align: center;
+  }
+  header .right a {
+    display: none;
   }
   header .mid {
-    width: 50%;
-  }
-  header .mid .hero svg {
-    width: 60%!important;
+    width: 100%;
   }
   header .mid .hero video {
     width: 100%!important;

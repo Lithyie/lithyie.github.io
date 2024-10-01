@@ -2129,16 +2129,25 @@ footer {
 @media (max-width: 1024px) {
 
   header {
+    .main{
+      flex-direction: column-reverse;
+      align-items: center!important;
+    }
     .right {
-      width: 50%;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      p{
+        text-align: center;
+      }
+      a{
+        display: none;
+      }
     }
 
     .mid {
-      width: 50%;
+      width: 100%;
       .hero{
-        svg{
-          width: 60%!important;
-        }
         video{
           width: 100%!important;
         }
