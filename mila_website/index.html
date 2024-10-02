@@ -191,11 +191,8 @@
                             <div class="titre">
                                 <p>Transports</p>
                             </div>
-                            <!-- <div class="icon">
+                            <div class="icon">
                                 <img src="./assets/vid/transport.gif" alt="">
-                            </div> -->
-                            <div class="icon" data-webm="./assets/vid/transport.webm" data-gif="./assets/vid/transport.gif">
-                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -216,11 +213,8 @@
                                 <p>Hôtels & Casinos</p>
                             </div>
 
-                            <!-- <div class="icon">
+                            <div class="icon">
                                 <img src="./assets/vid/casino.gif" alt="">
-                            </div> -->
-                            <div class="icon" data-webm="./assets/vid/casino.webm" data-gif="./assets/vid/casino.gif">
-                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -240,11 +234,8 @@
                             <div class="titre">
                                 <p>Musées</p>
                             </div>
-                            <!-- <div class="icon">
+                            <div class="icon">
                                 <img src="./assets/vid/musee.gif" alt="">
-                            </div> -->
-                            <div class="icon" data-webm="./assets/vid/musee2.webm" data-gif="./assets/vid/musee.gif">
-                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -264,11 +255,8 @@
                             <div class="titre">
                                 <p>Galeries Marchandes</p>
                             </div>
-                            <!-- <div class="icon">
+                            <div class="icon">
                                 <img src="./assets/vid/centres.gif" alt="">
-                            </div> -->
-                            <div class="icon" data-webm="./assets/vid/centres.webm" data-gif="./assets/vid/centres.gif">
-                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -585,55 +573,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-  function canPlayWebM() {
-    const video = document.createElement('video');
-    return video.canPlayType('video/webm; codecs="vp8, vorbis"') !== "";
-  }
-
-  function canPlayMP4() {
-    const video = document.createElement('video');
-    return video.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"') !== "";
-  }
-
-  // Sélectionne tous les éléments <img> et <video>
-  const mediaElements = document.querySelectorAll('img, video');
-
-  mediaElements.forEach(function (mediaElement) {
-    // Récupère les sources des formats depuis les attributs data-*
-    const webmSrc = mediaElement.getAttribute('data-webm');
-    const gifSrc = mediaElement.getAttribute('data-gif');
-    const mp4Src = mediaElement.getAttribute('data-mp4');
-
-    // On crée dynamiquement l'élément vidéo ou image en fonction du support du format
-    if (canPlayWebM() && webmSrc) {
-      const videoElement = document.createElement('video');
-      videoElement.src = webmSrc;
-      videoElement.autoplay = true;
-      videoElement.loop = true;
-      videoElement.muted = true;
-      mediaElement.parentNode.replaceChild(videoElement, mediaElement); // Remplace le media existant
-      console.log("WebM video loaded:", webmSrc);
-    } else if (canPlayMP4() && mp4Src) {
-      const videoElement = document.createElement('video');
-      videoElement.src = mp4Src;
-      videoElement.autoplay = true;
-      videoElement.loop = true;
-      videoElement.muted = true;
-      mediaElement.parentNode.replaceChild(videoElement, mediaElement); // Remplace le media existant
-      console.log("MP4 video loaded:", mp4Src);
-    } else if (gifSrc) {
-      const imgElement = document.createElement('img');
-      imgElement.src = gifSrc;
-      imgElement.alt = 'loader';
-      mediaElement.parentNode.replaceChild(imgElement, mediaElement); // Remplace le media existant
-      console.log("GIF loaded:", gifSrc);
-    } else {
-      console.log("No supported format found for element.");
-    }
-  });
-});
 
 
         //Menu burger
