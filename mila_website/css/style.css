@@ -520,9 +520,6 @@ header div.mid .hero svg {
 header div.mid .hero img {
   position: absolute;
   z-index: 2;
-  height: auto;
-  width: 100%;
-  max-width: 120%;
   display: none;
 }
 header div.mid .hero video {
@@ -1642,10 +1639,6 @@ footer .content .right form .checkbox-container label {
   header div.mid .hero svg {
     width: 100%;
   }
-  header div.mid .hero img {
-    height: auto;
-    width: 70%;
-  }
   header div.mid .hero video {
     height: auto;
     width: 85%;
@@ -1856,9 +1849,6 @@ footer .content .right form .checkbox-container label {
   }
   header .mid .hero video {
     width: 85%!important;
-  }
-  header .mid .hero img {
-    width: 120%!important;
   }
   section.target .topline {
     width: 100% !important;
@@ -2289,8 +2279,6 @@ footer .content .right form .checkbox-container label {
   }
   header div.main div.mid .hero img {
     display: block;
-    width: 75%;
-    height: auto;
   }
   header div.main div.mid .hero video {
     display: none;
