@@ -1855,7 +1855,7 @@ footer .content .right form .checkbox-container label {
     width: 100%;
   }
   header .mid .hero video {
-    width: 100%!important;
+    width: 65%!important;
   }
   section.target .topline {
     width: 100% !important;
@@ -2085,7 +2085,7 @@ footer .content .right form .checkbox-container label {
     height: auto;
   }
   header div.main div.mid .hero video {
-    width: 60%!important;
+    width: 40%!important;
   }
   header div.main div.right {
     align-items: center;
@@ -2286,7 +2286,7 @@ footer .content .right form .checkbox-container label {
   }
   header div.main div.mid .hero img {
     display: block;
-    width: 100%;
+    width: 75%;
     height: auto;
   }
   header div.main div.mid .hero video {
