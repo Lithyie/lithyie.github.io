@@ -1857,6 +1857,9 @@ footer .content .right form .checkbox-container label {
   header .mid .hero video {
     width: 85%!important;
   }
+  header .mid .hero img {
+    width: 90%;
+  }
   section.target .topline {
     width: 100% !important;
     justify-content: center !important;
