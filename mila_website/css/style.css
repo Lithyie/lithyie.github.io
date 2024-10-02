@@ -520,6 +520,7 @@ header div.mid .hero svg {
 header div.mid .hero img {
   position: absolute;
   z-index: 2;
+  max-width: 150%!important;
   display: none;
 }
 header div.mid .hero video {
