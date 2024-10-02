@@ -2,7 +2,7 @@
 
 // loader.js
 (function () {
-  var minimumLoadTime = 4000; // 4000 ms = 4 secondes
+  var minimumLoadTime = 3500; // 4000 ms = 4 secondes
 
   var startTime = new Date().getTime();
   document.body.classList.add('no-scroll');
