@@ -191,8 +191,11 @@
                             <div class="titre">
                                 <p>Transports</p>
                             </div>
-                            <div class="icon">
+                            <!-- <div class="icon">
                                 <img src="./assets/vid/transport.gif" alt="">
+                            </div> -->
+                            <div class="icon" data-webm="./assets/vid/transport.webm" data-gif="./assets/vid/transport.gif">
+                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -213,8 +216,11 @@
                                 <p>Hôtels & Casinos</p>
                             </div>
 
-                            <div class="icon">
+                            <!-- <div class="icon">
                                 <img src="./assets/vid/casino.gif" alt="">
+                            </div> -->
+                            <div class="icon" data-webm="./assets/vid/casino.webm" data-gif="./assets/vid/casino.gif">
+                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -234,8 +240,11 @@
                             <div class="titre">
                                 <p>Musées</p>
                             </div>
-                            <div class="icon">
+                            <!-- <div class="icon">
                                 <img src="./assets/vid/musee.gif" alt="">
+                            </div> -->
+                            <div class="icon" data-webm="./assets/vid/musee2.webm" data-gif="./assets/vid/musee.gif">
+                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -255,8 +264,11 @@
                             <div class="titre">
                                 <p>Galeries Marchandes</p>
                             </div>
-                            <div class="icon">
+                            <!-- <div class="icon">
                                 <img src="./assets/vid/centres.gif" alt="">
+                            </div> -->
+                            <div class="icon" data-webm="./assets/vid/centres.webm" data-gif="./assets/vid/centres.gif">
+                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -277,8 +289,11 @@
                             <div class="titre">
                                 <p>Points de vente</p>
                             </div>
-                            <div class="icon">
+                            <!-- <div class="icon">
                                 <img src="./assets/vid/pdv.gif" alt="">
+                            </div> -->
+                            <div class="icon" data-webm="./assets/vid/pdv.webm" data-gif="./assets/vid/pdv.gif">
+                                <!-- Le contenu sera ajouté ici dynamiquement via JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -358,10 +373,6 @@
                     </div>
                     <div class="image">
                         <video loop autoplay muted src="./assets/vid/pdv.webm"></video>
-                        <!-- <video loop autoplay muted playsinline>
-                            <source src="./assets/vid/pdv.webm" type="video/webm">
-                            <img src="./assets/vid/pdv.gif" alt="mila points de vente">
-                        </video> -->
                     </div>
                     <div class="desc">
                         <p>Mila révolutionne l'expérience d’achat dans vos points de vente</p>
@@ -586,41 +597,43 @@ document.addEventListener('DOMContentLoaded', function () {
     return video.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"') !== "";
   }
 
-  function fileExists(url, callback) {
-    const http = new XMLHttpRequest();
-    http.open('HEAD', url, false); // Synchronous request
-    http.onload = function () {
-      callback(http.status !== 404);
-    };
-    http.send();
-  }
+  // Sélectionne tous les éléments <img> et <video>
+  const mediaElements = document.querySelectorAll('img, video');
 
-  const videoElements = document.querySelectorAll('video');
+  mediaElements.forEach(function (mediaElement) {
+    // Récupère les sources des formats depuis les attributs data-*
+    const webmSrc = mediaElement.getAttribute('data-webm');
+    const gifSrc = mediaElement.getAttribute('data-gif');
+    const mp4Src = mediaElement.getAttribute('data-mp4');
 
-  videoElements.forEach(function (videoElement) {
-    const originalSrc = videoElement.src;
-
-    if (canPlayWebM()) {
-      const webmSrc = originalSrc.replace('.mp4', '.webm');
-      fileExists(webmSrc, function (exists) {
-        if (exists) {
-          videoElement.src = webmSrc;
-          videoElement.load();
-          console.log("WebM loaded:", webmSrc);
-        } else {
-          console.log("WebM file does not exist:", webmSrc);
-        }
-      });
-    } else if (canPlayMP4()) {
-      videoElement.src = originalSrc;
-      videoElement.load();
-      console.log("MP4 loaded:", originalSrc);
+    // On crée dynamiquement l'élément vidéo ou image en fonction du support du format
+    if (canPlayWebM() && webmSrc) {
+      const videoElement = document.createElement('video');
+      videoElement.src = webmSrc;
+      videoElement.autoplay = true;
+      videoElement.loop = true;
+      videoElement.muted = true;
+      mediaElement.parentNode.replaceChild(videoElement, mediaElement); // Remplace le media existant
+      console.log("WebM video loaded:", webmSrc);
+    } else if (canPlayMP4() && mp4Src) {
+      const videoElement = document.createElement('video');
+      videoElement.src = mp4Src;
+      videoElement.autoplay = true;
+      videoElement.loop = true;
+      videoElement.muted = true;
+      mediaElement.parentNode.replaceChild(videoElement, mediaElement); // Remplace le media existant
+      console.log("MP4 video loaded:", mp4Src);
+    } else if (gifSrc) {
+      const imgElement = document.createElement('img');
+      imgElement.src = gifSrc;
+      imgElement.alt = 'loader';
+      mediaElement.parentNode.replaceChild(imgElement, mediaElement); // Remplace le media existant
+      console.log("GIF loaded:", gifSrc);
     } else {
-      console.log("Neither WebM nor MP4 supported.");
+      console.log("No supported format found for element.");
     }
   });
 });
-
 
 
         //Menu burger
