@@ -1850,6 +1850,10 @@ footer .content .right form .checkbox-container label {
   header .mid .hero video {
     width: 85%!important;
   }
+  header .mid .hero img {
+    display: block!important;
+    width: 70%;
+  }
   section.target .topline {
     width: 100% !important;
     justify-content: center !important;
@@ -2074,7 +2078,7 @@ footer .content .right form .checkbox-container label {
     height: 80%;
   }
   header div.main div.mid .hero img {
-    width: 80%;
+    width: 35%;
     height: auto;
   }
   header div.main div.mid .hero video {
@@ -2279,6 +2283,8 @@ footer .content .right form .checkbox-container label {
   }
   header div.main div.mid .hero img {
     display: block;
+    width: 70%;
+    height: auto;
   }
   header div.main div.mid .hero video {
     display: none;
