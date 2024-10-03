@@ -1848,7 +1848,7 @@ footer .content .right form .checkbox-container label {
     width: 100%;
   }
   header .mid .hero video {
-    width: 85%!important;
+    display: none;
   }
   header .mid .hero img {
     display: block!important;
