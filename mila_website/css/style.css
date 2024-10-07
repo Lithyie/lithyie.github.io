@@ -1852,7 +1852,8 @@ footer .content .right form .checkbox-container label {
   }
   header .mid .hero img {
     display: block!important;
-    width: 70%;
+    width: 50%;
+    max-width: 50%;
   }
   section.target .topline {
     width: 100% !important;
@@ -2080,6 +2081,7 @@ footer .content .right form .checkbox-container label {
   header div.main div.mid .hero img {
     height: auto;
     width: 100%;
+    max-width: 70%;
   }
   header div.main div.mid .hero video {
     width: 40%!important;
@@ -2283,7 +2285,8 @@ footer .content .right form .checkbox-container label {
   }
   header div.main div.mid .hero img {
     display: block;
-    width: 70%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   header div.main div.mid .hero video {
