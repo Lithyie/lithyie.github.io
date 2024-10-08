@@ -445,10 +445,6 @@ header {
       }
 
       img {
-        position: absolute;
-        z-index: 2;
-        // height: auto;
-        // width: 100%;
         display: none;
       }
       video{
@@ -2133,6 +2129,7 @@ footer {
       align-items: center!important;
     }
     .right {
+      flex: 1;
       width: 100%;
       text-align: center;
       align-items: center;
@@ -2146,16 +2143,17 @@ footer {
 
     .mid {
       width: 100%!important;
+      flex: 1;
       .hero{
+        padding-top: 5%;
         video{
           // width: 85%!important;
           display: none;
         }
-        img{
-          display: block!important;
-          width: 50%;
-          max-width: 50%;
-        }
+          img{
+            max-width: 45%;
+            display: block!important;
+          }
       }
     }
   }
@@ -2465,9 +2463,7 @@ footer {
           }
 
           img {
-            height: auto;
-            width: 100%;
-            max-width: 70%;
+            max-width: 90%;
           }
           video{
             width: 40%!important;

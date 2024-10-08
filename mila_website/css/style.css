@@ -518,8 +518,6 @@ header div.mid .hero svg {
   animation: pulse 4s linear infinite;
 }
 header div.mid .hero img {
-  position: absolute;
-  z-index: 2;
   display: none;
 }
 header div.mid .hero video {
@@ -1834,6 +1832,7 @@ footer .content .right form .checkbox-container label {
     align-items: center!important;
   }
   header .right {
+    flex: 1;
     width: 100%;
     text-align: center;
     align-items: center;
@@ -1846,14 +1845,17 @@ footer .content .right form .checkbox-container label {
   }
   header .mid {
     width: 100%!important;
+    flex: 1;
+  }
+  header .mid .hero {
+    padding-top: 5%;
   }
   header .mid .hero video {
     display: none;
   }
   header .mid .hero img {
+    max-width: 45%;
     display: block!important;
-    width: 50%;
-    max-width: 50%;
   }
   section.target .topline {
     width: 100% !important;
@@ -2079,9 +2081,7 @@ footer .content .right form .checkbox-container label {
     height: 80%;
   }
   header div.main div.mid .hero img {
-    height: auto;
-    width: 100%;
-    max-width: 70%;
+    max-width: 90%;
   }
   header div.main div.mid .hero video {
     width: 40%!important;
